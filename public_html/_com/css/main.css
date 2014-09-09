@@ -1,102 +1,111 @@
 /**
- *  File: index.html	
- * 	91.461 Assignment: Creating Your First Web Page
- * 	Jose F. Flores, Umass Lowell Computer Science Student 
- * 		jose_flores@student.uml.edu
- * 	Copyright (c) 2014 by Jose F. Flores. All rights reserved. May be 
- * 		freely copied or excerpted for educational purposes with credit 
- * 		to the author.
+ *  File: index.html    
+ *  91.461 Assignment: Creating Your First Web Page
+ *  Jose F. Flores, Umass Lowell Computer Science Student 
+ *      jose_flores@student.uml.edu
+ *  Copyright (c) 2014 by Jose F. Flores. All rights reserved. May be 
+ *      freely copied or excerpted for educational purposes with credit 
+ *      to the author.
  * 
- * 	updated by JFF on September 8, 2014 at 14:00
- * 		Created Webpage
+ *  updated by JFF on September 8, 2014 at 14:00
+ *      Created Webpage
  *  updated by JFF on September 5, 2014 at 15:00
- * 		Created Webpage
- * 	updated by JFF on September 4, 2014 at 14:00
- * 		Added header comment
+ *      Created Webpage
+ *  updated by JFF on September 4, 2014 at 14:00
+ *      Added header comment
  */
  
 html , 
 body { 
-		background : #fff ;
-		color : #000 ;
-		height : 100% ; 
-		font-family : Verdana, Geneva, sans-serif ; /* UML website standards */
-		margin : 0 ; /* Remove extra spacing around webpage */
-		padding : 0 ; /* Remove extra spacing around webpage */
-		width : 100% ; 
-	}
+        background : #fff ;
+        color : #000 ;
+        height : 100% ; 
+        /* UML website standards */
+        font-family : Verdana, Geneva, sans-serif ; 
+        /* Remove extra spacing around webpage */
+        margin : 0 ; 
+        /* Remove extra spacing around webpage */
+        padding : 0 ; 
+        width : 100% ; 
+    }
 
 a {
-		color : #0168B3 ; /* Light blue links */
-		text-decoration : none ; /* Remove underline from links */
-	}
-	
+        /* Light blue links */
+        color : #0168B3 ; 
+        /* Remove underline from links */
+        text-decoration : none ; 
+    }
+    
 h1 , h2 , h3 , h4 , h5 , h6 { 
-		font-weight : normal ; /* Remove heading bold */
-		margin : 0px ;
-		padding : 0px ; 
-	}	
-		
+        /* Remove heading bold */
+        font-weight : normal ; 
+        margin : 0px ;
+        padding : 0px ; 
+    }   
+        
 div.wrapper {
-		height : 100% ; 
-		width : 100% ; 
-	}
-	
+        height : 100% ; 
+        width : 100% ; 
+    }
+    
 div.header { 
-		/* Sticky header*/
-		background : #eee ;
-		box-shadow : 0px 1px 10px #666 ; /* Shadow effect under header */
-		height : 100px ; 
-		left : 0px ;
-		position : fixed ; 
-		top : 0px ;
-		width : 100% ; 
-	}
+        /* Sticky header*/
+        background : #eee ;
+        /* Shadow effect under header */
+        box-shadow : 0px 1px 10px #666 ; 
+        height : 100px ; 
+        left : 0px ;
+        position : fixed ; 
+        top : 0px ;
+        width : 100% ; 
+    }
 
 div.title-wrapper {
-		padding : 0 0 0 25px ; /*indent heading*/
-	}
-	
+        padding : 0 0 0 25px ; /*indent heading*/
+    }
+    
 h1.title {
-		font-size : 30px ;
-		height : 50px ; 
-		line-height: 50px ; /* Center text vertically in heading */
-		width : 100% ;
-	}
-		
-h2.title-sub {	
-		font-size : 15px ;
-		height : 25px ; 
-		line-height : 25px ;
-		width : 100% ;
-	}
-	
+        font-size : 30px ;
+        height : 50px ; 
+        /* Center text vertically in heading */
+        line-height: 50px ; 
+        width : 100% ;
+    }
+        
+h2.title-sub {  
+        font-size : 15px ;
+        height : 25px ; 
+        line-height : 25px ;
+        width : 100% ;
+    }
+    
 /* Logo*/
 img.uml {
-		float : left ;
-		height : 75px ;
-		margin : 15px 25px 0 0 ;
-	}
-	
+        float : left ;
+        height : 75px ;
+        margin : 15px 25px 0 0 ;
+    }
+    
 div.content {
-		color : #000 ;
-		font-size : 14px ;
-		padding : 125px 25px 165px 25px ; /* Fixes sticky header and footer from covering up content */
-	}
-	
+        color : #000 ;
+        font-size : 14px ;
+        /* Fixes sticky header and footer from covering up content */
+        padding : 125px 25px 165px 25px ; 
+    }
+    
 div.footer { 
-		/* Sticky footer*/
-		background : #eee ;
-		border : 1px 0 0 0 solid #666 ;
-		bottom : 0px ;
-		height : 30px ;
-		left : 0px ;		
-		position : fixed ;
-		text-align : center ;
-		width: 100% ;		
-	}
+        /* Sticky footer*/
+        background : #eee ;
+        border : 1px 0 0 0 solid #666 ;
+        bottom : 0px ;
+        height : 30px ;
+        left : 0px ;        
+        position : fixed ;
+        text-align : center ;
+        width: 100% ;       
+    }
 
 div.notice, 
 div.copyright {
-		font-size : 10px;
-	}
+        font-size : 10px;
+    }
