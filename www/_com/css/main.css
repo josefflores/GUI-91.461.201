@@ -1,0 +1,195 @@
+/**
+ *  File: index.html    
+ *  91.461 Assignment: Creating Your First Web Page
+ *  Jose F. Flores, Umass Lowell Computer Science Student 
+ *      jose_flores@student.uml.edu
+ *  Copyright (c) 2014 by Jose F. Flores. All rights reserved. May be 
+ *      freely copied or excerpted for educational purposes with credit 
+ *      to the author.
+ * 
+ *  updated by JFF on September 8, 2014 at 14:00
+ *      Created Webpage.
+ *  updated by JFF on September 5, 2014 at 15:00
+ *      Created Webpage.
+ *  updated by JFF on September 4, 2014 at 14:00
+ *      Added header comment.
+ */
+ 
+/**
+ *  Styling the body and html sections, Goal is to standardize the font 
+ *  and remove extra spacing surrounding the elements so that the 
+ *  sections occupy the whole viewing space of the page.
+ */
+html , 
+body { 
+        background : #fff ;
+        color : #000 ;
+        height : 100% ; 
+        /* UML website standards. */
+        font-family : Verdana, Geneva, sans-serif ; 
+        /* Remove extra spacing around webpage. */
+        margin : 0 ; 
+        /* Remove extra spacing around webpage. */
+        padding : 0 ; 
+        width : 100% ; 
+    }
+
+/**
+ *  Standardizing the look of links in the document.
+ */
+a {
+        /* Light blue links. */
+        color : #0168B3 ; 
+        /* Remove underline from links. */
+        text-decoration : none ; 
+    }
+   
+/**
+ *  Standardizing the heading elements of the document.
+ */
+h1 , h2 , h3 , h4 , h5 , h6 { 
+        /* Remove heading bold. */
+        font-weight : normal ; 
+        margin : 0px ;
+        padding : 0px ; 
+    }   
+
+h1 { color : #fcb825 ; }
+/**
+ *  This is a wrapper, it allows for positioning of the document content.
+ */
+div.wrapper {
+        height : 100% ; 
+        width : 100% ; 
+    }
+ 
+/**
+ *  The header bar of the page.
+ */
+div.header { 
+        
+		/* Sticky header. */
+        background : #0168B3 ;
+        /* Shadow effect under header. */
+        box-shadow : 0px 1px 10px #666 ; 
+        height : 107px ; 
+        left : 0px ;
+        position : fixed ; 
+        top : 0px ;
+        width : 100% ; 
+    }
+/**
+ *  The title wrapper to assist in positioning of the page title.
+ */
+div.title-wrapper {
+        padding : 0 0 0 40px ; /* Indent heading. */
+        color : #fff ;
+    }
+    
+/**
+ *  A class of heading to be used for the title of the page.
+ */
+h1.title {
+        font-size : 30px ;
+        height : 50px ; 
+        /* Center text vertically in heading. */
+        line-height: 50px ; 
+        width : 100% ;
+    }
+/**
+ *  A class of heading to be used as a description of the page.
+ */        
+h2.title-sub {  
+        font-size : 15px ;
+        height : 25px ; 
+        line-height : 25px ;
+        width : 100% ;
+    }
+    
+/* 
+ * A clss of image to be used for the logo. 
+ */
+img.logo {
+        float : left ;
+        height: 75px;
+		margin: 0px 20px 0px 0px;
+    }
+
+/**
+ *  The container holding the main content of the page.
+ */ 
+div.content {
+       color : #000 ;
+       font-size : 14px ;
+       /* Fixes sticky header and footer from covering up content. */
+       padding: 125px 0px 50px 0px;
+    }
+    
+div.content-wrapper {
+       padding: 0 25px;overflow: auto;
+    }
+
+/** 
+ *  The container holding the footer of the page
+ */
+div.footer { 
+        /* Sticky footer*/
+        background : #eee ;
+        border-top : 1px solid #999 ;
+        bottom : 0px ;
+        height : 40px ;
+        left : 0px ;        
+        position : fixed ;
+        text-align : center ;
+        width: 100% ;       
+    }
+
+/**
+ *  These containers hold the github link notice and copyright information
+ */
+div.notice, 
+div.copyright {
+        font-size : 10px;
+    }
+div.header-right { margin-left:75px; }
+nav.horizontal { width : 100% ; margin : 0px 0px 0px -60px; padding :0px 60px 0px 0px ;height :26px ; line-height:26px; border-top:6px solid #FCB825; background : #fff ; }
+nav.horizontal ul { margin :0px 155px ; padding :0px ; list-style-type:none;}
+nav.horizontal ul li { float:left ;  border-right: 1px solid #ddd ; }
+nav.horizontal ul li:first-child { border-left :  1px solid #ddd ; }
+nav.horizontal ul li a { display:block ; height: 25px ; line-height: 25px ; padding : 0px 10px ;}
+nav.horizontal ul li a:hover { background : #eee ;}
+
+nav.vertical {float: left;
+width: 300px;}
+nav.vertical ul {
+		float: left;
+		width: 100%;
+
+		padding: 0px;
+		list-style-type: none;
+		margin: 0px;
+
+		padding-right: 20px ;overflow-wrap: break-word;
+	}
+	
+nav.vertical ul li a {background:#fff; width:100%; display:block; min-height : 20px ; line-height:20px; border-top: 1px solid #ddd ;  border-left: 1px solid #ddd ;  border-right: 1px solid #ddd ; padding:3px;}
+nav.vertical ul li:last-child a { border-bottom: 1px solid #ddd ; }
+nav.vertical ul li a:hover {background: #eee ;}
+div.source { margin-left: 320px;
+overflow-wrap: break-word; border: 1px solid #ddd; padding:5px;}
+
+iframe { width:100%;height:800px; border:0px;}
+img.description { height: 90px; width:90px;  margin: 0 0 10px 0 ;
+padding: 5px;
+border: 1px solid #ddd;
+float: left;}
+div.description { min-height: 90px;
+padding: 5px;
+border: 1px solid #ddd;
+margin: 0 0 10px 110px;}
+h4 {color: #0168B3;
+font-size: 10px;}
+
+
+p {margin-bottom:0px;}
+a.selected  { background: #FCB825 !important;}
