@@ -27,15 +27,13 @@
     ////
 
     // Load the local library for path resoloution
-    include( './localLib.php' ) ;
+    include( 'localLib.php' ) ;
 
-    //  Resolve root paths
-    $A = getRoot( __DIR__ ) ;
-    //var_dump( $A ) ;
+    //  Resolve root paths, determine OS, etc
+    $A = init( __DIR__ ) ;
 
     //  Including application navigation paths
-    include( $A[ 'D_ROOT' ] . 'ini\\paths.php' ) ;
-    //var_dump( $A ) ;
+    include( $A[ 'D_ROOT' ] . 'ini' . $A[ 'D_SLASH' ] . 'paths.php' ) ;
 
     ////
     //  INCLUDES
@@ -47,7 +45,8 @@
     ////
 
     //  Page title
-    $A[ 'PAGE_TITLE' ] = 'GUI - Assignments' ;
+    $A[ 'TAB_NAME' ] = getPageDir( $A ) ;
+	$A[ 'PAGE_TITLE' ] = $A[ 'TAB_APP' ] . ' - ' . $A[ 'TAB_NAME' ] ;
 
     //  Set content for index
     $A[ 'CONTENT' ] = 'content.php' ;

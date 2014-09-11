@@ -16,35 +16,6 @@
      *  9/9/14  Generated header template
      */
 
-	/**
-	 *  This explodes the url to extract the last directory name so that the 
-	 * 	menu can then be highlighted as selected.
-	 */
-	$tmp = explode( '/' , 
-					$_SERVER[ 'HTTP_HOST' ] . 
-					$_SERVER[ 'REQUEST_URI' ] ) ;
-
-	/**
-	 *  setting the directory to lowercse for comparison incase someone typed 
-	 *	it in a different case
-	 */
-	$tmp = strtoupper( $tmp[ count( $tmp ) - 2 ] ) ; 
-
-	/**
-	 * 	This switch case then checks upon the available menu items and then 
-	 * 	marks the page that the user is visiting
-	 */
-	switch ( $tmp  ) {
-		case 'ABOUT' : 
-		case 'ASSIGNMENT' :
-		case 'PHPSOURCE' :  
-			$page = $tmp ; 
-			break ;
-		default : 
-			$page = 'HOME' ;  
-			break ;
-	}
-
 	echo'
             <!-- Start header -->
             <div class="header">
@@ -75,28 +46,28 @@
                             <li><a ' ;
                             
                             // Checking to see if the user is on a the page
-                            if ( $page == 'HOME' ) echo 'class="selected" ' ; 
+                            if ( $A[ 'TAB_NAME' ] == 'HOME' ) echo 'class="selected" ' ; 
                             
 							echo  'href="' , $A[ 'W_ROOT' ] , '"> Home </a></li>
                             
                             <li><a ' ;
                             
                             // Checking to see if the user is on a the page
-                            if ( $page == 'ABOUT' ) echo 'class="selected" ' ; 
+                            if ( $A[ 'TAB_NAME' ] == 'ABOUT' ) echo 'class="selected" ' ; 
                             
 							echo  'href="' , $A[ 'W_ROOT' ] , 'about/"> About </a></li>
                             
                             <li><a ' ;
                             
                             // Checking to see if the user is on a the page
-                            if ( $page == 'ASSIGNMENT' ) echo 'class="selected" ' ; 
+                            if ( $A[ 'TAB_NAME' ] == 'ASSIGNMENT' ) echo 'class="selected" ' ; 
                             
 							echo  'href="' , $A[ 'W_ROOT' ] , 'assignment/"> Assignments </a></li>
                             
                             <li><a ' ;
                             
                             // Checking to see if the user is on a the page
-                            if ( $page == 'PHPSOURCE' ) echo 'class="selected" ' ;
+                            if ( $A[ 'TAB_NAME' ] == 'PHPSOURCE' ) echo 'class="selected" ' ;
                             
 							echo  'href="' , $A[ 'W_ROOT' ] , 'phpSource/"> PHP Source </a></li>
 							

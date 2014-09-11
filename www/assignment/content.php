@@ -67,7 +67,7 @@
                 //  Remove Root path to make link relative and shorter
                 $link = explode( $A[ 'D_ROOT' ] , $name ) ;
                 //  Get assignment number from directory structure
-                $sect = explode( '\\' , $link[ 1 ] ) ;
+                $sect = explode( $A[ 'D_SLASH' ] , $link[ 1 ] ) ;
                 //  Verify that assignment number is a number and not
                 //  the indexer
                 if ( is_numeric( $sect[ 2 ] ) ) {

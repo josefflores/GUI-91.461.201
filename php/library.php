@@ -44,7 +44,47 @@
             }
         }
         //  No match found
-        return false;
-    }
+        return false ;
+    }	
+	
+	/**
+	 * 	@name getPageDir
+	 * 
+	 * 	This function gets the directory holding the accessed index file
+	 * 
+	 * 	@param 	$A 		The global variable
+	 * 	@return $page	The directory uppercase if not a given directory then return HOME
+	 */
+	function getPageDir( $A ) {
+		/**
+		 *  This explodes the url to extract the last directory name so that the 
+		 * 	menu can then be highlighted as selected.
+		 */
+		$tmp = explode( $A[ 'W_SLASH' ] , 
+						$_SERVER[ 'HTTP_HOST' ] . 
+						$_SERVER[ 'REQUEST_URI' ] ) ;
 
+		/**
+		 *  setting the directory to lowercse for comparison incase someone typed 
+		 *	it in a different case
+		 */
+		$tmp = strtoupper( $tmp[ count( $tmp ) - 2 ] ) ; 
+
+		/**
+		 * 	This switch case then checks upon the available menu items and then 
+		 * 	marks the page that the user is visiting
+		 */
+		switch ( $tmp  ) {
+			case 'ABOUT' : 
+			case 'ASSIGNMENT' :
+			case 'PHPSOURCE' :  
+				$page = $tmp ; 
+				break ;
+			default : 
+				$page = 'HOME' ;  
+				break ;
+		}
+		
+		return $page ;
+	}
 ?>

@@ -10,7 +10,7 @@
      *  A Umass Lowell Computer Science Student 91.461 Assignment: Creating
      *      Your First Web Page
      *
-     *  This file is the landing page for assignment 2, It
+     *  This file is the landing page for the assignment2 page, It
      *  orchestrates the inclusion of paths, functions and libraries
      *  that might be needed by the application. It then passes the
      *  Content to the page template for page generation.
@@ -27,15 +27,13 @@
     ////
 
     // Load the local library for path resoloution
-    include( './localLib.php' ) ;
+    include( 'localLib.php' ) ;
 
-    //  Resolve root paths
-    $A = getRoot( __DIR__ ) ;
-    //var_dump( $A ) ;
+    //  Resolve root paths, determine OS, etc
+    $A = init( __DIR__ ) ;
 
     //  Including application navigation paths
-    include( $A[ 'D_ROOT' ] . 'ini\\paths.php' ) ;
-    //var_dump( $A ) ;
+    include( $A[ 'D_ROOT' ] . 'ini' . $A[ 'D_SLASH' ] . 'paths.php' ) ;
 
     ////
     //  INCLUDES
@@ -47,7 +45,8 @@
     ////
 
     //  Page title
-    $A[ 'PAGE_TITLE' ] = 'GUI - Home' ;
+    $A[ 'TAB_NAME' ] = getPageDir( $A ) ;
+	$A[ 'PAGE_TITLE' ] = $A[ 'TAB_APP' ] . ' - ' . $A[ 'TAB_NAME' ] ;
 
     //  Set content for index
     $A[ 'CONTENT' ] = 'content.php' ;
