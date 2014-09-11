@@ -19,7 +19,6 @@
     echo '
         <!-- Setting meta information -->
         <meta charset="' , $A[ 'CHARSET' ] , '">
-        <meta http-equiv="content-language" content="en">
         <meta name="keywords" content="' , $A[ 'KEYWORDS' ] , '">
         <meta name="description" content="' , $A[ 'DESCRIPTION' ] , '">
         <meta name="author" content="' , $A[ 'AUTHOR' ] , '">

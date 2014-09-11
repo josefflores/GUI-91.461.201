@@ -28,7 +28,7 @@
                     <div class="description" >
                         <h3>Home Page</h3>
                         <h4>The Project Home Page</h4>
-                        <p> This page is the landing page to Jose Flores&apos; GUI Programming I project website. It will be updated during the Fall 2014 and Spring 2015 school year.</p>
+                        <p> This page is the landing page to Jose Flores&apos;s GUI Programming I project website. It will be updated during the Fall 2014 and Spring 2015 semesters.</p>
                     </div>
                     ';
 

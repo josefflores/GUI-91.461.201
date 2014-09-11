@@ -23,7 +23,7 @@
     $A[ 'EMAIL' ]       = 'jose_flores@student.uml.edu'  ;
     $A[ 'YEAR' ]        = '2014' ;
     $A[ 'KEYWORDS' ]    = 'University,  Massachusetts, MA,  Lowell, UMASS, Computer Science, CS, Department, GUI, Heines' ;
-    $A[ 'DESCRIPTION' ] = 'This is Jose Flores&sapos; University of Masssachussetss Lowel GUI project sequence website. The class is directed by Dr. Heines of the Computer Science department.' ;
+    $A[ 'DESCRIPTION' ] = 'This is Jose Flores&apos;s University of Masssachussetss Lowel GUI project sequence website. The class is directed by Dr. Heines of the Computer Science department.' ;
     $A[ 'FAVICON' ]     = $A[ 'W_IMG' ] . 'icon_32.png' ;
     $A[ 'CHARSET' ]     = 'utf-8' ;
     $A[ 'LOGO' ]        = $A[ 'W_IMG' ] . 'mouse.png' ;

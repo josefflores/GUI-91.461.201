@@ -25,13 +25,13 @@
     // Content begin
 
     //  Determining which paths to itterate through
-    $paths = array( realpath( $A[ 'D_INI' ] ) ,
-                    realpath( $A[ 'D_DOC' ] ) ,
+    $paths = array( realpath( $A[ 'D_DOC' ] ) ,
+					realpath( $A[ 'D_INI' ] ) ,                    
                     realpath( $A[ 'D_PHP' ] ) ,
                     realpath( $A[ 'D_WWW' ] ) ) ;
 
     //  Determine which files to show
-    $include = array( 'php' ) ;
+    $include = array( 'php' , 'txt' ) ;
 
     //  Describing page content
     echo '
@@ -39,7 +39,7 @@
                     <div class="description" >
                         <h3>PHP Source</h3>
                         <h4>A PHP Source file viewer</h4>
-                        <p> This page was generated upon request of the instructor as a condition to be able to use PHP in the GUI Programming 1 assignments. It allows for the viewing of raw PHP source code from the web. The php files included in the project are listed as links in the left pane, when clicked the page is reloaded as a bookmarkable page with the php source available on the right.</p>
+                        <p> This page was generated upon request of the instructor as a condition to be able to use PHP in the GUI Programming I assignments. It allows for the viewing of raw PHP source code from the web. I have also included txt files in the options as they are only being used as readme files, they have crucial information as to the directory structure of the document. The files are listed as links in the left pane, when clicked the page is reloaded as a bookmarkable page with the PHP source available on the right.</p>
                     </div>
     ';
 
@@ -72,7 +72,7 @@
                      $_GET[ 'file' ] == $link[ 1 ] ) {
                         echo ' class="selected" ' ;
                 }
-                echo ' href="./?file=' , $link[ 1 ] , '">' , $link[ 1 ] , '</a></li>
+                echo ' href="?file=' , urlencode( trim( $link[ 1 ] ) ) , '">' , trim( $link[ 1 ] ) , '</a></li>
                 ';
             }
         }

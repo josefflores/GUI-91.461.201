@@ -36,7 +36,7 @@
                     <div class="description">
                         <h3>Assignments</h3>
                         <h4>An assignment archive</h4>
-                        <p>This is an assignment archive of my GUI Programming 1 assignments that have been completed. The assignments weere developed using PHP, HTML5, CSS3, JS and jQuery. They are listed as links in the left pane, which when clicked will reload a bookmarkable page with an iframe containing the assignment.</p>
+                        <p>This is an assignment archive of my GUI Programming I assignments that have been completed. The assignments were developed using PHP, HTML5, CSS3, JS and jQuery. They are listed as links in the left pane. When clicked, will reload a bookmarkable page with an iframe containing the assignment.</p>
                     </div>
     ';
 
@@ -77,7 +77,7 @@
                          $_GET[ 'file' ] == $link[ 1 ] ) {
                             echo ' class="selected" ' ;
                     }
-                    echo 'href="./?file=' , $link[ 1 ]  ,
+                    echo 'href="/?file=' , urlencode( trim( $link[ 1 ] ) ) ,
                          '"> Assignment ' , $sect[ 2 ] , '</a></li>
                          ';
                 }

@@ -24,7 +24,7 @@ echo '<!DOCTYPE html>
 // Starting HTML
 echo '
 <!-- Start of html -->
-<html>' ;
+<html lang="en">' ;
 
 // Creating the head of the document
 echo '  
