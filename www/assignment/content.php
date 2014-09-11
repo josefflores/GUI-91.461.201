@@ -77,7 +77,7 @@
                          $_GET[ 'file' ] == $link[ 1 ] ) {
                             echo ' class="selected" ' ;
                     }
-                    echo 'href="/?file=' , urlencode( trim( $link[ 1 ] ) ) ,
+                    echo 'href="?file=' , urlencode( trim( $link[ 1 ] ) ) ,
                          '"> Assignment ' , $sect[ 2 ] , '</a></li>
                          ';
                 }

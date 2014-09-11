@@ -47,7 +47,7 @@
     ////
 
     //  Page title
-    $A[ 'PAGE_TITLE' ] = 'GUI - Home' ;
+    $A[ 'PAGE_TITLE' ] = 'GUI - About' ;
 
     //  Set content for index
     $A[ 'CONTENT' ] = 'content.php' ;
