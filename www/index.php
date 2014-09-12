@@ -19,34 +19,31 @@
      */
 
 
-    // File Access Guard
+     // File Access Guard
     define( 'CONTENT_GUARD' , TRUE ) ;
 
-    ////
-    //  RESOLVE PATHS
-    ////
+    /**
+     *  INIT
+     */
 
-    // Load the local library for path resoloution
-    include( 'localLib.php' ) ;
+    // Find Directory Root
+    $A[ 'DIR' ] = __DIR__ ;
+    $tmp = explode( 'www' , $A[ 'DIR' ] ) ;
+    $A[ 'D_ROOT' ] = $tmp[ 0 ] ;
 
-    //  Resolve root paths, determine OS, etc
-    $A = init( __DIR__ ) ;
+    // Load Framework
+    include( $A[ 'D_ROOT' ] . 'php/class/framework.php' ) ;
+    $F = new framework( $A ) ;
+    $A = $F->init( ) ;
 
-    //  Including application navigation paths
-    include( $A[ 'D_ROOT' ] . 'ini' . $A[ 'D_SLASH' ] . 'paths.php' ) ;
+    /**
+     *  INCLUDES
+     */
+    include( $A[ 'D_ROOT' ] . 'php/_includes.php' ) ; // Global Includes
 
-    ////
-    //  INCLUDES
-    ////
-    include( $A[ 'D_PHP' ] . 'includes.php' ) ;
-
-    ////
-    //  PAGE CALLING
-    ////
-
-    //  Page title
-    $A[ 'TAB_NAME' ] = getPageDir( $A ) ;
-	$A[ 'PAGE_TITLE' ] = $A[ 'TAB_APP' ] . ' - ' . $A[ 'TAB_NAME' ] ;
+    /**
+     *  PAGE CALLING
+     */
 
     //  Set content for index
     $A[ 'CONTENT' ] = 'content.php' ;

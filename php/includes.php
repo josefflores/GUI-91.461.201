@@ -20,17 +20,20 @@
 
     //  CONFIGURATIONS
 
+        //  Application path information configuration
+        include( $A[ 'D_ROOT' ] . $A[ 'D_SLASH' ] . 'ini' . $A[ 'D_SLASH' ] . 'paths.php' ) ;
+
         //  Application information configuration
         include( $A[ 'D_INI' ] . 'application.php' ) ;
 
     //  LIBRARIES
 
         //  Application library
-        include( $A[ 'D_PHP' ] . 'library.php' ) ;
+        include( $A[ 'D_PHP' ] . 'lib' . $A[ 'D_SLASH' ] . 'library.php' ) ;
 
     //  CLASSES
 
         //  None so far
-        
-    
+
+
 ?>

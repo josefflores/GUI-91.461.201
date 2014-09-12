@@ -12,11 +12,11 @@
      *
      *  This file holds the header for the template
      *
-     * 	9/11/14	Added menu on page highlight
+     *  9/11/14 Added menu on page highlight
      *  9/9/14  Generated header template
      */
 
-	echo'
+    echo'
             <!-- Start header -->
             <div class="header">
 
@@ -44,33 +44,33 @@
                     <nav class="horizontal">
                         <ul>
                             <li><a ' ;
-                            
+
                             // Checking to see if the user is on a the page
-                            if ( $A[ 'TAB_NAME' ] == 'HOME' ) echo 'class="selected" ' ; 
-                            
-							echo  'href="' , $A[ 'W_ROOT' ] , '"> Home </a></li>
-                            
+                            if ( $A[ 'TAB_NAME' ] == 'HOME' ) echo 'class="selected" ' ;
+
+                            echo  'href="' , $A[ 'W_ROOT' ] , '"> Home </a></li>
+
                             <li><a ' ;
-                            
+
                             // Checking to see if the user is on a the page
-                            if ( $A[ 'TAB_NAME' ] == 'ABOUT' ) echo 'class="selected" ' ; 
-                            
-							echo  'href="' , $A[ 'W_ROOT' ] , 'about/"> About </a></li>
-                            
+                            if ( $A[ 'TAB_NAME' ] == 'ABOUT' ) echo 'class="selected" ' ;
+
+                            echo  'href="' , $A[ 'W_ROOT' ] , 'about/"> About </a></li>
+
                             <li><a ' ;
-                            
+
                             // Checking to see if the user is on a the page
-                            if ( $A[ 'TAB_NAME' ] == 'ASSIGNMENT' ) echo 'class="selected" ' ; 
-                            
-							echo  'href="' , $A[ 'W_ROOT' ] , 'assignment/"> Assignments </a></li>
-                            
+                            if ( $A[ 'TAB_NAME' ] == 'ASSIGNMENT' ) echo 'class="selected" ' ;
+
+                            echo  'href="' , $A[ 'W_ROOT' ] , 'assignment/"> Assignments </a></li>
+
                             <li><a ' ;
-                            
+
                             // Checking to see if the user is on a the page
                             if ( $A[ 'TAB_NAME' ] == 'PHPSOURCE' ) echo 'class="selected" ' ;
-                            
-							echo  'href="' , $A[ 'W_ROOT' ] , 'phpSource/"> PHP Source </a></li>
-							
+
+                            echo  'href="' , $A[ 'W_ROOT' ] , 'phpSource/"> PHP Source </a></li>
+
                         </ul>
                     </nav>
 
@@ -79,6 +79,6 @@
 
             <!-- End header -->
             </div>
-	' ;
+    ' ;
 
 ?>

@@ -26,7 +26,7 @@
 
     //  Determining which paths to itterate through
     $paths = array( realpath( $A[ 'D_DOC' ] ) ,
-					realpath( $A[ 'D_INI' ] ) ,                    
+                    realpath( $A[ 'D_INI' ] ) ,
                     realpath( $A[ 'D_PHP' ] ) ,
                     realpath( $A[ 'D_WWW' ] ) ) ;
 
@@ -67,7 +67,7 @@
                 $link = explode( $A[ 'D_ROOT' ] , $name ) ;
                 //  Generate source file links
                 echo '
-				<li><a ';
+                <li><a ';
                 if ( isset( $_GET[ 'file' ] ) &&
                      $_GET[ 'file' ] == $link[ 1 ] ) {
                         echo ' class="selected" ' ;

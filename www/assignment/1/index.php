@@ -22,37 +22,33 @@
     // File Access Guard
     define( 'CONTENT_GUARD' , TRUE ) ;
 
-    ////
-    //  RESOLVE PATHS
-    ////
+    /**
+     *  INIT
+     */
 
-    // Load the local library for path resoloution
-    include( './localLib.php' ) ;
+    // Find Directory Root
+    $A[ 'DIR' ] = __DIR__ ;
+    $tmp = explode( 'www' , $A[ 'DIR' ] ) ;
+    $A[ 'D_ROOT' ] = $tmp[ 0 ] ;
 
-    //  Resolve root paths
-    $A = getRoot( __DIR__ ) ;
-    //var_dump( $A ) ;
+    // Load Framework
+    include( $A[ 'D_ROOT' ] . 'php/class/framework.php' ) ;
+    $F = new framework( $A ) ;
+    $A = $F->init( ) ;
 
-    //  Including application navigation paths
-    include( $A[ 'D_ROOT' ] . 'ini\\paths.php' ) ;
-    //var_dump( $A ) ;
+    /**
+     *  INCLUDES
+     */
+    include( $A[ 'D_ROOT' ] . 'php/_includes.php' ) ; // Global Includes
 
-    ////
-    //  INCLUDES
-    ////
-    include( $A[ 'D_PHP' ] . 'includes.php' ) ;
-
-    ////
-    //  PAGE CALLING
-    ////
-
-    //  Page title
-    $A[ 'PAGE_TITLE' ] = 'GUI - Home' ;
+    /**
+     *  PAGE CALLING
+     */
 
     //  Set content for index
     $A[ 'CONTENT' ] = 'content.php' ;
 
     //  Begin page processing
-    include( $A[ 'CONTENT' ] ) ;
+    include( $A[ 'CONTENT' ]  ) ;
 
 ?>

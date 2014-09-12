@@ -27,6 +27,6 @@
     $A[ 'FAVICON' ]     = $A[ 'W_IMG' ] . 'icon_32.png' ;
     $A[ 'CHARSET' ]     = 'utf-8' ;
     $A[ 'LOGO' ]        = $A[ 'W_IMG' ] . 'mouse.png' ;
-    $A[ 'TAB_APP' ]		= 'GUI' ;
+    $A[ 'TAB_APP' ]     = 'GUI' ;
 
 ?>

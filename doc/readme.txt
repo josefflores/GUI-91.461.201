@@ -34,12 +34,15 @@
     |
     + php/                      PHP source file directory
     |   + lib/                  PHP libraries directory
+    |   |	+ library.php       User generated PHP library
     |   |   + ...               PHP libraries
     |   |
-    |   + classes/              PHP classes directory
+    |   + class/                PHP classes directory
+    |   |   + framework.php     The web framework I have developed to allow for
+    |   |                       application OS and directory self detection,
+    |   |                       as well as orchestrating the generation of files
     |   |   + ...               PHP classes
     |   |
-    |   + library.php           User generated PHP library
     |   + ...                   php source files such as templates and
     |                           other multi-purpose scripts
     |
