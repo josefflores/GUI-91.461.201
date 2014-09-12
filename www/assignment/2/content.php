@@ -82,7 +82,7 @@
                 <div class="title-wrapper">
 
                     <!-- logo -->
-                    <img class="uml" src="<?php echo $A[ 'W_IMG' ] ; ?>/UML.jpg" alt="University of Massachussetss Lowell Logo">
+                    <img class="uml" src="<?php echo $A[ 'W_IMG' ] ; ?>UML.jpg" alt="University of Massachussetss Lowell Logo">
 
                     <!-- Title of the page -->
                     <h1 class="title">91.461 GUI Programming I</h1>

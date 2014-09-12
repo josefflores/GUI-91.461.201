@@ -99,7 +99,7 @@
         //  Check if the file path passed actually exists
         if ( file_exists( $A[ 'D_ROOT' ] . $_GET[ 'file' ] ) ) {
             //  Break apart path
-            $www = explode( 'www' , $_GET[ 'file' ] ) ;
+            $www = explode( 'www'.$A[ 'D_SLASH' ] , $_GET[ 'file' ] ) ;
             // Generate assignment link
             echo '<iframe src="' ,  $A[ 'W_ROOT' ] , $www[ 1 ] , '"></iframe>' ;
         }
