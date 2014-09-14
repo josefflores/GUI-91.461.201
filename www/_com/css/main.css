@@ -357,6 +357,7 @@ p {
  */
 a.selected {
     background: #FCB825 !important;
+    border-bottom: 1px solid #FCB825;
     color: #333 !important;
  }
 

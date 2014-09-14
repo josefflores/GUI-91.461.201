@@ -73,41 +73,29 @@
             //  Generate an array of Web directories.
             $server =  array_filter( explode( $this->A[ 'W_SLASH' ] , $server[ 0 ] ) ) ;
 
-            // Generate an array of system directories.
-            $dir = explode( $this->A[ 'D_SLASH' ] , $this->A[ 'DIR' ] ) ;
+            // Generate an array of application directories.
+            $dir = explode( $this->A[ 'D_ROOT' ] , $this->A[ 'DIR' ] ) ;
+			$dir = explode( $this->A[ 'D_SLASH' ] , $dir[ 1 ] ) ;
 
             //  Get sizes of arrays.
             $s = count( $server ) ;
-            $d = count( $dir ) ;
+            $d = count( $dir ) - 1 ; // minus 1 to compensate for the www
+			
+			//  Determine if https or http
+			if ( $this->isSSL() ) {
+				$form = 'https' ;
+			} else{
+				$form = 'http' ;
+			}
+			//  Generate root paths, There is a distinct web root and
+			//  directory root.
+			$this->A[ 'W_ROOT' ] = $form . '://' ;
 
-            /**
-             *  Find point of array mismatch.
-             */
+			// Web root
+			// S - d to make the difference which is the common directories
+			for ( $j = 0 ; $j < $s - $d ; ++$j ) 
+				$this->A[ 'W_ROOT' ] .= $server[ $j ] . $this->A[ 'W_SLASH' ] ;
 
-            //  Travers arrays in reverse
-            for( $i = 0 ; $i < $d ; ++$i ) {
-
-                //  Check for directory name mismatch if found determine path
-                if ( $server[ $s - $i ] != $dir[ $d - $i ] ) {
-
-                    //  Determine if https or http
-                    if ( $this->isSSL() )
-                        $form = 'https' ;
-                    else
-                        $form = 'http' ;
-
-                    //  Generate root paths, There is a distinct web root and
-                    //  directory root.
-                    $this->A[ 'W_ROOT' ] = $form . '://' ;
-
-                    // Web root
-                    for ( $j = 0 ; $j <= ( $s - $i ) ; ++$j )
-                        $this->A[ 'W_ROOT' ] .= $server[ $j ] . $this->A[ 'W_SLASH' ] ;
-
-                    return ;
-
-                }
-            }
         }
 
         /**
