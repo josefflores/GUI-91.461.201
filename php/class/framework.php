@@ -47,6 +47,8 @@
         public function __construct( $A ){
             // Store a copy for use
             $this->A = $A ;
+            ini_set( 'display_errors',1 ) ;  
+            error_reporting( E_ALL ) ;
         }
 
         /**

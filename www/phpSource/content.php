@@ -57,7 +57,8 @@
      *  http://php.net/manual/en/class.recursivedirectoryiterator.php
      */
     foreach( $paths as $path ) {
-        $objects = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( $path ) ,
+        $objects = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( $path , FilesystemIterator::SKIP_DOTS | FilesystemIterator::KEY_AS_PATHNAME ) ,
+												  RecursiveIteratorIterator::LEAVES_ONLY,
                                                   RecursiveIteratorIterator::SELF_FIRST ) ;
         //  Getting each Directory array element
         foreach($objects as $name => $object){
