@@ -58,7 +58,7 @@
      */
     foreach( $paths as $path ) {
         $objects = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( $path , FilesystemIterator::SKIP_DOTS | FilesystemIterator::KEY_AS_PATHNAME ) ,
-												  RecursiveIteratorIterator::LEAVES_ONLY,
+                                                  RecursiveIteratorIterator::LEAVES_ONLY,
                                                   RecursiveIteratorIterator::CATCH_GET_CHILD ) ;
         //  Getting each Directory array element
         foreach($objects as $name => $object){

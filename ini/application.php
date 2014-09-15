@@ -29,4 +29,8 @@
     $A[ 'LOGO' ]        = $A[ 'W_IMG' ] . 'mouse.png' ;
     $A[ 'TAB_APP' ]     = 'GUI' ;
 
+    $A[ 'UPDATE' ]      = array( '09/09/14 - Assignment 1' ,
+                                 '09/10/14 - Assignment 2' ,
+                                 '09/14/14 - Assignment 3' ) ;
+
 ?>

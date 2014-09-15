@@ -1,6 +1,6 @@
 <?php
     /**
-     *  @file   js.php
+     *  @file   meta.php
      *  @author Jose F. Flores <jose_flores@student.uml.edu>
      *
      *  Copyright (c) 2014 by Jose F. Flores. All rights reserved. May be
@@ -18,7 +18,6 @@
     // Set document encoding
     echo '
         <!-- Setting meta information -->
-        <meta charset="' , $A[ 'CHARSET' ] , '">
         <meta name="keywords" content="' , $A[ 'KEYWORDS' ] , '">
         <meta name="description" content="' , $A[ 'DESCRIPTION' ] , '">
         <meta name="author" content="' , $A[ 'AUTHOR' ] , '">

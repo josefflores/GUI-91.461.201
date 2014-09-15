@@ -15,30 +15,37 @@
      *  9/9/14  Generated Page Template
      */
 
-	//  Page title
-	$A[ 'TAB_NAME' ] = getPageDir( $A ) ;
-	$A[ 'PAGE_TITLE' ] = $A[ 'TAB_APP' ] . ' - ' . $A[ 'TAB_NAME' ] ;
+    //  Page title
+    $A[ 'TAB_NAME' ] = getPageDir( $A ) ;
+    $A[ 'PAGE_TITLE' ] = $A[ 'TAB_APP' ] . ' - ' . $A[ 'TAB_NAME' ] ;
 
-	// Generating cocument type declaration
-	echo '<!DOCTYPE html>
+    // Generating cocument type declaration
+    echo '<!DOCTYPE html>
 <!-- Document type declaration for HTML5-->
-	' ;
+    ' ;
 
-	// Starting HTML
-	echo '
+    // Starting HTML
+    echo '
 <!-- Start of html -->
 <html lang="en">' ;
 
-	// Creating the head of the document
-	echo '
+    // Creating the head of the document
+    echo '
     <head>
+        <meta charset="' , $A[ 'CHARSET' ] , '">
     ' ;
+    /**
+     *  Including the file html comment information for the page, includes
+     *  license and update information.
+     */
+    include( $A[ 'D_PHP' ] . 'info.php' ) ;
 
     /**
      *  Including the Meta information for the page such as ecodings,
      *  title, page icons, etc .
      */
     include( $A[ 'D_PHP' ] . 'meta.php' ) ;
+
     /**
      *  Including any relevent css files, such as the main css file and
      *  any plugin/ library css files.
@@ -50,16 +57,16 @@
      */
     include( $A[ 'D_PHP' ] . 'js.php' ) ;
 
-	echo '
+    echo '
     </head>
-	' ;
+    ' ;
 
 
-	/**
-	 *  Generating the body of the document. In this first section the header
-	 *  and the menu will be generated.
-	 */
-	echo '
+    /**
+     *  Generating the body of the document. In this first section the header
+     *  and the menu will be generated.
+     */
+    echo '
     <body>
 
         <!--
@@ -67,33 +74,33 @@
             positional modifications in page layout such as centering.
         -->
         <div class="wrapper">
-	' ;
+    ' ;
 
         include( $A[ 'D_PHP' ] . 'header.php' ) ;
 
-	// The content section is generated here, it will be unique for each page
-	echo '
+    // The content section is generated here, it will be unique for each page
+    echo '
             <!-- Begin content -->
             <div class="content">
 
                 <div class="content-wrapper">
-	' ;
+    ' ;
 
-	// Page specific content is being included
-	include( $A[ 'CONTENT' ] )  ;
+    // Page specific content is being included
+    include( $A[ 'CONTENT' ] )  ;
 
-	echo '
+    echo '
                 </div>
             <!-- End content -->
             </div>
-	' ;
+    ' ;
 
-	/**
-	 *  Generating the footer of the document. The footer contains links to
-	 *  the github repository, copyright information as well as a link to view
-	 *  the php source.
-	 */
-	echo '
+    /**
+     *  Generating the footer of the document. The footer contains links to
+     *  the github repository, copyright information as well as a link to view
+     *  the php source.
+     */
+    echo '
             <!-- Begin footer with page information-->
             <div class="footer">
 

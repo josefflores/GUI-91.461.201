@@ -34,7 +34,7 @@
     |
     + php/                      PHP source file directory
     |   + lib/                  PHP libraries directory
-    |   |	+ library.php       User generated PHP library
+    |   |   + library.php       User generated PHP library
     |   |   + ...               PHP libraries
     |   |
     |   + class/                PHP classes directory
@@ -78,14 +78,12 @@
         |   + content.php       The content of the about page, holds
         |   |                   a blurb about the author
         |   + index.php         The landing page for the about page
-        |   + localLib.php      The root finding functions
         |
         + assignment/           The Assignment page directory
         |   + content.php       The content of the assignment page, holds
         |   |                   a directory listing of the assignments and
         |   |                   displays them
         |   + index.php         The landing page for the assignment page
-        |   + localLib.php      The root finding functions
         |   + #/                The assigment directories they may have
         |   ...                 other subdirectories but are beyond the
         |                       scope of this document
@@ -95,7 +93,6 @@
         |   |                   a directory listing of the php source files and
         |   |                   displays them
         |   + index.php         The landing page for the phpSource page
-        |   + localLib.php      The root finding functions
         |
         + WEB-INF               Instructor supplied directory Assignment 1
         |   + classes           Instructor supplied directory Assignment 1
@@ -103,5 +100,4 @@
         |
         + content.php           The content of the home page
         + index.php             The home page created for the application
-        + localLib.php          The root finding functions
 

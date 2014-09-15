@@ -47,7 +47,7 @@
         public function __construct( $A ){
             // Store a copy for use
             $this->A = $A ;
-            ini_set( 'display_errors',1 ) ;  
+            ini_set( 'display_errors',1 ) ;
             error_reporting( E_ALL ) ;
         }
 
@@ -77,26 +77,26 @@
 
             // Generate an array of application directories.
             $dir = explode( $this->A[ 'D_ROOT' ] , $this->A[ 'DIR' ] ) ;
-			$dir = explode( $this->A[ 'D_SLASH' ] , $dir[ 1 ] ) ;
+            $dir = explode( $this->A[ 'D_SLASH' ] , $dir[ 1 ] ) ;
 
             //  Get sizes of arrays.
             $s = count( $server ) ;
             $d = count( $dir ) - 1 ; // minus 1 to compensate for the www
-			
-			//  Determine if https or http
-			if ( $this->isSSL() ) {
-				$form = 'https' ;
-			} else{
-				$form = 'http' ;
-			}
-			//  Generate root paths, There is a distinct web root and
-			//  directory root.
-			$this->A[ 'W_ROOT' ] = $form . '://' ;
 
-			// Web root
-			// S - d to make the difference which is the common directories
-			for ( $j = 0 ; $j < $s - $d ; ++$j ) 
-				$this->A[ 'W_ROOT' ] .= $server[ $j ] . $this->A[ 'W_SLASH' ] ;
+            //  Determine if https or http
+            if ( $this->isSSL() ) {
+                $form = 'https' ;
+            } else{
+                $form = 'http' ;
+            }
+            //  Generate root paths, There is a distinct web root and
+            //  directory root.
+            $this->A[ 'W_ROOT' ] = $form . '://' ;
+
+            // Web root
+            // S - d to make the difference which is the common directories
+            for ( $j = 0 ; $j < $s - $d ; ++$j )
+                $this->A[ 'W_ROOT' ] .= $server[ $j ] . $this->A[ 'W_SLASH' ] ;
 
         }
 

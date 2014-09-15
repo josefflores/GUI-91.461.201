@@ -1,5 +1,5 @@
 /**
- *  File: index.html
+ *  File: main.cc
  *  91.461 Assignment: Creating Your First Web Page
  *  Jose F. Flores, Umass Lowell Computer Science Student
  *      jose_flores@student.uml.edu
@@ -7,12 +7,8 @@
  *      freely copied or excerpted for educational purposes with credit
  *      to the author.
  *
- *  updated by JFF on September 8, 2014 at 14:00
- *      Created Webpage.
- *  updated by JFF on September 5, 2014 at 15:00
- *      Created Webpage.
- *  updated by JFF on September 4, 2014 at 14:00
- *      Added header comment.
+ *  updated by JFF on September 14, 2014 at 18:02
+ *      Finished styling assignment repository 
  */
 
 /**
@@ -23,23 +19,28 @@
  */
 html ,
 body {
-    background: #fff;
-    color: #000;
-    font-family: Verdana, Geneva, sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
     width: 100%;
- }
+}
 
+/**
+ * Setting Font, setting default colors for background and text.
+ */
+body {
+    background: #ffffff;
+    color: #000;
+    font-family: Verdana, Geneva, sans-serif;
+}
 /**
  *  Standardizing the look of links in the document. I personally
  *  dislike underlines.
  */
 a {
-    color: #0168B3; /* Light blue links. */
+    color: #0168b3; /* Light blue links. */
     text-decoration: none;
- }
+}
 
 /**
  *  Standardizing the heading elements of the document. Removing bold.
@@ -48,22 +49,22 @@ h1 , h2 , h3 , h4 , h5 , h6 {
     font-weight: normal;
     margin: 0px;
     padding: 0px;
- }
+}
 
 /**
  *  Giving The page Heading a different color
  */
 h1 {
     color: #fcb825; /*yellow*/
- }
+}
 
 /**
  *  Small subheader in a description box.
  */
 h4 {
-    color: #0168B3;
+    color: #0168b3;
     font-size: 10px;
- }
+}
 
 /**
  *  A class of heading to be used for the title of the page. It aligns
@@ -74,7 +75,7 @@ h1.title {
     height: 50px;
     line-height: 50px;
     width: 100%;
- }
+}
 
 /**
  *  A class of heading to be used as a description of the page. It aligns
@@ -85,16 +86,17 @@ h2.title-sub {
     height: 25px;
     line-height: 25px;
     width: 100%;
- }
+}
 
 /**
  *  This is a wrapper, it allows for positioning of the document content.
  */
 div.wrapper {
+    background: #f8f8f8;
     height: 100%;
     min-width: 800px;
     width: 100%;
- }
+}
 
 /**
  *  The header bar of the page. The header is always present and allows
@@ -103,7 +105,7 @@ div.wrapper {
  *  is a z-index above the content
  */
 div.header {
-    background: #333 ; /*#0168B3; */
+    background: #333333; /*#0168B3; */
     box-shadow: 0px 1px 10px #666;
     height: 107px;
     left: 0px;
@@ -111,7 +113,7 @@ div.header {
     position: fixed;
     top: 0px;
     width: 100%;
- }
+}
 
 /**
  *  The title wrapper to assist in positioning of the page title. I am
@@ -119,28 +121,28 @@ div.header {
  *  side of the header.
  */
 div.title-wrapper {
-    color: #fff;
+    color: #ffffff;
     padding: 0 0 0 40px ;
- }
+}
 
 /*
- * A clss of image to be used for the logo.
+ * A class of image to be used for the logo.
  */
 img.logo {
     float: left;
     height: 75px;
     margin: 0px 20px 0px 0px;
- }
+}
 
 /**
  *  The container holding the main content of the page. The padding fixes
  *  the sticky header and footer from covering up content.
  */
 div.content {
-    color: #000;
+    color: #000000;
     font-size: 14px;
     padding: 125px 0px 50px 0px; /*  */
- }
+}
 
 /**
  *  This wrapper llows for smooth contraction of the content went
@@ -149,14 +151,14 @@ div.content {
 div.content-wrapper {
     overflow: auto;
     padding: 0 25px;
- }
+}
 
 /**
  *  The container holding the sticky footer of the page
  */
 div.footer {
-    background: #eee;
-    border-top: 1px solid #999;
+    background: #eeeeee;
+    border-top: 1px solid #999999;
     bottom: 0px;
     height: 40px;
     left: 0px;
@@ -164,7 +166,7 @@ div.footer {
     position: fixed;
     text-align: center;
     width: 100%;
- }
+}
 
 /**
  *  These containers hold the github link notice and copyright information
@@ -172,28 +174,28 @@ div.footer {
 div.notice,
 div.copyright {
     font-size: 10px;
- }
+}
 
 /**
  *  This container holds the title elements.
  */
 div.header-right {
     margin-left: 75px;
- }
+}
 
 /**
  *  This holds the horizontal navigation rules, they are used for the
  *  main document navigation
  */
 nav.horizontal {
-    background: #fff;
+    background: #ffffff;
     border-top: 6px solid #FCB825;
     height: 26px;
     line-height: 26px;
     margin: 0px 0px 0px -60px;
     padding: 0px 60px 0px 0px;
     width: 100%;
- }
+}
 
     /**
      *  This is the unordered list of menu items. Bulleting is removed
@@ -205,16 +207,16 @@ nav.horizontal {
         margin: 0px 0px 0px 155px;
         padding: 0px;
         width: 100%;
-     }
+    }
 
         /**
          *  Menu items are described here. This is where the horizontal
          * part is determined.
          */
         nav.horizontal ul li {
-            border-right: 1px solid #ddd;
+            border-right: 1px solid #dddddd;
             float: left;
-         }
+        }
 
             /**
              *  This is a first-child selector It only affects the first
@@ -222,8 +224,8 @@ nav.horizontal {
              *  of the list items without having back to back borders.
              */
             nav.horizontal ul li:first-child {
-                border-left: 1px solid #ddd;
-             }
+                border-left: 1px solid #dddddd;
+            }
 
             /**
              *  The menu links are being affected here, links are made to
@@ -235,12 +237,18 @@ nav.horizontal {
                 height: 25px;
                 line-height: 25px;
                 padding: 0px 10px;
-             }
+            }
 
                 /**
-                 *  This styles links when they are hovered over.
+                 *  Setting hover and active state colors for the anchor items 
+                 *  in the menu
                  */
-                nav.horizontal ul li a:hover {background: #eee;}
+                nav.horizontal ul li a:hover {
+                    background: #eeeeee;
+                }
+                nav.horizontal ul li a:active {
+                    background: #ffffff;
+                }
 
 /**
  *  This is the beginning of the vertical navigation menu, it is used for
@@ -270,7 +278,7 @@ nav.vertical {
          *  The list anchors for the vertical menu are being styled here.
          */
         nav.vertical ul li a {
-            background: #eee;
+            background: #ffffff;
             border-left: 1px solid #ddd;
             border-right: 1px solid #ddd;
             border-top: 1px solid #ddd;
@@ -287,26 +295,30 @@ nav.vertical {
          *  back to back borders.
          */
         nav.vertical ul li:last-child a {
-            border-bottom: 1px solid #ddd;
-         }
+            border-bottom: 1px solid #dddddd;
+        }
 
         /**
-         *  Setting hover color for the anchor items in the menu
+         *  Setting hover and active state colors for the anchor items 
+         *  in the menu
          */
         nav.vertical ul li a:hover {
-            background: #fff;
-         }
+            background: #eeeeee;
+        }
+        nav.vertical ul li a:active {
+            background: #ffffff;
+        }
 
 /**
  *  The source div contains any list item output such as file contents
  *  or assignent contents. It is made to expand and contract with browser resizes
  */
 div.source {
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
     margin-left: 430px;
     overflow-wrap: break-word;
     padding: 5px;
- }
+}
 
 /**
  *  The iframe element allows for the viewing of past assignments as
@@ -317,29 +329,29 @@ iframe {
     border: 0px;
     height: 800px;
     width: 100%;
- }
+}
 
 /**
  *  The icon for a page description
  */
 img.description {
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
     float: left;
     height: 90px;
     margin: 0 0 10px 0;
     padding: 5px;
     width: 90px;
- }
+}
 
 /**
  *  The text box of a page description
  */
 div.description {
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
     margin: 0 0 10px 110px;
     min-height: 90px;
     padding: 5px;
- }
+}
 
 /**
  *  The paragraph element, removing extra spacing from the bottom this
@@ -348,7 +360,7 @@ div.description {
  */
 p {
     margin-bottom: 0px;
- }
+}
 
 /**
  *  Used the important tag to overide the background color for a selected
@@ -356,8 +368,16 @@ p {
  *  assignment or file is being viewed.
  */
 a.selected {
-    background: #FCB825 !important;
-    border-bottom: 1px solid #FCB825;
-    color: #333 !important;
- }
+    background: #fcb825 !important;
+    border-bottom: 1px solid #fcb825;
+    color: #333333 !important;
+}
 
+/**
+ * making all content holders have a white background
+ */
+.description ,
+nav.vertical ul ,
+div.source {
+    background: #ffffff;
+}
