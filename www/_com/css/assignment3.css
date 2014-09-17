@@ -8,21 +8,21 @@
  *      to the author.
  *
  *  updated by JFF on September 17, 2014 at 15:37
- *      Finished styling assignment 
+ *      Finished styling assignment
  */
 
 /**
- * 	I am resetting the styles found in main.css using the initial key 
- * 	word, as found in http://www.w3.org/TR/css3-cascade/#initial
+ *  I am resetting the styles found in main.css using the initial key
+ *  word, as found in http://www.w3.org/TR/css3-cascade/#initial
  */
 .example-1 {
-	background: initial;
-	border: initial;
-	box-shadow: initial;
-	color: initial;
-	display: initial;
-	/*float: initial;*/
-	height: initial;
+    background: initial;
+    border: initial;
+    box-shadow: initial;
+    color: initial;
+    display: initial;
+    /*float: initial;*/
+    height: initial;
     line-height: initial;
     list-style-type: initial;
     margin: initial;
@@ -42,84 +42,99 @@
 }
 
 /**
- *	These styles are for the example-2 class as applied to different 
- * 	elements
+ *  These styles are for the example-2 class as applied to different
+ *  elements
  */
- 
+
+/**
+ *  Styles a heading in comic sans
+ */
 h1.example-2 {
-	padding: 20px 0;
-	font-weight: normal;
-	font-family: "Comic Sans MS", cursive, sans-serif ;
-	font-size: 30px;
-	color: purple ;
+    padding: 20px 0;
+    font-weight: normal;
+    font-family: "Comic Sans MS", cursive, sans-serif ;
+    font-size: 30px;
+    color: purple ;
 }
-h2.example-2 {
-	padding: 10px 0;
-	font-weight: bold;
-	font-family: Impact, Charcoal, sans-serif ;
-	font-size:20px;
-	color: #000 ;
-} 
-
-h3.example-2 {
-	padding: 5px 0;
-	font-weight: bold;
-	font-size: 15px;
-	color: #000 ;
-}
-
-p.example-2 {
-	font-family: "Courier New", Courier, monospace ;
-}
-
-blockquote.example-2{
-	font-style: italic;
-}
-
-
 /**
- *	These are for situational classes
+ *  Styles a more serious subheading
  */
- 
+h2.example-2 {
+    padding: 10px 0;
+    font-weight: bold;
+    font-family: Impact, Charcoal, sans-serif ;
+    font-size:20px;
+    color: #000 ;
+}
+
 /**
- * 	Highlights text like a yellow highlighter would
- */  
+ *  Styles the last subheading for the examples
+ */
+h3.example-2 {
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 15px;
+    color: #000 ;
+}
+
+/**
+ *  Default styles the explanatory example paragraphs
+ */
+p.example-2 {
+    font-family: "Courier New", Courier, monospace ;
+}
+
+/**
+ *  Styles a quote to be italic
+ */
+blockquote.example-2{
+    font-style: italic;
+}
+
+
+/**
+ *  These are for situational classes
+ */
+
+/**
+ *  Highlights text like a yellow highlighter would
+ */
 .highlight {
-	background: yellow;
+    background: yellow;
 }
 /**
  * Covers text up with a floating white box
  */
 .hide {
-	background: white;
-	box-shadow: 2px 2px 2px #333;
-	color: white ;
+    background: white;
+    box-shadow: 2px 2px 2px #333;
+    color: white ;
 }
 /**
- * 	Formats a title to look like if it came froma typewriter
- */ 
+ *  Formats a title to look like if it came froma typewriter
+ */
 .title {
-	color: #333 ;
-	font-weight: bold;
-	font-size: 25px;
-	text-decoration: underline;
-	
+    color: #333 ;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+
 }
 
 /**
- * 	Expresses a mistake was made by making the text stand out
+ *  Expresses a mistake was made by making the text stand out
  */
 .mistake {
-	color: orange ;
-	text-transform: capitalize;
-	letter-spacing: 3px;
+    color: orange ;
+    text-transform: capitalize;
+    letter-spacing: 3px;
 }
 
 /**
- * 	Bolded capitalized and red to make the text scream out
+ *  Bolded capitalized and red to make the text scream out
  */
 .yell {
-	text-transform: uppercase;
-	color: red ;
+    text-transform: uppercase;
+    color: red ;
 }
 
