@@ -163,7 +163,7 @@
                         <div class="sample"><h2 class="example-1">Topic Title h2 for strong tag</h2></div>
                         <div class="sample"><h3 class="example-1">Subheading h3 tag strengthening the use of a word with strong</h3></div>
                         <div class="sample"><p class="example-1"> I am writing this paragraph to show how we use span tags to change subsections. I will use the span tag to highlight the words <span> highlight </span> and <span> hide </span>. I will also use the span tag to change how a <span>title</span> is presented. </p> </div>
-                        
+
                         <div class="sample"><p class="example-1"> An emphasis tag is used for expressing a different pronunciation. This paragraph will be used to describe how an emphasis tag should be used with the example of a new English speaker who mispronounced their words when they said &quot; I had <em>read</em> my book. &quot;. </p></div>
                         <div class="sample"><p class="example-1"> If everyday speech was being used in a paragraph a strong element would describe a scream. </p>
                         <blockquote class="example-1"> &quot; Oh my God, the house is on <strong>fire</strong>! &quot; </blockquote> </div>
@@ -175,7 +175,7 @@
                         <div class="sample"><h2 class="example-2">Topic Title h2 for strong tag. Oh by the way never use comic sans like above its a designer joke. </h2></div>
                         <div class="sample"><h3 class="example-2">Subheading h3 tag strengthening the use of a word with font-weight: bold; </h3></div>
                         <div class="sample"><p class="example-2"> I am writing this paragraph to show how we use span tags to change subsections. I will use the span tag to highlight the words <span class="highlight"> highlight </span> and <span class="hide"> hide </span>. I will also use the span tag to change how a <span class="title">title</span> is presented. </p> </div>
-                        
+
                         <div class="sample"><p class="example-2"> An emphasis tag is used for expressing a different pronunciation. This paragraph will be used to describe how an emphasis tag should be used with the example of a new English speaker who mispronounced their words when they said &quot; I had <em class="mistake">read</em> my book. &quot;. </p></div>
                         <div class="sample"><p class="example-2"> If everyday speech was being used in a paragraph a strong element would describe a scream. </p>
                         <blockquote class="example-2"> &quot; Oh my God, the house is on <strong class="yell">fire</strong>! &quot; </blockquote> </div>
