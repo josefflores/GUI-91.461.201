@@ -169,7 +169,7 @@
                         <blockquote class="example-1"> &quot; Oh my God, the house is on <strong>fire</strong>! &quot; </blockquote> </div>
 
                         <h5> After </h5>
-                        <p> This section know shows the same code with modified styles.</p>
+                        <p> This section know shows the same markup with modified styles.</p>
 
                         <div class="sample"><h1 class="example-2">Content Title h1 tag</h1></div>
                         <div class="sample"><h2 class="example-2">Topic Title h2 for strong tag. Oh by the way never use comic sans like above its a designer joke. </h2></div>
