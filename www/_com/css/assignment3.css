@@ -3,8 +3,8 @@
  * 	word. as found in http://www.w3.org/TR/css3-cascade/#initial
  */
 .example-1 {
-	background: intial;
-	border: intial;
+	background: initial;
+	border: initial;
 	box-shadow: initial;
 	color: initial;
 	display: initial;
@@ -12,19 +12,19 @@
 	height: initial;
     line-height: initial;
     list-style-type: initial;
-    margin: intial;
-    font-size: intial;
+    margin: initial;
+    font-size: initial;
     font-family: initial;
     font-style: initial;
     font-weight: initial;
-    outline: intial;
+    outline: initial;
     /*overflow: initial;*/
     /*overflow-wrap: initial;*/
-    padding: intial;
+    padding: initial;
     /*position: initial;*/
     text-align: initial;
     text-decoration: initial;
-    vertical-align: intial;
+    vertical-align: initial;
     /*width: initial;*/
 }
 
