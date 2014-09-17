@@ -100,9 +100,9 @@
                     <!-- Navigation menu -->
                     <nav class="horizontal">
                         <ul>
-                            <li><a href="<?php echo $A[ 'W_ROOT' ] ; echo urlencode( '/assignments/3/' ) ; ?> "> Instructions </a></li>
+                            <li><a href="<?php echo $A[ 'W_ROOT' ] ; echo 'assignments/3/' ?> "> Instructions </a></li>
 
-                            <li><a href="<?php echo $A[ 'W_ROOT' ] ; echo urlencode( '/assignments/3/work/' ) ; ?>"> Work </a></li>
+                            <li><a href="<?php echo $A[ 'W_ROOT' ] ; echo 'assignments/3/work/' ?>"> Work </a></li>
                         </ul>
                     </nav>
                 <!-- End header wrapper-->
