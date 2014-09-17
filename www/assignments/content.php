@@ -56,7 +56,7 @@
      *  An example on how to do this was found on the php manual
      *  http://php.net/manual/en/class.recursivedirectoryiterator.php
      */
-     
+
     foreach( $paths as $path ) {
         //  Recursive Iterator
         $dir = scandir( $path ) ;
@@ -66,16 +66,16 @@
             //  Compare filenames
             if ( is_numeric( $item ) ) {
 
-					// Make link
-					echo '      <li><a ';
-					if ( isset( $_GET[ 'file' ] ) &&
-						 $_GET[ 'file' ] == $item ) {
-							echo ' class="selected" ' ;
-					}
-					echo 'href="?file=' , urlencode( trim( 'www' . $A['D_SLASH' ] . 'assignments' . $A['D_SLASH' ] . $item ) ) ,
-						 '"> Assignment ' , $item , '</a></li>
-						 ';
-                
+                    // Make link
+                    echo '      <li><a ';
+                    if ( isset( $_GET[ 'file' ] ) &&
+                         $_GET[ 'file' ] == $item ) {
+                            echo ' class="selected" ' ;
+                    }
+                    echo 'href="?file=' , urlencode( trim( 'www' . $A['D_SLASH' ] . 'assignments' . $A['D_SLASH' ] . $item ) ) ,
+                         '"> Assignment ' , $item , '</a></li>
+                         ';
+
             }
         }
     }
