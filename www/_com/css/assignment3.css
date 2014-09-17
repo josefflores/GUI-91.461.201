@@ -13,7 +13,7 @@
 
 /**
  * 	I am resetting the styles found in main.css using the initial key 
- * 	word. as found in http://www.w3.org/TR/css3-cascade/#initial
+ * 	word, as found in http://www.w3.org/TR/css3-cascade/#initial
  */
 .example-1 {
 	background: initial;
@@ -41,6 +41,11 @@
     /*width: initial;*/
 }
 
+/**
+ *	These styles are for the example-2 class as applied to different 
+ * 	elements
+ */
+ 
 h1.example-2 {
 	padding: 20px 0;
 	font-weight: normal;
@@ -71,15 +76,29 @@ blockquote.example-2{
 	font-style: italic;
 }
 
-span.highlight {
+
+/**
+ *	These are for situational classes
+ */
+ 
+/**
+ * 	Highlights text like a yellow highlighter would
+ */  
+.highlight {
 	background: yellow;
 }
-span.hide {
+/**
+ * Covers text up with a floating white box
+ */
+.hide {
 	background: white;
 	box-shadow: 2px 2px 2px #333;
 	color: white ;
 }
-span.title {
+/**
+ * 	Formats a title to look like if it came froma typewriter
+ */ 
+.title {
 	color: #333 ;
 	font-weight: bold;
 	font-size: 25px;
@@ -87,12 +106,19 @@ span.title {
 	
 }
 
-em.mistake {
+/**
+ * 	Expresses a mistake was made by making the text stand out
+ */
+.mistake {
 	color: orange ;
 	text-transform: capitalize;
 	letter-spacing: 3px;
 }
-strong.yell {
+
+/**
+ * 	Bolded capitalized and red to make the text scream out
+ */
+.yell {
 	text-transform: uppercase;
 	color: red ;
 }
