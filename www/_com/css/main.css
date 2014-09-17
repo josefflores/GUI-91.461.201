@@ -387,7 +387,6 @@ div.source {
  * The pre tag holds code examples and text examples
  */
 pre, div.sample { 
-	background: #f8f8f8;
 	margin: 10px 0;
 	padding: 10px 0;
 	overflow-wrap: break-word;
