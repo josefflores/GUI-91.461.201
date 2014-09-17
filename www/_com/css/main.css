@@ -8,7 +8,7 @@
  *      to the author.
  *
  *  updated by JFF on September 14, 2014 at 18:02
- *      Finished styling assignment repository 
+ *      Finished styling assignment repository
  */
 
 /**
@@ -149,7 +149,7 @@ div.content {
  *  browsers are resized.
  */
 div.content-wrapper {
-	background: #f8f8f8;
+    background: #f8f8f8;
     overflow: auto;
     padding: 0 25px;
 }
@@ -241,7 +241,7 @@ nav.horizontal {
             }
 
                 /**
-                 *  Setting hover and active state colors for the anchor items 
+                 *  Setting hover and active state colors for the anchor items
                  *  in the menu
                  */
                 nav.horizontal ul li a:hover {
@@ -300,7 +300,7 @@ nav.vertical {
         }
 
         /**
-         *  Setting hover and active state colors for the anchor items 
+         *  Setting hover and active state colors for the anchor items
          *  in the menu
          */
         nav.vertical ul li a:hover {
@@ -386,29 +386,29 @@ div.source {
 /**
  * The pre tag holds code examples and text examples
  */
-pre, div.sample { 
-	margin: 10px 0;
-	padding: 10px 0;
-	overflow-wrap: break-word;
-	width: 100%;
+pre, div.sample {
+    margin: 10px 0;
+    padding: 10px 0;
+    overflow-wrap: break-word;
+    width: 100%;
 }
 
-pre { 
-	background: #f8f8f8;
-	border: 1px solid #fcb825;
+pre {
+    background: #f8f8f8;
+    border: 1px solid #fcb825;
 }
-div.sample { 
-	background: #ffffff; 
-	border: 1px solid #0168b3;
+div.sample {
+    background: #ffffff;
+    border: 1px solid #0168b3;
 }
 
 /**
  * a sub heading for content
  */
 h5 {
-	color: #fcb825;
-	font-weight: bold;
-	font-size: 12px;
-	margin: 4px 0 0 0;
-	padding: 4px 0;
+    color: #fcb825;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 4px 0 0 0;
+    padding: 4px 0;
 }
