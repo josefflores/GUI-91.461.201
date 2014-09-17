@@ -21,7 +21,7 @@
     box-shadow: initial;
     color: initial;
     display: initial;
-    /*float: initial;*/
+    float: initial;
     height: initial;
     line-height: initial;
     list-style-type: initial;
@@ -31,14 +31,14 @@
     font-style: initial;
     font-weight: initial;
     outline: initial;
-    /*overflow: initial;*/
-    /*overflow-wrap: initial;*/
+    overflow: initial;
+    overflow-wrap: initial;
     padding: initial;
-    /*position: initial;*/
+    position: initial;
     text-align: initial;
     text-decoration: initial;
     vertical-align: initial;
-    /*width: initial;*/
+    width: initial;
 }
 
 /**
