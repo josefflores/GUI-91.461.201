@@ -29,7 +29,7 @@ body {
  * Setting Font, setting default colors for background and text.
  */
 body {
-    background: #ffffff;
+    background: #f8f8f8;
     color: #000;
     font-family: Verdana, Geneva, sans-serif;
 }
@@ -149,6 +149,7 @@ div.content {
  *  browsers are resized.
  */
 div.content-wrapper {
+	background: #f8f8f8;
     overflow: auto;
     padding: 0 25px;
 }
@@ -380,4 +381,35 @@ a.selected {
 nav.vertical ul ,
 div.source {
     background: #ffffff;
+}
+
+/**
+ * The pre tag holds code examples and text examples
+ */
+pre, div.sample { 
+	background: #f8f8f8;
+	margin: 10px 0;
+	padding: 10px 0;
+	overflow-wrap: break-word;
+	width: 100%;
+}
+
+pre { 
+	background: #f8f8f8;
+	border: 1px solid #fcb825;
+}
+div.sample { 
+	background: #ffffff; 
+	border: 1px solid #0168b3;
+}
+
+/**
+ * a sub heading for content
+ */
+h5 {
+	color: #fcb825;
+	font-weight: bold;
+	font-size: 12px;
+	margin: 4px 0 0 0;
+	padding: 4px 0;
 }

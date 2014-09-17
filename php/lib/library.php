@@ -76,8 +76,8 @@
          */
         switch ( $tmp  ) {
             case 'ABOUT' :
-            case 'ASSIGNMENT' :
-            case 'PHPSOURCE' :
+            case 'ASSIGNMENTS' :
+            case 'PHP-SOURCE' :
                 $page = $tmp ;
                 break ;
             default :

@@ -56,31 +56,26 @@
      *  An example on how to do this was found on the php manual
      *  http://php.net/manual/en/class.recursivedirectoryiterator.php
      */
+     
     foreach( $paths as $path ) {
         //  Recursive Iterator
-        $objects = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( $path ) ,
-                                                  RecursiveIteratorIterator::SELF_FIRST ) ;
+        $dir = scandir( $path ) ;
+
         //  Getting each Directory array element
-        foreach( $objects as $name => $object ) {
+        foreach( $dir as $item ) {
             //  Compare filenames
-            if ( basename( $object ) == $include ) {
-                //  Remove Root path to make link relative and shorter
-                $link = explode( $A[ 'D_ROOT' ] , $name ) ;
-                //  Get assignment number from directory structure
-                $sect = explode( $A[ 'D_SLASH' ] , $link[ 1 ] ) ;
-                //  Verify that assignment number is a number and not
-                //  the indexer
-                if ( is_numeric( $sect[ 2 ] ) ) {
-                    // Make link
-                    echo '      <li><a ';
-                    if ( isset( $_GET[ 'file' ] ) &&
-                         $_GET[ 'file' ] == $link[ 1 ] ) {
-                            echo ' class="selected" ' ;
-                    }
-                    echo 'href="?file=' , urlencode( trim( $link[ 1 ] ) ) ,
-                         '"> Assignment ' , $sect[ 2 ] , '</a></li>
-                         ';
-                }
+            if ( is_numeric( $item ) ) {
+
+					// Make link
+					echo '      <li><a ';
+					if ( isset( $_GET[ 'file' ] ) &&
+						 $_GET[ 'file' ] == $item ) {
+							echo ' class="selected" ' ;
+					}
+					echo 'href="?file=' , urlencode( trim( 'www' . $A['D_SLASH' ] . 'assignments' . $A['D_SLASH' ] . $item ) ) ,
+						 '"> Assignment ' , $item , '</a></li>
+						 ';
+                
             }
         }
     }

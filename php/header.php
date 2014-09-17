@@ -60,16 +60,16 @@
                             <li><a ' ;
 
                             // Checking to see if the user is on a the page
-                            if ( $A[ 'TAB_NAME' ] == 'ASSIGNMENT' ) echo 'class="selected" ' ;
+                            if ( $A[ 'TAB_NAME' ] == 'ASSIGNMENTS' ) echo 'class="selected" ' ;
 
-                            echo  'href="' , $A[ 'W_ROOT' ] , 'assignment/"> Assignments </a></li>
+                            echo  'href="' , $A[ 'W_ROOT' ] , 'assignments/"> Assignments </a></li>
 
                             <li><a ' ;
 
                             // Checking to see if the user is on a the page
-                            if ( $A[ 'TAB_NAME' ] == 'PHPSOURCE' ) echo 'class="selected" ' ;
+                            if ( $A[ 'TAB_NAME' ] == 'PHP-SOURCE' ) echo 'class="selected" ' ;
 
-                            echo  'href="' , $A[ 'W_ROOT' ] , 'phpSource/"> PHP Source </a></li>
+                            echo  'href="' , $A[ 'W_ROOT' ] , 'php-source/"> PHP Source </a></li>
 
                         </ul>
                     </nav>

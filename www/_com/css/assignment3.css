@@ -1,0 +1,86 @@
+/**
+ * 	I am resetting the styles found in main.css using the initial key 
+ * 	word. as found in http://www.w3.org/TR/css3-cascade/#initial
+ */
+.example-1 {
+	background: intial;
+	border: intial;
+	box-shadow: initial;
+	color: initial;
+	display: initial;
+	/*float: initial;*/
+	height: initial;
+    line-height: initial;
+    list-style-type: initial;
+    margin: intial;
+    font-size: intial;
+    font-family: initial;
+    font-style: initial;
+    font-weight: initial;
+    outline: intial;
+    /*overflow: initial;*/
+    /*overflow-wrap: initial;*/
+    padding: intial;
+    /*position: initial;*/
+    text-align: initial;
+    text-decoration: initial;
+    vertical-align: intial;
+    /*width: initial;*/
+}
+
+h1.example-2 {
+	padding: 20px 0;
+	font-weight: normal;
+	font-family: "Comic Sans MS", cursive, sans-serif ;
+	font-size: 30px;
+	color: purple ;
+}
+h2.example-2 {
+	padding: 10px 0;
+	font-weight: bold;
+	font-family: Impact, Charcoal, sans-serif ;
+	font-size:20px;
+	color: #000 ;
+} 
+
+h3.example-2 {
+	padding: 5px 0;
+	font-weight: bold;
+	font-size: 15px;
+	color: #000 ;
+}
+
+p.example-2 {
+	font-family: "Courier New", Courier, monospace ;
+}
+
+blockquote.example-2{
+	font-style: italic;
+}
+
+span.highlight {
+	background: yellow;
+}
+span.hide {
+	background: white;
+	box-shadow: 2px 2px 2px #333;
+	color: white ;
+}
+span.title {
+	color: #333 ;
+	font-weight: bold;
+	font-size: 25px;
+	text-decoration: underline;
+	
+}
+
+em.mistake {
+	color: orange ;
+	text-transform: capitalize;
+	letter-spacing: 3px;
+}
+strong.yell {
+	text-transform: uppercase;
+	color: red ;
+}
+
