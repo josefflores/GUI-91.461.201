@@ -26,7 +26,11 @@
     line-height: initial;
     list-style-type: initial;
     margin: initial;
-    font-size: initial;
+    /**
+     *  This kills the inital for all elements in non IIS servers for
+     *  some reason, even though inital is a valid value for font-size
+     **/
+    /*font-size: initial;*/
     font-family: initial;
     font-style: initial;
     font-weight: initial;
