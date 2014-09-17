@@ -59,10 +59,11 @@
         <!-- Setting the page title-->
         <title> GUI Programming I </title>
 
-        <!-- Adding link to main css stylesheet file -->
-        <link type="text/css" rel="stylesheet" href="<?php echo $A[ 'W_CSS' ] ; ?>main.css">
         <!-- Adding link to Assignment 3 css stylesheet file, This file has the styling for the example elements-->
         <link type="text/css" rel="stylesheet" href="<?php echo $A[ 'W_CSS' ] ; ?>assignment3.css">
+        <!-- Adding link to main css stylesheet file -->
+        <link type="text/css" rel="stylesheet" href="<?php echo $A[ 'W_CSS' ] ; ?>main.css">
+
 
     </head>
 
