@@ -393,6 +393,14 @@ pre, div.sample {
     width: 100%;
 }
 
+/**
+ * Marking the differences between the pre and div.sample tags
+ * 
+ * The pre tag is bordered by yellow and has a modified background 
+ * while the sample has a blue border and background is white
+ * I did this to make them look differently and in turn give the user 
+ * visual feedback to what they were looking at.
+ */
 pre {
     background: #f8f8f8;
     border: 1px solid #fcb825;
