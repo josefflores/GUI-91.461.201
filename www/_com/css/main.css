@@ -63,9 +63,14 @@ h1 {
  */
 h4 {
     color: #0168b3;
+
+}
+/**
+ *  Makes the small article descriptors
+ */
+h4.info {
     font-size: 10px;
 }
-
 /**
  *  A class of heading to be used for the title of the page. It aligns
  *  text vertically in the block.
@@ -321,6 +326,10 @@ div.source {
     padding: 5px;
 }
 
+div.source code {
+	background: none;
+	border: none ;
+}
 /**
  *  The iframe element allows for the viewing of past assignments as
  *  seperate web pages without introducing styling or structural
@@ -386,7 +395,7 @@ div.source {
 /**
  * The pre tag holds code examples and text examples
  */
-pre, div.sample {
+code, div.sample {
     margin: 10px 0;
     padding: 10px 0;
     overflow-wrap: break-word;
@@ -395,15 +404,16 @@ pre, div.sample {
 
 /**
  * Marking the differences between the pre and div.sample tags
- * 
- * The pre tag is bordered by yellow and has a modified background 
+ *
+ * The pre tag is bordered by yellow and has a modified background
  * while the sample has a blue border and background is white
- * I did this to make them look differently and in turn give the user 
+ * I did this to make them look differently and in turn give the user
  * visual feedback to what they were looking at.
  */
-pre {
+code {
     background: #f8f8f8;
     border: 1px solid #fcb825;
+    display: block;
 }
 div.sample {
     background: #ffffff;

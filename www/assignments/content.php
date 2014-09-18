@@ -35,7 +35,7 @@
                     <img class="description" src="' , $A[ 'W_IMG' ] ,  'assignment.png" alt="Web technologies logo." >
                     <div class="description">
                         <h3>Assignments</h3>
-                        <h4>An assignment archive</h4>
+                        <h4 class="info">An assignment archive</h4>
                         <p>This is an assignment archive of my GUI Programming I assignments that have been completed. The assignments were developed using PHP, HTML5, CSS3, JS and jQuery. They are listed as links in the left pane. When clicked, will reload a bookmarkable page with an iframe containing the assignment.</p>
                     </div>
     ';

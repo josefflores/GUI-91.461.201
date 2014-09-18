@@ -27,12 +27,12 @@
                     <img class="description" src="' , $A[ 'W_IMG' ] ,  'me.jpg" alt="Picture of Jose Flores" >
                     <div class="description">
                         <h3>About Me</h3>
-                        <h4>Jose F. Flores</h4>
+                        <h4 class="info">Jose F. Flores</h4>
                         <p> My name is Jose Flores, and I am a senior majoring in Computer Science. I consider myself a jack of all trades; I can program, draw, build, and whatever else I feel like trying. I have set up this page as my GUI Programming I assignment repository, to showcase what I have completed in the course sequence. </p>
                     </div>
                     <div class="description">
                         <h3>Past Work</h3>
-                        <h4>Websites</h4>
+                        <h4 class="info">Websites</h4>
                         <p> These are some examples of websites I have made in the past. It is an incomplete list but shows a little of what I am capable of. </p>
                         <ul>
                             <li> <a href="http://www.astuml.org">www.astuml.org</a></li>

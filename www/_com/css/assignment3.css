@@ -15,7 +15,9 @@
  *  I am resetting the styles found in main.css using the initial key
  *  word, as found in http://www.w3.org/TR/css3-cascade/#initial
  */
-.example-1 {
+.example-1,
+h4.example-1 ,
+h5.example-1 {
     background: initial;
     border: initial;
     box-shadow: initial;

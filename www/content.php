@@ -27,7 +27,7 @@
                     <img class="description" src="' , $A[ 'W_IMG' ] ,  'home.png" alt="home logo" >
                     <div class="description" >
                         <h3>Home Page</h3>
-                        <h4>The Project Home Page</h4>
+                        <h4 class="info">The Project Home Page</h4>
                         <p> This page is the landing page to Jose Flores&apos;s GUI Programming I project website. It will be updated during the Fall 2014 and Spring 2015 semesters.</p>
                     </div>
                     ';
