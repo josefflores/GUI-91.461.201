@@ -1,16 +1,16 @@
 <?php
-	$root = 'json/roots.json' ;
+	$root = '../json/roots.json' ;
 	
 	if ( is_file( $root ) ) {
 		
 		$tmp = file_get_contents( $root ) ;
 		$A = json_decode( $tmp , true ) ;
 		
-		include( 'php/class/w3c_validator.php' ) ;
+		include( '../php/class/w3c_validator.php' ) ;
 				//construct list containing links to crawl
 				$root 			= array( $A[ 'W_ROOT' ] ) ;
-				$out			= 'json/w3c_validation.json' ;
-				$simpleHtmlDom 	= 'php/lib/simple_html_dom.php' ;
+				$out			= '../json/w3c_validation.json' ;
+				$simpleHtmlDom 	= '../php/lib/simple_html_dom.php' ;
 				
 				if ( is_file( $out ) )
 					unlink( $out ) ;
