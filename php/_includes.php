@@ -36,16 +36,4 @@
         //  w3c_validator.php
         include( $A[ 'D_PHP' ] . 'class' . $A[ 'D_SLASH' ] . 'w3c_validator.php' ) ;
 
-	//	TRIGGERS
-	
-		// Root Trigger
-		if ( isset( $_GET[ 'ROOTS' ] ) ) {
-		
-			$fp = fopen( $A[ 'D_JSON' ] . 'roots.json' , 'w' ) ;
-			fwrite( $fp , json_encode( array( 'D_ROOT' => $A[ 'D_ROOT' ] , 
-											  'W_ROOT' => $A[ 'W_ROOT' ] ) ) ) ;
-			fclose( $fp ) ;
-			$path = explode( '?' , $A[ 'DIR' ] ) ;
-			header( $path[ 0 ] ) ;
-		}
 ?>

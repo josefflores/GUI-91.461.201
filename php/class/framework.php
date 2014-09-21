@@ -168,25 +168,48 @@
 		 * 
 		 * 	This function genereates a json report of the w3c validator
 		 */
-		 private function w3c_validate( ){
+		 private function w3c_validate( $out ){
 			 
-			 if( isset( $A[ 'W3C' ] ) ){
-				//construct list containing links to crawl
-				$root 			= array( $A[ 'D_ROOT' ] ) ;
-				$simpleHtmlDom 	= $A[ 'D_PHP' ] . 'lib' . $A[ 'D_SLASH' ] . 'simple_html_dom.php' ;
-				
-				$wv = new w3c_validator( $root , 
-										 $simpleHtmlDom ) ;
-				
-				$wv->crawl() ;
-				$wv->process() ;
-				
-				$fp = fopen( $A[ 'D_PHP' ] . 'w3c_validation.json' , 'w' ) ;
-				fwrite( $fp , json_encode( $wv->report( ) ) ) ;
-				fclose( $fp ) ;
-			}
-		 }
-		 
+			// Start crawler
+			$wv = new w3c_validator( array( $A[ 'W_ROOT' ] ) , 
+									 $A[ 'D_PHP' ] . 'lib/simple_html_dom.php' ) ;
+			$wv->crawl() ;
+			$wv->process() ;
+			
+			// Write results
+			$fp = fopen( $out , 'w' ) ;
+			fwrite( $fp , json_encode( $wv->report( ) ) ) ;
+			fclose( $fp ) ;
+			 
+		}
+		
+		/**
+		 * 	@name 	setup
+		 * 
+		 * 	This function performs initial setup
+		 * 
+		 * 	@param	$A	The uptodate global variable
+		 * 	@return $A	the updated global variable
+		 */ 
+		public function setup( $A ) {
+			//	Update A
+			$this->A = $A ;
+			
+			/**
+			 *  DESTROY FILES
+			 */
+			$files = array( $A[ 'D_JSON' ] . 'w3c_validation.json' ) ;
+			
+			foreach ( $files as $f )
+				if ( is_file( $f ) )
+					unlink( $f ) ;
+			
+			// One time setup actions			
+			$this->w3c_validate( $files[ 1 ] ) ;
+			
+			return $A ;
+		}
+		
         /**
          *  @name   init
          *
@@ -198,7 +221,7 @@
 
             $this->initOS() ;
             $this->getRoot( ) ;
-			$this->w3c_validate( ) ;
+			
 			
             return $this->A ;
         }
