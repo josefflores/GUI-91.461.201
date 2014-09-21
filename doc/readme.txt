@@ -54,6 +54,11 @@
 
     |
     + www/                      The web root Directory
+        + _api/                 This is the api directory it holds a restful
+        |   |                   that returns json responses
+        |   + init/             The system initialization call
+        |   + .../              Api landing points, the
+        |
         + _com/                 The common component directory
         |   + css/              The CSS directory
         |   |   + main.css      The main document css styling file, this file
@@ -88,10 +93,16 @@
         |   ...                 other subdirectories but are beyond the
         |                       scope of this document
         |
-        + phpSource             The phpSource directory
+        + php-source            The php source directory
         |   + content.php       The content of the phpSource page holds
         |   |                   a directory listing of the php source files and
         |   |                   displays them
+        |   + index.php         The landing page for the phpSource page
+        |
+        + validation            The validation directory
+        |   + content.php       The content of the validation page holds
+        |   |                   a listing of all links and wether they
+        |   |                   validate or not.
         |   + index.php         The landing page for the phpSource page
         |
         + WEB-INF               Instructor supplied directory Assignment 1

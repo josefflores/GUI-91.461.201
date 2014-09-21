@@ -47,13 +47,13 @@
         public function __construct( $A , $errors = true ){
             // Store a copy for use
             $this->A = $A ;
-            
+
             if( $errors ) {
-				ini_set( 'display_errors',1 ) ;
-				ini_set('display_startup_errors',1);
-				error_reporting(-1);
-				error_reporting( E_ALL ) ;
-			}
+                ini_set( 'display_errors',1 ) ;
+                ini_set('display_startup_errors',1);
+                error_reporting(-1);
+                error_reporting( E_ALL ) ;
+            }
         }
 
         /**
@@ -163,63 +163,92 @@
 
         }
 
-		/**
-		 * 	@name	w3c_validate
-		 * 
-		 * 	This function genereates a json report of the w3c validator
-		 */
-		 private function w3c_validate( $out ){
-			 
-			// Start crawler
-			$wv = new w3c_validator( array( $this->A[ 'W_ROOT' ] ) , 
-									 $this->A[ 'D_PHP' ] . 'lib/simple_html_dom.php' ) ;
-			$wv->crawl() ;
-			$wv->process() ;
-			
-			// Write results
-			$fp = fopen( $out , 'w' ) ;
-			fwrite( $fp , json_encode( $wv->report( ) ) ) ;
-			fclose( $fp ) ;
-			 
-		}
-		
-		/**
-		 * 	@name 	setup
-		 * 
-		 * 	This function performs initial setup
-		 * 
-		 * 	@param	$A	The uptodate global variable
-		 */ 
-		public function setup( $A ) {
-			//	Update A
-			$this->A = $A ;
-			
-			/**
-			 *  DESTROY FILES
-			 */
-			$files = array( $this->A[ 'D_JSON' ] . 'w3c_validation.json' ) ;
-			
-			foreach ( $files as $f )
-				if ( is_file( $f ) )
-					unlink( $f ) ;
-			
-			// One time setup actions			
-			$this->w3c_validate( $files[ 0 ] ) ;
-			
-			foreach ( $files as $f )
-				if ( !is_file( $f ) ) {
-					$this->respond( 500 ,  "Could not initialize system." ) ;
-				}
-			
-			$this->respond( 204 ,  "System was initialized." ) ;
-			
-		}
-		
-		private function respond( $code , $message ) {
-			header( "HTTP/1.1 " . $code . " " . $message , true , $code ) ;
+        /**
+         *  @name   w3c_validate
+         *
+         *  This function genereates a json report of the w3c validator
+         */
+         private function w3c_validate( $out ){
 
-		}
-		
+            // Start crawler
+            $wv = new w3c_validator( array( $this->A[ 'W_ROOT' ] ) ,
+                                     $this->A[ 'D_PHP' ] . 'lib/simple_html_dom.php' ) ;
+            $wv->crawl() ;
+            $wv->process() ;
+
+            // Write results
+            $fp = fopen( $out , 'w' ) ;
+            fwrite( $fp , json_encode( $wv->report( ) ) ) ;
+            fclose( $fp ) ;
+
+        }
+
+        /**
+         *  @name   setup
+         *
+         *  This function performs initial setup
+         *
+         *  @param  $A  The uptodate global variable
+         */
+        public function setup( $A ) {
+            //  Update A
+            $this->A = $A ;
+
+            /**
+             *  DESTROY FILES
+             */
+            $files = array( $this->A[ 'D_JSON' ] . 'w3c_validation.json' ) ;
+
+            foreach ( $files as $f )
+                if ( is_file( $f ) )
+                    unlink( $f ) ;
+
+            /**
+             *  RUN SETUP FUNCTIONS
+             */
+
+            // One time setup actions
+            $this->w3c_validate( $files[ 0 ] ) ;
+
+            /**
+             *  VERIFY
+             */
+            // Give a puase for the last action to complete
+            sleep( 5 ) ;
+
+            // Check if files have been written
+            $flag = false ;
+            foreach ( $files as $f )
+                if ( !is_file( $f ) ) {
+                    $flag = true ;
+                }
+
+            /**
+             *  RESPOND
+             */
+
+            // Determine response type
+            if ( $flag )
+                $this->respond( 500 ,  "Could not initialize system." ) ;
+            else
+                $this->respond( 200 ,  "System was initialized." ) ;
+
+        }
+
+        /**
+         *  @name   respond
+         *
+         *  This function generates the header response and content
+         *
+         *  @param  $code       The response code
+         *  @return $message    The response message
+         */
+        private function respond( $code , $message ) {
+            header( $_SERVER["SERVER_PROTOCOL"] . " " . $code . " " . $message , true , $code ) ;
+            header( 'Content-Type: application/json' ) ;
+            echo json_encode( array( $code , $message ) ) ;
+        }
+
         /**
          *  @name   init
          *
@@ -231,8 +260,8 @@
 
             $this->initOS() ;
             $this->getRoot( ) ;
-			
-			
+
+
             return $this->A ;
         }
 
