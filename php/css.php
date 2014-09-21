@@ -21,6 +21,6 @@
     echo '
         <!-- Adding css files -->
         <link href="' , $A['W_CSS'] , 'main.css" rel="stylesheet" type="text/css">
-' ;
+    ' ;
 
 ?>

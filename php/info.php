@@ -23,15 +23,15 @@
           ' , $A[ 'AUTHOR' ] , ', UMass Lowell Computer Science, ' , $A[ 'EMAIL' ] , '
           Copyright (c) 2014 by ' , $A[ 'AUTHOR' ] , '.  All rights reserved.  May be freely
             copied or excerpted for educational purposes with credit to the author.
-' ;
+    ' ;
 
             foreach( $A[ 'UPDATE' ] as $item ) {
                 echo '             updated by ' , $A[ 'AUTHOR' ] , ' on ' , $item , '
-' ;
+    ' ;
 
             }
 
-echo '        -->
-';
+    echo '        -->
+    ';
 
 ?>

@@ -48,9 +48,9 @@
                 to the author.
 
             updated by JFF on September 9, 2014 at 13:30
-                Updated webpage comments
+                Updated web page comments
             updated by JFF on September 5, 2014 at 14:00
-                Created Webpage
+                Created web page
             updated by JFF on September 4, 2014 at 14:00
                 Added header comment
         -->

@@ -1,6 +1,6 @@
 <?php
      /**
-     *  @file   init.php
+     *  @file   index.php
      *  @author Jose F. Flores <jose_flores@student.uml.edu>
      *
      *  Copyright (c) 2014 by Jose F. Flores. All rights reserved. May be
@@ -37,5 +37,5 @@
     include( $A[ 'D_ROOT' ] . 'php/_includes.php' ) ; // Global Includes
 
     $F->setup( $A ) ;
-    
+
 ?>

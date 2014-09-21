@@ -29,6 +29,6 @@
         <!-- Giving document tab bar icons -->
         <link rel="icon" href="' , $A[ 'FAVICON' ] , '" type="image/png">
         <link rel="shortcut icon" href="' , $A[ 'FAVICON' ] , '" type="image/png">
-';
+    ';
 
 ?>
