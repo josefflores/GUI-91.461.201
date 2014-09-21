@@ -108,7 +108,7 @@
 
                             <li>
 
-                                <a href="<?php echo $A[ 'W_ROOT' ] ; echo 'assignments/3/' ; ?> ">
+                                <a href="<?php echo $A[ 'W_ROOT' ] ; echo 'assignments/3/' ; ?>">
                                     Instructions
                                 </a>
 

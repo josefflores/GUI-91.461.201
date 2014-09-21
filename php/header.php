@@ -70,6 +70,13 @@
                             if ( $A[ 'TAB_NAME' ] == 'PHP-SOURCE' ) echo 'class="selected" ' ;
 
                             echo  'href="' , $A[ 'W_ROOT' ] , 'php-source/"> PHP Source </a></li>
+                            
+                            <li><a ' ;
+
+                            // Checking to see if the user is on a the page
+                            if ( $A[ 'TAB_NAME' ] == 'VALIDATION' ) echo 'class="selected" ' ;
+
+                            echo  'href="' , $A[ 'W_ROOT' ] , 'validation/"> Validation </a></li>
 
                         </ul>
                     </nav>

@@ -78,6 +78,7 @@
             case 'ABOUT' :
             case 'ASSIGNMENTS' :
             case 'PHP-SOURCE' :
+            case 'VALIDATION' ;
                 $page = $tmp ;
                 break ;
             default :

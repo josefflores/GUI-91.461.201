@@ -44,11 +44,16 @@
          *
          *  @param  $A      The application global
          */
-        public function __construct( $A ){
+        public function __construct( $A , $errors = true ){
             // Store a copy for use
             $this->A = $A ;
-            ini_set( 'display_errors',1 ) ;
-            error_reporting( E_ALL ) ;
+            
+            if( $errors ) {
+				ini_set( 'display_errors',1 ) ;
+				ini_set('display_startup_errors',1);
+				error_reporting(-1);
+				error_reporting( E_ALL ) ;
+			}
         }
 
         /**
@@ -158,6 +163,30 @@
 
         }
 
+		/**
+		 * 	@name	w3c_validate
+		 * 
+		 * 	This function genereates a json report of the w3c validator
+		 */
+		 private function w3c_validate( ){
+			 
+			 if( isset( $A[ 'W3C' ] ) ){
+				//construct list containing links to crawl
+				$root 			= array( $A[ 'D_ROOT' ] ) ;
+				$simpleHtmlDom 	= $A[ 'D_PHP' ] . 'lib' . $A[ 'D_SLASH' ] . 'simple_html_dom.php' ;
+				
+				$wv = new w3c_validator( $root , 
+										 $simpleHtmlDom ) ;
+				
+				$wv->crawl() ;
+				$wv->process() ;
+				
+				$fp = fopen( $A[ 'D_PHP' ] . 'w3c_validation.json' , 'w' ) ;
+				fwrite( $fp , json_encode( $wv->report( ) ) ) ;
+				fclose( $fp ) ;
+			}
+		 }
+		 
         /**
          *  @name   init
          *
@@ -169,7 +198,8 @@
 
             $this->initOS() ;
             $this->getRoot( ) ;
-
+			$this->w3c_validate( ) ;
+			
             return $this->A ;
         }
 

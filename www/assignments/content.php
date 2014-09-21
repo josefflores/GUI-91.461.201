@@ -72,7 +72,7 @@
                          $_GET[ 'file' ] == $item ) {
                             echo ' class="selected" ' ;
                     }
-                    echo 'href="?file=' , urlencode( trim( 'www' . $A['D_SLASH' ] . 'assignments' . $A['D_SLASH' ] . $item ) ) ,
+                    echo 'href="?file=' , urlencode( trim( 'www' . $A['D_SLASH' ] . 'assignments' . $A['W_SLASH' ] . $item . $A['W_SLASH' ] ) ) ,
                          '"> Assignment ' , $item , '</a></li>
                          ';
 

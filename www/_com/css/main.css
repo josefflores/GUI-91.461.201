@@ -33,6 +33,41 @@ body {
     color: #000;
     font-family: Verdana, Geneva, sans-serif;
 }
+
+ul.list {
+	margin: 10px 0px;
+	list-style-type: none ;
+}
+
+ol.list {
+	margin: 10px 0px;
+	list-style-type: normal ;
+}
+
+.list li {
+	line-height: 40px;
+	height: 40px;
+	padding: 5px 5px;
+	margin: 0px;
+}
+
+.list li div {
+	line-height: 32px;
+	height: 32px;
+	padding: 0px 5px;
+	margin: 0px;
+	float:left ;
+}
+
+.list li div:nth-child(2) {
+	padding: 4px 5px;
+}
+
+.list li div img {
+	border: 1px solid #dddddd;
+	padding: 4px ;
+}
+
 /**
  *  Standardizing the look of links in the document. I personally
  *  dislike underlines.
@@ -395,7 +430,7 @@ div.source {
 /**
  * The pre tag holds code examples and text examples
  */
-code, div.sample {
+div.code, div.sample {
     margin: 10px 0;
     padding: 10px 0;
     overflow-wrap: break-word;
@@ -410,7 +445,7 @@ code, div.sample {
  * I did this to make them look differently and in turn give the user
  * visual feedback to what they were looking at.
  */
-code {
+div.code {
     background: #f8f8f8;
     border: 1px solid #fcb825;
     display: block;
@@ -430,3 +465,6 @@ h5 {
     margin: 4px 0 0 0;
     padding: 4px 0;
 }
+
+
+

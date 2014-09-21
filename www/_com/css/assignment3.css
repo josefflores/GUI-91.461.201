@@ -113,7 +113,7 @@ blockquote.example-2{
  */
 .hide {
     background: white;
-    box-shadow: 2px 2px 2px #333;
+    box-shadow: 1px 1px 5px #333;
     color: white ;
 }
 /**
