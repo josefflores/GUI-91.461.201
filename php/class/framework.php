@@ -171,8 +171,8 @@
 		 private function w3c_validate( $out ){
 			 
 			// Start crawler
-			$wv = new w3c_validator( array( $A[ 'W_ROOT' ] ) , 
-									 $A[ 'D_PHP' ] . 'lib/simple_html_dom.php' ) ;
+			$wv = new w3c_validator( array( $this->A[ 'W_ROOT' ] ) , 
+									 $this->A[ 'D_PHP' ] . 'lib/simple_html_dom.php' ) ;
 			$wv->crawl() ;
 			$wv->process() ;
 			
@@ -189,7 +189,6 @@
 		 * 	This function performs initial setup
 		 * 
 		 * 	@param	$A	The uptodate global variable
-		 * 	@return $A	the updated global variable
 		 */ 
 		public function setup( $A ) {
 			//	Update A
@@ -198,16 +197,27 @@
 			/**
 			 *  DESTROY FILES
 			 */
-			$files = array( $A[ 'D_JSON' ] . 'w3c_validation.json' ) ;
+			$files = array( $this->A[ 'D_JSON' ] . 'w3c_validation.json' ) ;
 			
 			foreach ( $files as $f )
 				if ( is_file( $f ) )
 					unlink( $f ) ;
 			
 			// One time setup actions			
-			$this->w3c_validate( $files[ 1 ] ) ;
+			$this->w3c_validate( $files[ 0 ] ) ;
 			
-			return $A ;
+			foreach ( $files as $f )
+				if ( !is_file( $f ) ) {
+					$this->respond( 500 ,  "Could not initialize system." ) ;
+				}
+			
+			$this->respond( 204 ,  "System was initialized." ) ;
+			
+		}
+		
+		private function respond( $code , $message ) {
+			header( "HTTP/1.1 " . $code . " " . $message , true , $code ) ;
+
 		}
 		
         /**
