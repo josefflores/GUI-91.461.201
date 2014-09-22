@@ -7,7 +7,7 @@
      *      freely copied or excerpted for educational purposes with credit
      *      to the author.
      *
-     *  A Umass Lowell Computer Science Student 91.461 Assignment: Creating
+     *  A UMass Lowell Computer Science Student 91.461 Assignment: Creating
      *      Styling Your First Web Page With CSS
      *
      *  This file holds the content for the assignment 3. The assignment
@@ -167,36 +167,42 @@
                         Heading tags range from h1 to h6, these tags are used to format text headings and are to be used sequentially; an h1 tag proceeds an h2 tag, an h2 tag precedes an h3 tag, and so on. These tags are used to describe the information under them and can be precursors to other elements; the following element&apos;s content should fall under the category described by the preceding headings.
                     </p>
 
+                    <!-- h1 example -->
                     <div class="code">
                         <h1 class="example-1">
                         &lt;h1&gt; Heading 1 - The top level heading, usually reserved for a title. &lt;/h1&gt;
                         </h1>
                     </div>
 
+                    <!-- h2 example -->
                     <div class="code">
                         <h2 class="example-1">
                             &lt;h2&gt; Heading 2 - The second largest heading, usually reserved for a sub-title or a description of the preceding title. &lt;/h2&gt;
                         </h2>
                     </div>
 
+                    <!-- h3 example -->
                     <div class="code">
                         <h3 class="example-1">
                             &lt;h3&gt; Heading 3 - The third largest heading. &lt;/h3&gt;
                         </h3>
                     </div>
 
+                    <!-- h4 example -->
                     <div class="code">
                         <h4 class="example-1">
                             &lt;h4&gt; Heading 4 - The fourth largest heading. &lt;/h4&gt;
                         </h4>
                     </div>
 
+                    <!-- h5 example -->
                     <div class="code">
                         <h5 class="example-1">
                             &lt;h5&gt; Heading 5 - The fifth largest heading. &lt;/h5&gt;
                         </h5>
                     </div>
 
+                    <!-- h6 example -->
                     <div class="code">
                         <h6 class="example-1">
                             &lt;h6&gt; Heading 6 - The smallest heading. &lt;/h6&gt;
@@ -212,6 +218,7 @@
                         Paragraph tags are used to contain organized sections of text, they will wrap text by default.
                     </p>
 
+                    <!-- paragraph example -->
                     <div class="code">
                         <p class="example-1">
                             &lt;p&gt; I am a a little paragraph I will have a bunch of gibberish as a my content. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum &lt;/p&gt;
@@ -226,6 +233,7 @@
                         Span tags are used to mark sections of text within a parent so that these sections of text can then be formatted differently. They have no initial formatting and can be used to just segregate subsections of text.
                     </p>
 
+                    <!-- span example -->
                     <div class="code">
                         <p class="example-1">
                             &lt;p&gt; Text inside a &lt;span&gt;
@@ -240,6 +248,7 @@
                         Emphasis tags are meant to give a selection of text emphasis, its purpose is to make the contained text stand out, it&apos;s default formatting makes it italicized.
                     </p>
 
+                    <!-- em example -->
                     <div class="code">
                         <p class="example-1">
                             &lt;p&gt; Text inside a parent to be formatted for &lt;em&gt;
@@ -254,6 +263,7 @@
                         Strong tags are used to give weight to a selection of text, this tag is commonly associated with being bold.
                     </p>
 
+                    <!-- strong example -->
                     <div class="code">
                         <p class="example-1" >
                             &lt;p&gt; Text inside a parent that needs to carry &lt;strong&gt;
@@ -286,27 +296,32 @@
                         This section will show how the previous tags found under Elements look by default on your browser.
                     </p>
 
+                    <!-- original browser rendering of h1 -->
                     <div class="sample">
                         <h1 class="example-1">
                             Content Title h1 tag
                         </h1>
                     </div>
 
+                    <!-- original browser rendering of h2 -->
                     <div class="sample">
                         <h2 class="example-1">
-                            Topic Title h2 for strong tag
+                            Topic Title h2
                         </h2>
                     </div>
 
+                    <!-- original browser rendering of h3 -->
                     <div class="sample">
                         <h3 class="example-1">
-                            Subheading h3 tag strengthening the use of a word with font-weight: bold;
+                            Subheading h3 tag
                         </h3>
                     </div>
 
+                    <!-- original browser rendering of spans -->
                     <div class="sample">
                         <p class="example-1">
                             I am writing this paragraph to show how we use span tags to change subsections. I will use the span tag to highlight the words
+
                             <span>
                                 highlight
                             </span>
@@ -322,6 +337,7 @@
                         </p>
                     </div>
 
+                    <!-- original browser rendering of em -->
                     <div class="sample">
                         <p class="example-1">
                             An emphasis tag is used for expressing a different pronunciation. This paragraph will be used to describe how an emphasis tag should be used with the example of a new English speaker who mispronounced their words when they said &quot; I had
@@ -332,6 +348,7 @@
                         </p>
                     </div>
 
+                    <!-- original browser rendering of strong -->
                     <div class="sample">
                         <p class="example-1">
                             If everyday speech was being used in a paragraph a strong element would describe a scream.
@@ -354,18 +371,21 @@
                         This section know shows the same markup with modified styles.
                     </p>
 
+                    <!-- browser rendering of modified h1, this h1 uses comic sans a joke font in most applications-->
                     <div class="sample">
                         <h1 class="example-2">
                             Content Title h1 tag
                         </h1>
                     </div>
 
+                    <!-- browser rendering of modified h2, this h2 is displayed bold and in Impact font-->
                     <div class="sample">
                         <h2 class="example-2">
-                            Topic Title h2 for strong tag. Oh by the way never use comic sans like above its a designer joke.
+                            Topic Title h2 displayed bold and in a different font than the h1 above. Oh by the way never use comic sans like above its a designer joke.
                         </h2>
                     </div>
 
+                    <!-- browser rendering of modified h3, this h3 uses the default font but is also bold-->
                     <div class="sample">
                         <h3 class="example-2">
                             Subheading h3 tag strengthening the use of a word with font-weight: bold;
@@ -376,14 +396,20 @@
                     <div class="sample">
                         <p class="example-2">
                             I am writing this paragraph to show how we use span tags to change subsections. I will use the span tag to highlight the words
+
+                            <!-- browser rendering of modified span class this class makes text highlighted as if by a yellow highlighter-->
                             <span class="highlight">
                                 highlight
                             </span>
                             and
+
+                            <!-- browser rendering of modified span class this class makes text covered up by a white box-->
                             <span class="hide">
                                 hide
                             </span>.
                             I will also use the span tag to change how a
+
+                            <!-- browser rendering of modified span class this class makes text look like a title typed from a typewriter -->
                             <span class="title">
                                 title
                             </span>
@@ -395,6 +421,7 @@
                     <div class="sample">
                         <p class="example-2">
                             An emphasis tag is used for expressing a different pronunciation. This paragraph will be used to describe how an emphasis tag should be used with the example of a new English speaker who mispronounced their words when they said &quot; I had
+                            <!-- browser rendering of modified em class this class makes text stand out to signify a mistake -->
                             <em class="mistake">
                                 read
                             </em>
@@ -407,8 +434,12 @@
                         <p class="example-2">
                             If everyday speech was being used in a paragraph a strong element would describe a scream.
                         </p>
+
+                        <!-- used to show speech -->
                         <blockquote class="example-2">
                             &quot; Oh my God, the house is on
+
+                            <!-- browser rendering of modified strong class this class makes text stand out and gives weight to what is being screamed-->
                             <strong class="yell">
                                 fire
                             </strong>
