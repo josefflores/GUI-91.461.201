@@ -427,7 +427,14 @@ iframe {
     height: 800px;
     width: 100%;
 }
-
+iframe.google {
+    border: 0px;
+    height: 800px;
+    min-width: 630px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display:block;
+}
 /**
  *  The icon for a page description
  */

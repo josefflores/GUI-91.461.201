@@ -246,7 +246,7 @@
          *  @param  $code       The response code
          *  @return $message    The response message
          */
-        private function respond( $code , $message ) {
+        public function respond( $code , $message ) {
             header( $_SERVER["SERVER_PROTOCOL"] . " " . $code . " " . $message , true , $code ) ;
             header( 'Content-Type: application/json' ) ;
             echo json_encode( array( $code , $message ) ) ;

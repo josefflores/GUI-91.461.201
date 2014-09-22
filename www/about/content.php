@@ -39,7 +39,11 @@
                             <li> <a href="http://www.josefflores.com">www.josefflores.com</a></li>
                             <!-- li> <a href="http://csr.cs.uml.edu">csr.cs.uml.edu</a></li -->
                         </ul>
-
+                    </div>
+                    <div class="description">
+                        <h3>Resume</h3>
+                        <h4 class="info">My Experience</h4>
+                        <iframe class="google" src="http://docs.google.com/viewer?url=' , urlencode( $A[ 'W_ROOT' ] . '_api/get/pdf/?file=jose_flores_resume.pdf' ) , '&embedded=true"></iframe>
                     </div>
                     ';
 
