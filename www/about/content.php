@@ -43,7 +43,9 @@
                     <div class="description">
                         <h3>Resume</h3>
                         <h4 class="info">My Experience</h4>
-                        <iframe class="google" src="http://docs.google.com/viewer?url=' , urlencode( $A[ 'W_ROOT' ] . '_api/get/pdf/?file=jose_flores_resume.pdf' ) , '&embedded=true"></iframe>
+
+                        <!-- Iframe code was given by Google, I modified the ampersands to use &amp; for validation -->
+                        <iframe class="google" src="http://docs.google.com/viewer?url=' , urlencode( $A[ 'W_ROOT' ] . '_api/get/pdf/?file=jose_flores_resume.pdf' ) , '&amp;embedded=true"></iframe>
                     </div>
                     ';
 
