@@ -1,7 +1,7 @@
 /**
  *  File: assignment3.css
- *  91.461 Assignment: Creating Your First Web Page
- *  Jose F. Flores, Umass Lowell Computer Science Student
+ *  91.461 Assignment: Styling Your First Web Page With CSS
+ *  Jose F. Flores, UMass Lowell Computer Science Student
  *      jose_flores@student.uml.edu
  *  Copyright (c) 2014 by Jose F. Flores. All rights reserved. May be
  *      freely copied or excerpted for educational purposes with credit
@@ -29,8 +29,8 @@ h5.example-1 {
     list-style-type: initial;
     margin: initial;
     /**
-     *  This kills the inital for all elements in non IIS servers for
-     *  some reason, even though inital is a valid value for font-size
+     *  This kills the initial for all elements in non IIS servers for
+     *  some reason, even though initial is a valid value for font-size
      **/
     /*font-size: initial;*/
     font-family: initial;
@@ -117,7 +117,7 @@ blockquote.example-2{
     color: white ;
 }
 /**
- *  Formats a title to look like if it came froma typewriter
+ *  Formats a title to look like if it came from a typewriter
  */
 .title {
     color: #333 ;
@@ -137,7 +137,7 @@ blockquote.example-2{
 }
 
 /**
- *  Bolded capitalized and red to make the text scream out
+ *  Bold, capitalized, and red to make the text scream out
  */
 .yell {
     text-transform: uppercase;

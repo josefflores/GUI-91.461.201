@@ -7,11 +7,11 @@
      *      freely copied or excerpted for educational purposes with credit
      *      to the author.
      *
-     *  A Umass Lowell Computer Science Student 91.461
+     *  A UMass Lowell Computer Science Student 91.461
      *
-     *  This file holds the php init script for the application
+     *  This file holds the PHP initialization script for the application
      *
-     *  9/21/14     Created init script
+     *  9/21/14     Created initialization script
      */
 
     // File Access Guard
@@ -36,6 +36,7 @@
      */
     include( $A[ 'D_ROOT' ] . 'php/_includes.php' ) ; // Global Includes
 
+    //  Performing install
     $F->setup( $A ) ;
 
 ?>

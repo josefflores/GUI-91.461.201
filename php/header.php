@@ -7,7 +7,7 @@
      *      freely copied or excerpted for educational purposes with credit
      *      to the author.
      *
-     *  A Umass Lowell Computer Science Student 91.461 Assignment: Creating
+     *  A UMass Lowell Computer Science Student 91.461 Assignment: Creating
      *      Your First Web Page
      *
      *  This file holds the header for the template
@@ -70,7 +70,7 @@
                             if ( $A[ 'TAB_NAME' ] == 'PHP-SOURCE' ) echo 'class="selected" ' ;
 
                             echo  'href="' , $A[ 'W_ROOT' ] , 'php-source/"> PHP Source </a></li>
-                            
+
                             <li><a ' ;
 
                             // Checking to see if the user is on a the page

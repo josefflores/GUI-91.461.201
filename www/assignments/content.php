@@ -7,7 +7,7 @@
      *      freely copied or excerpted for educational purposes with credit
      *      to the author.
      *
-     *  A Umass Lowell Computer Science Student 91.461 Assignment: Creating
+     *  A UMass Lowell Computer Science Student 91.461 Assignment: Creating
      *      Your First Web Page
      *
      *  This file holds the content for the assignment directory listing
@@ -16,14 +16,14 @@
      *  9/10/14 Generated content page
      */
 
-    //  Define guard prevents acces unless from the index.php file at
+    //  Define guard prevents access unless from the index.php file at
     //  this level
     if ( !defined( 'CONTENT_GUARD' ) )
         header( 'Location: ./' ) ;
 
     // Content begin
 
-    //  Determining which paths to itterate through
+    //  Determining which paths to iterate through
     $paths = array( realpath( '.' ) ) ;
 
     //  Determine which files to show
@@ -48,12 +48,12 @@
                     ' ;
 
     /**
-     *  For each assignment directory Iterate throught the files and
+     *  For each assignment directory Iterate through the files and
      *  directories to retrieve assignments, only include the index.php
-     *  files as they are the only accesible files to the user. To view
-     *  other files use the php source link.
+     *  files as they are the only accessible files to the user. To view
+     *  other files use the PHP source link.
      *
-     *  An example on how to do this was found on the php manual
+     *  An example on how to do this was found on the PHP manual
      *  http://php.net/manual/en/class.recursivedirectoryiterator.php
      */
 

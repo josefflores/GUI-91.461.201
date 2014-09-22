@@ -7,14 +7,14 @@
      *      freely copied or excerpted for educational purposes with credit
      *      to the author.
      *
-     *  A Umass Lowell Computer Science Student 91.461 Assignment: Creating
+     *  A UMass Lowell Computer Science Student 91.461 Assignment: Creating
      *      Your First Web Page
      *
-     *  This file holds the php user generated function library. This
+     *  This file holds the PHP user generated function library. This
      *  file may expand or shrink depending if other functions are added,
-     *  or wethere they are consolidated into classes.
+     *  or whether they are consolidated into classes.
      *
-     *  9/10/14 Added function extInArray
+     *  9/10/14 Added function extInArray and getPageDir
      */
 
     /**
@@ -37,7 +37,7 @@
         // Compare each array entry
         foreach( $arr as $item ) {
 
-            //  Look at last period delimeted section of filename
+            //  Look at last period delimited section of filename
             if ( $ext[ count( $ext ) - 1 ] == $item ) {
                 // Match found
                 return true;
@@ -65,7 +65,7 @@
                         $_SERVER[ 'REQUEST_URI' ] ) ;
 
         /**
-         *  setting the directory to lowercse for comparison incase someone typed
+         *  setting the directory to lowercase for comparison in case someone typed
          *  it in a different case
          */
         $tmp = strtoupper( $tmp[ count( $tmp ) - 2 ] ) ;

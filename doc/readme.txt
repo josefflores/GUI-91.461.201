@@ -29,7 +29,7 @@
     |
     + ini/                      Configurations Directory
     |   + application.php       Application information configuration
-    |   + paths.php             Relative paths stucture of the document configurations
+    |   + paths.php             Relative paths structure of the document configurations
     |   + ...                   Other configuration files
     |
     + php/                      PHP source file directory
@@ -89,21 +89,21 @@
         |   |                   a directory listing of the assignments and
         |   |                   displays them
         |   + index.php         The landing page for the assignment page
-        |   + #/                The assigment directories they may have
+        |   + #/                The assignment directories they may have
         |   ...                 other subdirectories but are beyond the
         |                       scope of this document
         |
         + php-source            The php source directory
-        |   + content.php       The content of the phpSource page holds
+        |   + content.php       The content of the php-source page holds
         |   |                   a directory listing of the php source files and
         |   |                   displays them
-        |   + index.php         The landing page for the phpSource page
+        |   + index.php         The landing page for the php-source page
         |
         + validation            The validation directory
         |   + content.php       The content of the validation page holds
-        |   |                   a listing of all links and wether they
+        |   |                   a listing of all links and whether they
         |   |                   validate or not.
-        |   + index.php         The landing page for the phpSource page
+        |   + index.php         The landing page for the php-source page
         |
         + WEB-INF               Instructor supplied directory Assignment 1
         |   + classes           Instructor supplied directory Assignment 1

@@ -7,7 +7,7 @@
      *      freely copied or excerpted for educational purposes with credit
      *      to the author.
      *
-     *  A Umass Lowell Computer Science Student 91.461 Assignment: Creating
+     *  A UMass Lowell Computer Science Student 91.461 Assignment: Creating
      *      Your First Web Page
      *
      *  This file is the landing page for the about page, it

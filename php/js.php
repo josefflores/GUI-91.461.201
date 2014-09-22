@@ -7,15 +7,15 @@
      *      freely copied or excerpted for educational purposes with credit
      *      to the author.
      *
-     *  A Umass Lowell Computer Science Student 91.461 Assignment: Creating
+     *  A UMass Lowell Computer Science Student 91.461 Assignment: Creating
      *      Your First Web Page
      *
-     *  This file holds all the js and jQuery script links.
+     *  This file holds all the JS and jQuery script links.
      *
-     *  9/9/14          Added Google jquery api files
+     *  9/9/14          Added Google jQuery Api files
      */
 
-    //  google code library sources
+    //  Google code library sources
     echo '
         <!-- Adding google jquery APIs -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

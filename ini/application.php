@@ -7,12 +7,11 @@
      *      freely copied or excerpted for educational purposes with credit
      *      to the author.
      *
-     *  A Umass Lowell Computer Science Student 91.461 Assignment: Creating
-     *      Your First Web Page
+     *  A UMass Lowell Computer Science Student 91.461
      *
-     *  This file holds the relative path stucture of the document
+     *  This file holds the application globals.
      *
-     *  9/10/14 Generated Application Information
+     *  9/10/14 Generated Application Information.
      */
 
     // Application Information
@@ -22,15 +21,17 @@
     $A[ 'AUTHOR' ]      = 'Jose F. Flores' ;
     $A[ 'EMAIL' ]       = 'jose_flores@student.uml.edu'  ;
     $A[ 'YEAR' ]        = '2014' ;
-    $A[ 'KEYWORDS' ]    = 'University,  Massachusetts, MA,  Lowell, UMASS, Computer Science, CS, Department, GUI, Heines' ;
-    $A[ 'DESCRIPTION' ] = 'This is Jose Flores&apos;s University of Masssachussetss Lowel GUI project sequence website. The class is directed by Dr. Heines of the Computer Science department.' ;
+    $A[ 'KEYWORDS' ]    = 'University,  Massachusetts, MA,  Lowell, UMass, Computer Science, CS, Department, GUI, Heines' ;
+    $A[ 'DESCRIPTION' ] = 'This is Jose Flores&apos;s University of Massachusetts Lowell GUI project sequence website. The class is directed by Dr. Heines of the Computer Science department.' ;
     $A[ 'FAVICON' ]     = $A[ 'W_IMG' ] . 'icon_32.png' ;
     $A[ 'CHARSET' ]     = 'utf-8' ;
     $A[ 'LOGO' ]        = $A[ 'W_IMG' ] . 'mouse.png' ;
     $A[ 'TAB_APP' ]     = 'GUI' ;
 
-    $A[ 'UPDATE' ]      = array( '09/09/14 - Assignment 1' ,
+    $A[ 'UPDATE' ]      = array( '09/21/14 - Added API for first time initialization' ,
+                                 '09/17/14 - Added validation' ,
+                                 '09/14/14 - Assignment 3' ,
                                  '09/10/14 - Assignment 2' ,
-                                 '09/14/14 - Assignment 3' ) ;
+                                 '09/09/14 - Assignment 1' ) ;
 
 ?>

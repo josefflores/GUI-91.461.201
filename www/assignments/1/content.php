@@ -7,20 +7,20 @@
      *      freely copied or excerpted for educational purposes with credit
      *      to the author.
      *
-     *  A Umass Lowell Computer Science Student 91.461 Assignment: Creating
+     *  A UMass Lowell Computer Science Student 91.461 Assignment: Creating
      *      Your First Web Page
      *
      *  This file holds the content for the assignment 1. The assignment
-     *  file has had its extension modified to work as a php file to
+     *  file has had its extension modified to work as a PHP file to
      *  allow for header redirects from unwanted access as well as to
      *  allow for dynamic includes as the css and image locations are not
-     *  hardcoded as they originally were.
+     *  hard coded as they originally were.
      *
-     *  9/10/14 Modified html to work as php
-     *  9/9/14  Generated html content
+     *  9/10/14 Modified HTML to work as PHP
+     *  9/9/14  Generated HTML content
      */
 
-    //  Define guard prevents acces unless from the index.php file at
+    //  Define guard prevents access unless from the index.php file at
     //  this level
     if ( !defined( 'CONTENT_GUARD' ) )
         header( 'Location: ./' ) ;
@@ -31,7 +31,7 @@
 
 <!DOCTYPE html> <!-- Document type declaration for HTML5-->
 
-<!-- Start of html, language of document is english -->
+<!-- Start of HTML, language of document is English -->
 <html lang="en">
 
     <head>
@@ -42,16 +42,16 @@
         <!--
             File: index.html
             91.461 Assignment: Creating Your First Web Page
-            Jose F. Flores, Umass Lowell Computer Science Student
+            Jose F. Flores, UMass Lowell Computer Science Student
                 jose_flores@student.uml.edu
             Copyright (c) 2014 by Jose F. Flores. All rights reserved. May be
                 freely copied or excerpted for educational purposes with credit
                 to the author.
 
             updated by JFF on September 9, 2014 at 13:30
-                Updated webpage comments
+                Updated web page comments
             updated by JFF on September 5, 2014 at 14:00
-                Created Webpage
+                Created Web page
             updated by JFF on September 4, 2014 at 14:00
                 Added header comment
         -->
@@ -59,7 +59,7 @@
         <!-- Setting the page title-->
         <title> GUI Programming I </title>
 
-        <!-- Adding link to main css stylesheet file -->
+        <!-- Adding link to main css style sheet file -->
         <link type="text/css" rel="stylesheet" href="<?php echo $A[ 'W_CSS' ] ; ?>assignment2.css">
 
     </head>

@@ -7,18 +7,18 @@
      *      freely copied or excerpted for educational purposes with credit
      *      to the author.
      *
-     *  A Umass Lowell Computer Science Student 91.461 Assignment: Creating
+     *  A UMass Lowell Computer Science Student 91.461 Assignment: Creating
      *      Your First Web Page
      *
-     *  This file holds the relative path stucture of the document
+     *  This file holds the relative path structure of the document
      *
      *  9/9/14  Generated Page Template
      */
 
     //  Relative directory paths
     $A[ 'D_INI' ]   = $A[ 'D_ROOT' ] . 'ini' . $A[ 'D_SLASH' ] ;    //  configuration directory
-    $A[ 'D_PHP' ]   = $A[ 'D_ROOT' ] . 'php' . $A[ 'D_SLASH' ] ;    //  php scripts directory
-    $A[ 'D_WWW' ]   = $A[ 'D_ROOT' ] . 'www' . $A[ 'D_SLASH' ] ;    //  webroot directory
+    $A[ 'D_PHP' ]   = $A[ 'D_ROOT' ] . 'php' . $A[ 'D_SLASH' ] ;    //  PHP scripts directory
+    $A[ 'D_WWW' ]   = $A[ 'D_ROOT' ] . 'www' . $A[ 'D_SLASH' ] ;    //  web root directory
     $A[ 'D_DOC' ]   = $A[ 'D_ROOT' ] . 'doc' . $A[ 'D_SLASH' ] ;    //  documentation directory
     $A[ 'D_JSON' ]  = $A[ 'D_ROOT' ] . 'json' . $A[ 'D_SLASH' ] ;   //  json file directory
 

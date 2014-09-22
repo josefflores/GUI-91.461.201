@@ -8,20 +8,20 @@
      *      to the author.
      *
      *  A Umass Lowell Computer Science Student 91.461 Assignment: Creating
-     *      Your First Web Page
+     *      Styling Your First Web Page With CSS
      *
      *  This file holds the content for the assignment 3. The assignment
-     *  file has had its extension modified to work as a php file to
+     *  file has had its extension modified to work as a PHP file to
      *  allow for header redirects from unwanted access as well as to
      *  allow for dynamic includes as the css and image locations are not
-     *  hardcoded as they originally were. This assignments purpose is to
+     *  hard coded as they originally were. This assignments purpose is to
      *  show knowledge of text styling with css, So I have created a quick
      *  tutorial on how to format text.
      *
-     *  9/10/14 Modified html to work as php
+     *  9/10/14 Modified HTML to work as PHP
      */
 
-    //  Define guard prevents acces unless from the index.php file at
+    //  Define guard preventsaccess unless from the index.php file at
     //  this level
     if ( !defined( 'CONTENT_GUARD' ) )
         header( 'Location: ./' ) ;
@@ -31,7 +31,7 @@
 
 <!DOCTYPE html> <!-- Document type declaration for HTML5-->
 
-<!-- Start of html, language of document is english -->
+<!-- Start of HTML, language of document is English -->
 <html lang="en">
 
     <head>
@@ -42,16 +42,16 @@
         <!--
             File: index.html
             91.461 Assignment: Creating Your First Web Page
-            Jose F. Flores, Umass Lowell Computer Science Student
+            Jose F. Flores, UMass Lowell Computer Science Student
                 jose_flores@student.uml.edu
             Copyright (c) 2014 by Jose F. Flores. All rights reserved. May be
                 freely copied or excerpted for educational purposes with credit
                 to the author.
 
             updated by JFF on September 9, 2014 at 13:30
-                Updated webpage comments
+                Updated web page comments
             updated by JFF on September 5, 2014 at 14:00
-                Created Webpage
+                Created Web page
             updated by JFF on September 4, 2014 at 14:00
                 Added header comment
         -->
@@ -61,7 +61,7 @@
             GUI Programming I
         </title>
 
-        <!-- Adding link to main css stylesheet file -->
+        <!-- Adding link to main css style sheet file -->
         <link type="text/css" rel="stylesheet" href="<?php echo $A[ 'W_CSS' ] ; ?>main.css">
 
     </head>
@@ -178,7 +178,7 @@
                             <a href="">
                                 assignment 2 page
                             </a>
-                            as a central site. The website now contains an expanding about section, an assignment repository, and a php source file viewer. This website is written in PHP to generate HTML; the HTML output of PHP has been written to maintain its indentation structure but since PHP generates reusable components, some items indentation might not perfectly align if subsections are reused in differently indented locations.  I also took the assignemnt 2 page and updated its styling to match the overall website and then used it to generate a two page sub-website that explains assignment 3 and what I did on the Instructions page. For the work page I added a small tutorial to show HTML text formatting as a way to meet the assignments text styling criteria.
+                            as a central site. The website now contains an expanding about section, an assignment repository, and a php source file viewer. This website is written in PHP to generate HTML; the HTML output of PHP has been written to maintain its indentation structure but since PHP generates reusable components, some items indentation might not perfectly align if subsections are reused in differently indented locations.  I also took the assignment 2 page and updated its styling to match the overall website and then used it to generate a two page sub-website that explains assignment 3 and what I did on the Instructions page. For the work page I added a small tutorial to show HTML text formatting as a way to meet the assignments text styling criteria.
                         </li>
 
                     </ul>
@@ -199,7 +199,7 @@
                         Copyright &copy; 2014 by Jose F. Flores. All rights reserved
                     </div>
 
-                    <!-- Github link where versioning code is being stored -->
+                    <!-- Github link where versioning of code is being stored -->
                     <div class="notice">
 
                         <a href="https://github.com/josefflores/GUI-91.461.201">

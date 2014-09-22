@@ -7,7 +7,7 @@
      *      freely copied or excerpted for educational purposes with credit
      *      to the author.
      *
-     *  A Umass Lowell Computer Science Student 91.461 Assignment: Creating
+     *  A UMass Lowell Computer Science Student 91.461 Assignment: Creating
      *      Your First Web Page
      *
      *  This file holds the content for the home page.
@@ -15,7 +15,7 @@
      *  9/10/14 Generated Page Template
      */
 
-    //  Define guard prevents acces unless from the index.php file at
+    //  Define guard prevents access unless from the index.php file at
     //  this level
     if ( !defined( 'CONTENT_GUARD' ) )
         header( 'Location: ./' ) ;
@@ -29,6 +29,8 @@
                         <h3>Home Page</h3>
                         <h4 class="info">The Project Home Page</h4>
                         <p> This page is the landing page to Jose Flores&apos;s GUI Programming I project website. It will be updated during the Fall 2014 and Spring 2015 semesters.</p>
+                        <p> A note to instructors; since this is a PHP project the HTML source indentation might not align properly this is not due to neglect or a usage of tabs, but rather a side effect of including PHP sub routines that dynamically generate code at multiple indentation points that are different. I have taken as much care as possible to prevent this from happening, but wanted to explain inconsistencies when you are viewing the source.</p>
+
                     </div>
                     ';
 

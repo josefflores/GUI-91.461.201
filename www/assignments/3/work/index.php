@@ -7,10 +7,10 @@
      *      freely copied or excerpted for educational purposes with credit
      *      to the author.
      *
-     *  A Umass Lowell Computer Science Student 91.461 Assignment: Creating
-     *      Your First Web Page
+     *  A UMass Lowell Computer Science Student 91.461 Assignment: Creating
+     *      Styling Your First Web Page With CSS
      *
-     *  This file is the landing page for the assignment2 page, It
+     *  This file is the landing page for the assignment 3 page, It
      *  orchestrates the inclusion of paths, functions and libraries
      *  that might be needed by the application. It then passes the
      *  Content to the page template for page generation.

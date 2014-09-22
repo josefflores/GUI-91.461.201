@@ -7,7 +7,7 @@
      *      freely copied or excerpted for educational purposes with credit
      *      to the author.
      *
-     *  A Umass Lowell Computer Science Student 91.461 Assignment: Creating
+     *  A UMass Lowell Computer Science Student 91.461 Assignment: Creating
      *      Your First Web Page
      *
      *  This file holds the Framework class, I generated these
@@ -15,6 +15,9 @@
      *  Spring and Summer of 2014, but modified them to a class for my
      *  GUI course in Fall 2014.
      *
+     *  9/21/2014           Added API today and created a setup method to
+     *                      respond to it. It runs one time scripts and is
+     *                      kicked off by a Jenkins server during install.
      *  9/12/2014           Changed the file into a class called framework
      *                      which will initialize and be the starting point
      *                      for improvement. Contains Private members
@@ -40,7 +43,7 @@
         /**
          *  @name __construct
          *
-         *  Thi is the constuctor to the initFramework class
+         *  This is the constuctor to the initFramework class
          *
          *  @param  $A      The application global
          */
@@ -59,7 +62,7 @@
         /**
          *  @name   getRoot
          *
-         *  This functioin resolves the root paths, it counts backwards until
+         *  This function resolves the root paths, it counts backwards until
          *  the directories do not match. This function works because there
          *  are no other virtual directories besides the root.
          */
@@ -126,7 +129,7 @@
         /**
          *  @name isWindows
          *
-         *  This function determines wether php is in a windows OS or not.
+         *  This function determines whether PHP is in a windows OS or not.
          *
          *  @return     true    Windows
          *  @return     false   Not Windows
@@ -143,7 +146,7 @@
          *  @name initOS
          *
          *  This function initializes the system to the OS, It Determines
-         *  Direcotry slashes so that functions like explode do not break
+         *  Directory slashes so that functions like explode do not break
          *  when the application is moved between operating systems.
          */
         private function initOS( ){
@@ -166,7 +169,7 @@
         /**
          *  @name   w3c_validate
          *
-         *  This function genereates a json report of the w3c validator
+         *  This function generates a json report of the w3c validator
          */
          private function w3c_validate( $out ){
 
@@ -188,7 +191,7 @@
          *
          *  This function performs initial setup
          *
-         *  @param  $A  The uptodate global variable
+         *  @param  $A  The up to date global variable
          */
         public function setup( $A ) {
             //  Update A
@@ -213,7 +216,7 @@
             /**
              *  VERIFY
              */
-            // Give a puase for the last action to complete
+            // Give a pause for the last action to complete
             sleep( 5 ) ;
 
             // Check if files have been written
@@ -260,7 +263,6 @@
 
             $this->initOS() ;
             $this->getRoot( ) ;
-
 
             return $this->A ;
         }

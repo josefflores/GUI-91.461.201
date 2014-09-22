@@ -1,18 +1,21 @@
 /**
  *  File: main.css
  *  91.461 Assignment: Creating Your First Web Page
- *  Jose F. Flores, Umass Lowell Computer Science Student
+ *  Jose F. Flores, UMass Lowell Computer Science Student
  *      jose_flores@student.uml.edu
  *  Copyright (c) 2014 by Jose F. Flores. All rights reserved. May be
  *      freely copied or excerpted for educational purposes with credit
  *      to the author.
  *
+ *  updated by JFF on September 21, 2014 at 11:30
+ *      Finished styling for assignment 3 submission
+ *      Added styling for item lists and source code viewing
  *  updated by JFF on September 14, 2014 at 18:02
  *      Finished styling assignment repository
  */
 
 /**
- *  Styling the body and html sections, Goal is to standardize the font
+ *  Styling the body and HTML sections, Goal is to standardize the font
  *  and remove extra spacing surrounding the elements so that the
  *  sections occupy the whole viewing space of the page. The font
  *  complies with UML web standards
@@ -34,39 +37,85 @@ body {
     font-family: Verdana, Geneva, sans-serif;
 }
 
+/**
+ *  Default .list styling so that ordered and unordered list behave the
+ *  same way
+ */
 ul.list {
-	margin: 10px 0px;
-	list-style-type: none ;
+    margin: 10px 0px;
+    list-style-type: none ;
 }
 
 ol.list {
-	margin: 10px 0px;
-	list-style-type: normal ;
+    margin: 10px 0px;
+    list-style-type: normal ;
 }
 
-.list li {
-	line-height: 40px;
-	height: 40px;
-	padding: 5px 5px;
-	margin: 0px;
-}
+    /**
+     *  Common list item allows for expansion and prevents link wraps from
+     *  making ol numbering break.
+     */
+    .list > li {
+        min-height: 40px;
+        padding: 5px 5px;
+        margin: 0px;
+    }
 
-.list li div {
-	line-height: 32px;
-	height: 32px;
-	padding: 0px 5px;
-	margin: 0px;
-	float:left ;
-}
+        /**
+         *  This div allows for word wraps to expand downwards while maintaining
+         *  indentations of element
+         */
+        .list > li > div {
+            min-height: 40px;
+            width: 100%;
+        }
 
-.list li div:nth-child(2) {
-	padding: 4px 5px;
-}
+            /**
+             *  The first div will hold some form of icon for the list so
+             *  it is different than the second. If it does not hold an
+             *  icon it will add extra spacing
+             */
+            .list > li > div > div:first-child {
+                line-height: 40px;
+                height: 40px;
+                padding: 0px 5px;
+                margin: 0px 5px;
+                float: left;
+            }
 
-.list li div img {
-	border: 1px solid #dddddd;
-	padding: 4px ;
-}
+            /**
+             *  how a link should behave if it is in the first div.
+             *  usually surrounding an icon
+             */
+            .list > li > div > div:first-child > a {
+                display: block;
+                height: 40px;
+                width: 40px;
+                padding: 0px;
+                line-height: 40px;
+
+            }
+
+            /**
+             *  Whether the icon is in a link or not it shall still be
+             *  bordered
+             */
+            .list > li > div > div:first-child > img ,
+            .list > li > div > div:first-child > a > img {
+                border: 1px solid #dddddd;
+                padding: 4px ;
+            }
+
+        /**
+         * The second div contains the text of the list and should be
+         * able to collapse to multiple lines if it is cutoff
+         */
+        .list > li > div > div:nth-child(2) {
+            padding: 0px 5px;
+            word-break: break-word;
+            min-height:40px;
+            line-height:40px;
+        }
 
 /**
  *  Standardizing the look of links in the document. I personally
@@ -94,7 +143,7 @@ h1 {
 }
 
 /**
- *  Small subheader in a description box.
+ *  Small sub header in a description box.
  */
 h4 {
     color: #0168b3;
@@ -185,7 +234,7 @@ div.content {
 }
 
 /**
- *  This wrapper llows for smooth contraction of the content went
+ *  This wrapper allows for smooth contraction of the content went
  *  browsers are resized.
  */
 div.content-wrapper {
@@ -210,7 +259,7 @@ div.footer {
 }
 
 /**
- *  These containers hold the github link notice and copyright information
+ *  These containers hold the Github link notice and copyright information
  */
 div.notice,
 div.copyright {
@@ -293,7 +342,7 @@ nav.horizontal {
 
 /**
  *  This is the beginning of the vertical navigation menu, it is used for
- *  in page selection of content, such as assignemnt lists and file lists.
+ *  in page selection of content, such as assignment lists and file lists.
  */
 nav.vertical {
     float: left;
@@ -352,7 +401,7 @@ nav.vertical {
 
 /**
  *  The source div contains any list item output such as file contents
- *  or assignent contents. It is made to expand and contract with browser resizes
+ *  or assignment contents. It is made to expand and contract with browser resizes
  */
 div.source {
     border: 1px solid #dddddd;
@@ -361,13 +410,16 @@ div.source {
     padding: 5px;
 }
 
+/**
+ *  clearing up any styling started by PHP
+ */
 div.source code {
-	background: none;
-	border: none ;
+    background: none;
+    border: none ;
 }
 /**
  *  The iframe element allows for the viewing of past assignments as
- *  seperate web pages without introducing styling or structural
+ *  separate web pages without introducing styling or structural
  *  elements in the application
  */
 iframe {
@@ -408,7 +460,7 @@ p {
 }
 
 /**
- *  Used the important tag to overide the background color for a selected
+ *  Used the important tag to override the background color for a selected
  *  anchor. This anchor tag is used in the vertical menus to show which
  *  assignment or file is being viewed.
  */
@@ -428,9 +480,11 @@ div.source {
 }
 
 /**
- * The pre tag holds code examples and text examples
+ * The div.code tag holds code examples and the div.sample holds processed
+ * examples
  */
-div.code, div.sample {
+div.code,
+div.sample {
     margin: 10px 0;
     padding: 10px 0;
     overflow-wrap: break-word;
@@ -438,9 +492,9 @@ div.code, div.sample {
 }
 
 /**
- * Marking the differences between the pre and div.sample tags
+ * Marking the differences between the div.code and div.sample tags
  *
- * The pre tag is bordered by yellow and has a modified background
+ * The div.code tag is bordered by yellow and has a modified background
  * while the sample has a blue border and background is white
  * I did this to make them look differently and in turn give the user
  * visual feedback to what they were looking at.

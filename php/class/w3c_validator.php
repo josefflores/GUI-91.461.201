@@ -7,7 +7,7 @@
      *      freely copied or excerpted for educational purposes with credit
      *      to the author.
      *
-     *  A Umass Lowell Computer Science Student 91.461
+     *  A UMass Lowell Computer Science Student 91.461
      *      Checking all files against w3c validators
      *
      *  This file holds the w3c_validator class, I created it in an effort
@@ -20,9 +20,9 @@
      *  @name   w3c_validator
      *
      *  This class is given a series of root points in given domains,
-     *  and then it collects all unique link instances to other index files html
+     *  and then it collects all unique link instances to other index files HTML
      *  or css files for interlinked pages. It then validates links against
-     *  a css3 and html5 validator.
+     *  a CSS3 and HTML5 validator.
      *
      *  Note This file tricks the services into thinking that the requests
      *  are coming from a browser and repeated use could temporarily cause
@@ -140,14 +140,14 @@
         /**
          *  @name   get_data
          *
-         *  This function was found online at
+         *  This function was found at
          *  http://davidwalsh.name/curl-download
          *
          *  There was one modification made to allow for access to the
          *  validators, and that was the USERAGENT option
          *
          *  @param  $url    The url to be fetched
-         *  @return $data   The html of the fetched page or response
+         *  @return $data   The HTML of the fetched page or response
          *                  given by website.
          */
         private function get_data( $url ) {
@@ -172,7 +172,7 @@
          *  @name   getUrls
          *
          *  This function is the implementation of the simple_dom_parser
-         *  It searches for all tags in the html retrieved.
+         *  It searches for all tags in the HTML retrieved.
          *
          *  $param  $url    The url to search
          *  $return $arr    The array of found urls
@@ -237,11 +237,11 @@
          *  @name   process
          *
          *  This function processes the crawled links, it determines the
-         *  validator based on filetype.
+         *  validator based on file type.
          */
         public function process( ) {
 
-            //  Start oin the first link, this counter is needed so that
+            //  Start on the first link, this counter is needed so that
             //  functions know which link to work on
             $i = 0 ;
 

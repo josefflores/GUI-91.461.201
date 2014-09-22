@@ -7,10 +7,10 @@
      *      freely copied or excerpted for educational purposes with credit
      *      to the author.
      *
-     *  A Umass Lowell Computer Science Student 91.461 Assignment: Creating
+     *  A UMass Lowell Computer Science Student 91.461 Assignment: Creating
      *      Your First Web Page
      *
-     *  This file is the page template for all webpages
+     *  This file is the page template for all web pages
      *
      *  9/9/14  Generated Page Template
      */
@@ -19,7 +19,7 @@
     $A[ 'TAB_NAME' ] = getPageDir( $A ) ;
     $A[ 'PAGE_TITLE' ] = $A[ 'TAB_APP' ] . ' - ' . $A[ 'TAB_NAME' ] ;
 
-    // Generating cocument type declaration
+    // Generating document type declaration
     echo '<!DOCTYPE html>
 <!-- Document type declaration for HTML5-->
     ' ;
@@ -35,24 +35,24 @@
         <meta charset="' , $A[ 'CHARSET' ] , '">
     ' ;
     /**
-     *  Including the file html comment information for the page, includes
+     *  Including the file HTML comment information for the page, includes
      *  license and update information.
      */
     include( $A[ 'D_PHP' ] . 'info.php' ) ;
 
     /**
-     *  Including the Meta information for the page such as ecodings,
+     *  Including the Meta information for the page such as encoding,
      *  title, page icons, etc .
      */
     include( $A[ 'D_PHP' ] . 'meta.php' ) ;
 
     /**
-     *  Including any relevent css files, such as the main css file and
+     *  Including any relevant css files, such as the main css file and
      *  any plugin/ library css files.
      */
     include( $A[ 'D_PHP' ] . 'css.php' ) ;
     /**
-     *  Including any relevant Javascript files. This also includes Jquery
+     *  Including any relevant Javascript files. This also includes jQuery
      *  files and any onload functions that need to be run.
      */
     include( $A[ 'D_PHP' ] . 'js.php' ) ;
@@ -97,8 +97,8 @@
 
     /**
      *  Generating the footer of the document. The footer contains links to
-     *  the github repository, copyright information as well as a link to view
-     *  the php source.
+     *  the Github repository, copyright information as well as a link to view
+     *  the PHP source.
      */
     echo '
             <!-- Begin footer with page information-->
