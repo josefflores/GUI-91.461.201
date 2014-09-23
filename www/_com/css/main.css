@@ -427,14 +427,7 @@ iframe {
     height: 800px;
     width: 100%;
 }
-iframe.google {
-    border: 0px;
-    height: 800px;
-    min-width: 630px;
-    max-width: 1000px;
-    margin: 0 auto;
-    display: block;
-}
+
 /**
  *  The icon for a page description
  */
@@ -527,5 +520,84 @@ h5 {
     padding: 4px 0;
 }
 
+/**
+ *  Styling an embedded HTML object containing a pdf
+ */
+object.pdf {
+    width: 100% ;
+    min-width: 624px ;
 
+    overflow:visible;
 
+}
+
+/**
+ *  Styling tables to allow for table rows to extend as a unit
+ */
+table {
+    border-collapse: collapse;
+}
+
+/**
+ *  Preventing table cells from flowing into adjacent empty columns
+ */
+td {
+    display: inline-block ;
+    float:left;
+}
+
+/**
+ *  Rsume title row , did not use a th element here because there is no
+ *  table head
+ */
+tr.title {
+    font-weight: bold;
+    width: 100%;
+    line-height: 20px;
+    height: 20px;
+    border-bottom: 1px solid #000;
+}
+
+/**
+ *  Resume styling for content cells
+ */
+tr.entry > td {
+    margin:0px;
+    padding:0px;
+}
+/**
+ *  Resume styling for title cells
+ */
+tr.title > td {
+    padding: 10px 0 ;
+    margin-top:10px;
+}
+
+/**
+ *  Resume styling for column spacing
+ */
+tr.title > td:first-child ,
+tr.entry > td:first-child ,
+tr.title > td:nth-child(3) ,
+tr.entry > td:nth-child(3) {
+    width: 20%;
+}
+tr.title > td:nth-child(2) ,
+tr.entry > td:nth-child(2) {
+    width: 60%;
+}
+
+/**
+ *  Resume styling for topic rows. This is theEducation , Experience
+ *  etc headers
+ */
+tr.topic > td {
+    font-size: 1.17em;
+    background: #333333 ;
+    color: #fcb825;
+    font-weight: normal;
+    height:30px;
+    line-height:30px;
+    width:100%;
+    margin: 20px 0px 10px 0px;
+}

@@ -28,8 +28,13 @@
     $A[ 'LOGO' ]        = $A[ 'W_IMG' ] . 'mouse.png' ;
     $A[ 'TAB_APP' ]     = 'GUI' ;
 
-    $A[ 'UPDATE' ]      = array( '09/21/14 - Added API for first time initialization' ,
-                                 '09/17/14 - Added validation' ,
+    $A[ 'UPDATE' ]      = array( '09/22/14 - Added Resume, and fixed content and commenting' ,
+                                 '09/22/14 - Ran spell checker' ,
+                                 '09/21/14 - Added Rest API : get/pdf/ , for pdf download Not currently used in the project' ,
+                                 '09/21/14 - Added Rest API : init , for first time initialization' ,
+                                 '09/19/14 - Added validation Reporter' ,
+                                 '09/17/14 - Added Link Crawler' ,
+                                 '09/17/14 - Added Framework' ,
                                  '09/14/14 - Assignment 3' ,
                                  '09/10/14 - Assignment 2' ,
                                  '09/09/14 - Assignment 1' ) ;

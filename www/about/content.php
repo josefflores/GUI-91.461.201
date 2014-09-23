@@ -25,11 +25,13 @@
      //  Describing page content
     echo '
                     <img class="description" src="' , $A[ 'W_IMG' ] ,  'me.jpg" alt="Picture of Jose Flores" >
+
                     <div class="description">
                         <h3>About Me</h3>
                         <h4 class="info">Jose F. Flores</h4>
-                        <p> My name is Jose Flores, and I am a senior majoring in Computer Science. I consider myself a jack of all trades; I can program, draw, build, and whatever else I feel like trying. I have set up this page as my GUI Programming I assignment repository, to showcase what I have completed in the course sequence. </p>
+                        <p> My name is Jose Flores, and I am a senior majoring in Computer Science. I consider myself a jack of all trades; I can program, draw, build, and whatever else I feel like trying. I have set up this page to show you my experience. </p>
                     </div>
+
                     <div class="description">
                         <h3>Past Work</h3>
                         <h4 class="info">Websites</h4>
@@ -40,12 +42,184 @@
                             <!-- li> <a href="http://csr.cs.uml.edu">csr.cs.uml.edu</a></li -->
                         </ul>
                     </div>
+
                     <div class="description">
                         <h3>Resume</h3>
                         <h4 class="info">My Experience</h4>
 
-                        <!-- Iframe code was given by Google, I modified the ampersands to use %26 for validation -->
-                        <iframe class="google" src="http://docs.google.com/viewer?url=' , urlencode( $A[ 'W_ROOT' ] . '_api/get/pdf/?file=jose_flores_resume.pdf' ) , '%26embedded=true"></iframe>
+                        <!-- Building Resume -->
+                        <table>
+                            ' ;
+
+                        //  Get JSON resume
+                        $json = $A[ 'D_JSON' ] . 'resume.json' ;
+                        $json = json_decode( file_get_contents( $json ) , true ) ;
+
+                        // Start building resume
+                        echo '<!-- Employment history -->
+                            <tr class="topic">
+                                <td colspan="3"> Employment </td>
+                            </tr>
+
+                            ' ;
+
+                        // Employment history
+                        foreach( $json[ 'company' ] as $item ) {
+
+                            echo '<tr class="title">
+                                <td>' , $item[ 'employer' ] , '</td>
+                                <td>' , $item[ 'location' ] , '</td>
+                                <td>' , $item[ 'start' ] , ' - ' , $item[ 'end' ] , '</td>
+                            </tr>
+
+                            ' ;
+
+                            foreach ( $item[ 'entry' ] as $line ) {
+
+                                echo '<tr class="entry">
+                                <td colspan="1">' , $line[ 'title' ] , '</td>
+                                <td colspan="2">' , $line[ 'description' ] , '</td>
+                            </tr>
+
+                            ' ;
+                            }
+
+                        }
+
+                        // Education history
+                        echo '<!-- Education history -->
+                            <tr class="topic">
+                                <td colspan="3"> Education </td>
+                            </tr>
+
+                            ' ;
+
+                        foreach( $json[ 'education' ] as $item ) {
+
+                            echo '<tr class="title">
+                                <td>' , $item[ 'institution' ] , '</td>
+                                <td></td>
+                                <td>' , $item[ 'graduation' ] , '</td>
+                            </tr>
+
+                            <tr class="entry">
+                                <td>Major | Minor </td>
+                                <td>' , $item[ 'major' ] , ' | ' ;
+
+                            foreach ( $item[ 'minor' ] as $line )
+                                echo $line , ' ' ;
+
+                            echo '</td>
+                                <td></td>
+                            </tr>
+
+                            ' ;
+
+                            foreach ( $item[ 'organizations' ] as $line ) {
+                                echo '<tr class="entry">
+                                <td>' , $line[ 'name' ] , '</td>
+                                <td>' , $line[ 'description' ] , '</td>
+                                <td>' , $line[ 'start' ] , ' - ' , $line[ 'end' ] , '</td>
+                            </tr>
+
+                            ' ;
+                            }
+                        }
+
+                        // Skill sets
+                        echo '<!-- Skill section -->
+                            <tr class="topic">
+                                <td colspan="3"> Skills </td>
+                            </tr>
+
+                            ' ;
+
+                        // Experienced level skills
+                        echo '<tr class="entry">
+                                <td colspan="1">Languages ( Experienced )</td>
+                                <td colspan="2">' ;
+
+                        $flag = false ;
+                        foreach( $json[ 'languages' ][ 'major' ] as $item ) {
+                            if ($flag ) echo ', ' ;
+                            echo  $item  ;
+                            $flag = true ;
+                        }
+
+                        echo '</td>
+                            </tr>
+
+                            ' ;
+
+                        // Exposed level skills
+                        echo '<tr class="entry">
+                                <td colspan="1">Languages ( Exposed )</td>
+                                <td colspan="2">' ;
+
+                        $flag = false ;
+                        foreach( $json[ 'languages' ][ 'minor' ] as $item ) {
+                             if ($flag ) echo ', ' ;
+                            echo  $item  ;
+                            $flag = true ;
+                        }
+                        echo '</td>
+                            </tr>
+
+                            ' ;
+
+                        //  Operating system skills
+                        echo '<tr class="entry">
+                                <td colspan="1">OS</td>
+                                <td colspan="2">' ;
+
+                        $flag = false ;
+                        foreach( $json[ 'technologies' ][ 'os' ] as $item ) {
+                            if ($flag ) echo ', ' ;
+                            echo  $item  ;
+                            $flag = true ;
+                        }
+                        echo '</td>
+                            </tr>
+
+                            ' ;
+
+                        //  Software skills
+                        echo '<tr class="entry">
+                                <td colspan="1">Software</td>
+                                <td colspan="2">' ;
+
+                        $flag = false ;
+                        foreach( $json[ 'technologies' ][ 'software' ] as $item ) {
+                             if ($flag ) echo ', ' ;
+                            echo  $item  ;
+                            $flag = true ;
+                        }
+                        echo '</td>
+                            </tr>
+
+                            ' ;
+
+                        //  Accolades
+                        echo '<!-- Accolade Section -->
+                            <tr class="topic">
+                                <td colspan="3"> Accolades </td>
+                            </tr>
+
+                            ' ;
+
+                        foreach( $json[ 'distinctions' ] as $item ) {
+                            echo '<tr class="entry">
+                                <td>' , $item[ 'title' ] , '</td>
+                                <td>' , $item[ 'description' ] , '</td>
+                                <td>' , $item[ 'date' ] , '</td>
+                            </tr>
+
+                            ' ;
+
+                        }
+
+                echo'
+                        </table>
                     </div>
                     ';
 

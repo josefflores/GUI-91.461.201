@@ -38,14 +38,38 @@
 
     // Serve PDF
 
-    $file = $A[ 'D_PDF' ] . basename( $_GET[ 'file' ] ) ;
+    if ( isset( $_GET[ 'file' ] ) ) {
+        $name = basename( $_GET[ 'file' ] ) ;
+        $file = $A[ 'D_PDF' ] . $name ;
 
-    if ( is_file( $file ) ) {
-        header( 'Content-Type: application/pdf');
-        header( 'Content-Disposition: attachment;filename="' . basename( $_GET[ 'file' ] ) . '"' ) ;
-        readfile( $file ) ;
-    }
-    else {
+        if ( is_file( $file ) ) {
+
+            header( 'Content-Type: application/pdf');
+
+            //  Make sure an action value for switch case exists
+            $tmp = "" ;
+            if( isset( $_GET[ 'action' ] ) ) {
+                $tmp = $_GET[ 'action' ] ;
+            }
+
+            switch ( $tmp ) {
+                // view in browser
+                case 'view' :
+                    header( 'Content-Disposition: inline;filename="' . $name . '"' ) ;
+                    break ;
+
+                // force download
+                case 'download' :
+                default :
+                    header( 'Content-Disposition: attachment;filename="' . $name . '"' ) ;
+                    break ;
+            }
+
+            //  generate content
+            readfile( $file ) ;
+        }
+    } else {
+        // Error during request
         $F->respond( 404 , 'File was not found.' ) ;
     }
 
