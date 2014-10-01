@@ -1,0 +1,114 @@
+/**
+ *  File:  index.html
+ *
+ *  91.461 Assignment:  Assignments 4
+ *
+ *  Jose F. Flores, UMass Lowell Computer Science, jose_flores@student.uml.edu
+ *
+ *  Copyright (c) 2014 by Jose F. Flores.  All rights reserved.  May be freely
+ *      copied or excerpted for educational purposes with credit to the author.
+ *
+ *  updated by Jose F. Flores on 10/01/14 - Created Page
+ */
+
+/**
+ * setting up the default font and size of the display area
+ */
+body {
+        margin: 0px;
+        padding: 0px;
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    }
+
+/**
+ *  Setting up title
+ */
+h1 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 80px;
+        text-align: center;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+/**
+ *  Setting up sub heading
+ */
+h2 {
+        margin: 0px auto 80px auto;
+        text-align: center;
+        padding-bottom: 15px;
+        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+        width: 500px;
+        font-size: 18px;
+    }
+
+/**
+ *  Setting up paragraph indentation
+ */
+p {
+        margin-left: 20px;
+    }
+
+/**
+ *  Giving links a different font
+ */
+a {
+        font-family: 'Oswald', sans-serif;
+        color: #000000 ;
+    }
+
+/**
+ *  The list of links, without bullets and made to have the same
+ *  indentation as paragraphs
+ */
+ul {
+        list-style-type: none ;
+        margin: 0px 0px 0px 20px;
+        padding: 0px ;
+    }
+
+    /**
+     *  The list item containing the links, gave vertical separation
+     *  space
+     */
+    ul li {
+        margin: 0px 0px 20px 0px;
+    }
+
+/**
+ *  Allowing for centering
+ */
+.wrapper {
+        width: 800px;
+        margin:  40px auto;
+    }
+
+/**
+ *  The title container
+ */
+.header {
+        background: #00B8E6;
+    }
+
+/**
+ *  A section divider
+ */
+.body {
+        padding: 10px;
+        margin: 0px;
+    }
+
+/**
+ *  Copyright information container
+ */
+.footer {
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+        color:  #333;
+    }
+
+
