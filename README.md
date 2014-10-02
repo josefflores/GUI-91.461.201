@@ -1,6 +1,6 @@
 # GUI-91.461.201
 
-_This Prjoect is my GUI programming software project. It holds a information about me, a repository of assignments, a source viewer, and a w3c validator. This Document is here to relay as much information about the inner workings of the application, certain elements have been documented that do not exist, but when they are need will conform to the outline given here. If modifications to the application structure and purpose are made this document will reflect those changes._
+_This Prjoect is my GUI programming software project github homepage._
 
 ## Project Setup
 ### Directory Structure
