@@ -48,6 +48,13 @@ h2 {
     }
 
 /**
+ *  Setting the fonrt for the section headings
+ */
+h3 {
+        font-family: "Oswald", sans-serif;
+    }
+    
+/**
  *  Setting up paragraph indentation
  */
 p {
