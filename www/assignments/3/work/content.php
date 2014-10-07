@@ -61,10 +61,12 @@
             GUI Programming I
         </title>
 
-        <!-- Adding link to main css style sheet file -->
-        <link type="text/css" rel="stylesheet" href="<?php echo $A[ 'W_CSS' ] ; ?>main.css">
         <!-- Adding link to Assignment 3 css stylesheet file, This file has the styling for the example elements-->
         <link type="text/css" rel="stylesheet" href="<?php echo $A[ 'W_CSS' ] ; ?>assignment3.css">
+        <!-- Adding link to main css style sheet file -->
+        <link type="text/css" rel="stylesheet" href="<?php echo $A[ 'W_CSS' ] ; ?>main.css">
+
+
 
     </head>
 
@@ -109,13 +111,15 @@
                         <ul>
 
                             <li>
-                                <a href="<?php echo $A[ 'W_ROOT' ] ; echo 'assignments/3/' ?>">
+
+                                <a href="<?php echo $A[ 'W_ROOT' ] ; echo 'assignments/3/' ; ?>">
                                     Instructions
                                 </a>
+
                             </li>
 
                             <li>
-                                <a href="<?php echo $A[ 'W_ROOT' ] ; echo 'assignments/3/work/' ?>">
+                                <a href="<?php echo $A[ 'W_ROOT' ] ; echo 'assignments/3/work/' ; ?>">
                                     Work
                                 </a>
                             </li>
@@ -410,7 +414,7 @@
                             I will also use the span tag to change how a
 
                             <!-- browser rendering of modified span class this class makes text look like a title typed from a typewriter -->
-                            <span class="title">
+                            <span class="type">
                                 title
                             </span>
                             is presented.

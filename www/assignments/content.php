@@ -13,6 +13,7 @@
      *  This file holds the content for the assignment directory listing
      *  page.
      *
+     *  10/7/14 Fixed highlighting
      *  9/10/14 Generated content page
      */
 
@@ -57,6 +58,12 @@
      *  http://php.net/manual/en/class.recursivedirectoryiterator.php
      */
 
+    // Sets up the urlencode so it only happens once not every iteration
+    if ( isset( $_GET[ 'file' ] ) )
+        $file = urlencode( $_GET[ 'file' ] ) ;
+    else
+        $file = false ;
+
     foreach( $paths as $path ) {
         //  Recursive Iterator
         $dir = scandir( $path ) ;
@@ -65,11 +72,11 @@
         foreach( $dir as $item ) {
             //  Compare filenames
             if ( is_numeric( $item ) ) {
-
+                    $url = urlencode( trim( 'www' . $A['D_SLASH' ] . 'assignments' . $A['W_SLASH' ] . $item . $A['W_SLASH' ] ) ) ;
                     // Make link
                     echo '      <li><a ';
-                    if ( isset( $_GET[ 'file' ] ) &&
-                         $_GET[ 'file' ] == $item ) {
+                    if ( $file &&
+                          $file == $url )  {
                             echo ' class="selected" ' ;
                     }
                     echo 'href="?file=' , urlencode( trim( 'www' . $A['D_SLASH' ] . 'assignments' . $A['W_SLASH' ] . $item . $A['W_SLASH' ] ) ) ,

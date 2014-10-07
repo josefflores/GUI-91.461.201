@@ -13,6 +13,9 @@
      *  This file holds the w3c_validator class, I created it in an effort
      *  automate my page checks for w3c compliance
      *
+     *  10/6/2014   Modified validate method to deal with addresses that
+     *              start with //, these now default to http:// in the
+     *              validators but display as originally found links.
      *  9/18/2014   wrote class
      */
 
@@ -286,12 +289,20 @@
          */
         private function validate( $VAL , $link , $i ) {
 
+            // Keep as found link
+            $this->result[ $i ][ 'LINK' ] = $link ;
+
             //  Retrieve validation
+
+            //  Fix // begining for validators default to http
+            if ( substr( $link , 0 , 2 ) == '//' ) {
+                $link = 'http:' . $link ;
+            }
+
             $test = $VAL[ 'URL' ] . urlencode( $link ) ;
             $data = $this->get_data( $test ) ;
 
             //  Store common value of the link
-            $this->result[ $i ][ 'LINK' ] = $link ;
             $this->result[ $i ][ 'TEST' ] = $test ;
             // Initialize values, error case will overwrite
             $this->result[ $i ][ 'ERROR' ] = NULL ;

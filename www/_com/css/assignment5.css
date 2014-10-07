@@ -1,0 +1,144 @@
+    /**
+     *  @file   assignment5.css
+     *  @author Jose F. Flores <jose_flores@student.uml.edu>
+     *
+     *  Copyright (c) 2014 by Jose F. Flores. All rights reserved. May be
+     *      freely copied or excerpted for educational purposes with credit
+     *      to the author.
+     *
+     *  A UMass Lowell Computer Science Student 91.461 Assignment: Creating
+     *      Styling Your First Web Page With CSS
+     *
+     *  This file is the css file for the assignment 5 page.
+     *
+     *  10/7/14 Generated css file
+     */
+
+
+    /**
+     *  Remove any spacing around the body element.
+     */
+    body {
+            margin:0px;
+            padding:0px;
+        }
+
+    /**
+     *  em's are use to hold quoted content in this document
+     */
+    em {
+            color: #14425C ;
+        }
+
+    /**
+     *  A class that is the width of the document, it is used in conjunction
+     *  with a wrapper to generate elements whose background is the full
+     *  document while maintaining the wrapper content centered.
+     */
+    .wide {
+            width: 100% ;
+        }
+
+    /**
+     *  The wrapper that determines the width of the content.
+     */
+    .wrapper {
+            width: 800px;
+            margin: auto ;
+        }
+
+    /**
+     *  Using the parchment background to style the header
+     */
+    .constitution {
+            /**
+             * free seamless texture under Creative Commons Attribution 3.0 License.
+             * http://freeseamlesstextures.com/images/28-faded-parchment-background-sml.jpg
+             */
+            background-image: url( ../img/bg.jpg ) ;
+        }
+
+    /**
+     *  This is the header bottom border in colonial army blue
+     */
+    .border {
+            background-color: #14425C ;
+            height:20px;
+            box-shadow: 1px 3px 15px #333;
+            border-top: 2px inset black;
+            border-bottom: 1px solid black;
+        }
+
+    /**
+     *  This holds the revolutionary battle image
+     */
+    .banner {
+            width: 800px;
+            height: 300px;
+        }
+
+    /**
+     *  The whole literature content in a older typeset
+     */
+    div.literature {
+            padding: 20px;
+            margin: 10px 0px ;
+            font-family: 'EB Garamond', serif;
+            font-size: 20px ;
+            font-weight: bold;
+        }
+
+    /**
+     *  The literature title in the same font as the text
+     */
+    div.literature-title {
+            line-height: 70px ;
+            padding: 20px 0px ;
+            font-size: 50px ;
+        }
+
+    /**
+     *  The Literature author, using a cursive font
+     */
+    div.literature-author {
+            color: #14425C ;
+            font-family: 'Homemade Apple', cursive;
+        }
+
+    /**
+     *  The date when the literature was written
+     */
+    div.literature-date {
+            color: #14425C ;
+        }
+
+    /**
+     *  Each paragraph / verse of the literature
+     */
+    p.literature-verse {
+            padding: 15px 0px 0px 0px;
+        }
+
+    /**
+     *  Each paragraph line. Their spacing and display has been modified
+     *  to allow them to be on separate lines
+     */
+    p.literature-verse > span.line {
+            line-height: 23px;
+            margin-left: 0em;
+            padding: 2px 0px ;
+            display: block;
+        }
+
+    /**
+     *  The first letter of the first line of each paragraph, the letters
+     *  have been made larger and given a different color
+     */
+    p.literature-verse > span.line:first-child:first-letter {
+            float: left;
+            font-size: 49px;
+            line-height: 30px;
+            color: #14425c;
+            margin: -19px 0px 0px 0px;
+            padding: 5px 4px 0px 0px;
+        }
