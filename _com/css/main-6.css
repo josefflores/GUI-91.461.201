@@ -60,6 +60,7 @@ button:active{
  * Form inputs extra spacing
  */
 input {
+    float: left;
     margin: 10px 10px 10px 0px;
     padding: 5px;
     border: 1px solid #aaaaaa ;
