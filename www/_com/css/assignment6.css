@@ -1,0 +1,68 @@
+ /**
+ *  File: main.css
+ *  91.461 Assignment: Creating Your First Web Page
+ *  Jose F. Flores, UMass Lowell Computer Science Student
+ *      jose_flores@student.uml.edu
+ *  Copyright (c) 2014 by Jose F. Flores. All rights reserved. May be
+ *      freely copied or excerpted for educational purposes with credit
+ *      to the author.
+ *
+ *  updated by JFF on Oct 21, 2014 at 2:30
+ *      Finished styling for assignment 6 submission
+ */
+
+/**
+ * Warning box styling for both inputs and messages
+ */
+.invalid {
+    background: #F4B223 ;
+    border: 1px solid red;
+    padding: 5px;
+}
+
+/**
+ * Spacing the output
+ */
+#table {
+    margin-top: 10px;
+}
+
+/**
+ * Multiplication table, restoring border spacings and adding a table
+ * border to match website style
+ */
+#table table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    border: 1px solid #dddddd;
+    padding: 5px;
+}
+
+/**
+ * Multiplication table headers
+ */
+#table > table > tbody > tr > th {
+    background: #333333 ;
+    color : #F4B223 ;
+    text-align: center ;
+    width: 30px ;
+    line-height: 30px;
+}
+
+/**
+ * Multiplication table results
+ */
+#table > table > tbody > tr > td {
+    background: #F4B223 ;
+    text-align: center ;
+    min-width: 30px ;
+    line-height: 30px;
+}
+
+/**
+ *  Checkered pattern by overwriting cell background
+ */
+#table > table > tbody > tr:nth-child(even) > td:nth-child(even) ,
+#table > table > tbody > tr:nth-child(odd) > td:nth-child(odd) {
+    background: #fff ;
+}

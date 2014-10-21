@@ -13,6 +13,9 @@
      *  This file holds the w3c_validator class, I created it in an effort
      *  automate my page checks for w3c compliance
      *
+     *  10/11/2014  Added delay at the beginning of the get data method to
+     *              prevent failure being triggered by a validator due to
+     *              too many requests.
      *  10/6/2014   Modified validate method to deal with addresses that
      *              start with //, these now default to http:// in the
      *              validators but display as originally found links.
@@ -41,7 +44,10 @@
      *  http://someDirPath/path/
      *  http://someDirPath/somefile.html
      *  http://someDirPath/somefile.css
+     *  http://someDirPath/somefile.js
      *  http://someDirPath/?Getparameters
+     *  http://someDirPath/?Getparameters.json
+     *
      */
     class w3c_validator {
 
@@ -52,7 +58,7 @@
                                  'link' => 'href' ,
                                  'iframe' => 'src' ,
                                  'img' => 'src' ,
-                                 'script' => 'drc' ) ;
+                                 'script' => 'src' ) ;
 
         private $parse  = array( 'html' ) ;
         private $links  = array() ;
@@ -62,6 +68,12 @@
         private $CSS = array( 'SERVICE' => 'http://jigsaw.w3.org/css-validator' ,
                               'URL'     => 'http://jigsaw.w3.org/css-validator/validator?uri=' ,
                               'REGEX'   => '|div id="congrats"|' ) ;
+
+        //  JSON VALIDATOR
+        private $JSON = array('SERVICE' => 'http://jsonlint.com/' ,
+                              'URL'     => 'http://jsonlint.com/?json=' ,
+                              'REGEX'   => '|class="error"|' ) ;
+
 
         //  HTML VALIDATOR
         private $HTML = array('SERVICE' => 'http://validator.nu' ,
@@ -147,13 +159,21 @@
          *  http://davidwalsh.name/curl-download
          *
          *  There was one modification made to allow for access to the
-         *  validators, and that was the USERAGENT option
+         *  validators, and that was the USERAGENT option. I also added a
+         *  delay to prevent failure caused by a validator trigger.
          *
          *  @param  $url    The url to be fetched
+         *  @param  $delay  The amount to sleep between calls , this is
+         *                  needed in the case of a max web page request
+         *                  from a domain is triggered by the validators
+         *
          *  @return $data   The HTML of the fetched page or response
          *                  given by website.
          */
-        private function get_data( $url ) {
+        private function get_data( $url , $delay = 1 ) {
+
+            // Delay to prevent trigger
+            sleep( $delay ) ;
 
             $ch = curl_init() ;
 
@@ -257,12 +277,16 @@
                 // Start matching file types
 
                 // CSS
-                if ( preg_match( '|.css|' , $file[ 0 ] ) ) {
+                if ( preg_match( '|\.css|' , $file[ 0 ] ) ) {
                     $this->validate( $this->CSS , $link , $i ) ;
                 }
-
+                // JSON files
+                else if ( isset( $file[ 1 ] ) &&
+                          preg_match( '|\.json|' , $file[ 1 ] ) ){
+                    $this->validate( $this->JSON , $link , $i ) ;
+                }
                 // HTML and index files
-                else if ( preg_match( '|.html|' , $file[ 0 ] ) ||
+                else if ( preg_match( '|\.html|' , $file[ 0 ] ) ||
                          $file[ 0 ][ strlen( $file[ 0 ] ) - 1 ] == '/' ) {
                     $this->validate( $this->HTML , $link , $i ) ;
                 }

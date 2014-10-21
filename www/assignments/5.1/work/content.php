@@ -56,14 +56,14 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
         <!-- Including assignment js file -->
-        <script src="<?php echo $A[ 'W_JS' ] ; ?>assignment5.js" type="text/javascript"></script>
+        <script src="<?php echo $A[ 'W_JS' ] ; ?>assignment5A.js" type="text/javascript"></script>
 
         <!-- Including google fonts -->
         <link href='//fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 
         <!-- Including assignment css file -->
-        <link href='<?php echo $A[ 'W_CSS' ]; ?>assignment5.css' rel='stylesheet' type='text/css'>
+        <link href='<?php echo $A[ 'W_CSS' ]; ?>assignment5A.css' rel='stylesheet' type='text/css'>
 
     </head>
 
@@ -120,7 +120,6 @@
     </body>
 
 </html>
-
 
 
 

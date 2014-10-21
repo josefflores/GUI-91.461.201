@@ -33,86 +33,42 @@
         function placeContent() {
 
             //  VARIABLES
-             var i ,                //  Loop counter
-                str ,          //  The string holding the literature piece
-                pcol ,
-                k ,
-                z ,
-                col ,
-                remainder ,
-                mod ;
+            var i ;                 //  Loop counter
+            var str = "" ;          //  The string holding the literature piece
 
-
-            str = "" ;
-
-            // Get column number
-            col = $( "#column" ).val() ;
-
-            if ( col > json[ 'paragraph' ].length ) {
-                col = json[ 'paragraph' ].length ;
-            }
-
-            // Set css
-            if ( col != 1  ) {
-                $( ".wrapper").css( {"width" : 470 * col + "px"});
-            }
+            //  Generate parent element
+            str = '<div class="literature" >' ;
 
             //  Generating literature heading and replacing apostrophes
-            str += element( "literature-title" , json[ 'title' ] ) ;
-            str += element( "literature-author" , json[ 'author' ] ) ;
-            str += element( "literature-date" , json[ 'date' ] ) ;
+            str += '<div class="literature-title">' +
+                json[ 'title' ].replace( /'/g , '&rsquo;' ) + '</div>' ;
 
-            //  Generating literature content
-             //  Generate parent element
-            str += '<div class="literature" >' ;
+            str += '<div class="literature-author">' +
+                json[ 'author' ].replace( /'/g , '&rsquo;' ) + '</div>' ;
 
-            pcol = Math.floor( json[ 'paragraph' ].length / col )  ;
-            remainder = json[ 'paragraph' ].length % col ;
-
-            if( mod != 0 && remainder == 0 ) {
-                mod = 0 ;
-            } else {
-                mod = 1 ;
-            }
-
-            console.log( pcol ) ;
+            str += '<div class="literature-date">' +
+                json[ 'date' ].replace( /'/g , '&rsquo;' ) + '</div>' ;
 
             //  Generating literature content
 
             //  Looping through the array of paragraphs and the array of lines
             //  each paragraph holds
+            for ( i = 0 ; i < json[ 'paragraph' ].length ; ++i ) {
 
-            // i is the counter of the paragraph k is the div and z is the paragraphs in div counter
-            for (  i = 0 , k = 0 ; k < col && i < json[ 'paragraph' ].length ; ++k ) {
+                //  Generating a paragraph
+                str += '<p class="literature-verse">' ;
 
+                //  Generating each line
+                for ( j = 0 ; j < json[ 'paragraph' ][ i ].length ; ++j ) {
 
-                str += '<div class="column">' ;
-
-                for ( z = 0 ; z < pcol + mod && i < json[ 'paragraph' ].length ; ++i , ++z ) {
-
-                    //  Generating a paragraph
-                    str += '<p class="literature-verse">' ;
-
-                    //  Generating each line
-                    for ( j = 0 ; j < json[ 'paragraph' ][ i ].length ; ++j ) {
-
-                        //  Processing each line to remove non HTML safe quotes
-                        //  as well as to emphasize quotes
-                        str += formatter( json[ 'paragraph' ][ i ][ j ] ) ;
-
-                    }
-                    //  Terminating a paragraph
-                    str += '</p>' ;
+                    //  Processing each line to remove non HTML safe quotes
+                    //  as well as to emphasize quotes
+                    str += formatter( json[ 'paragraph' ][ i ][ j ] ) ;
 
                 }
+                //  Terminating a paragraph
+                str += '</p>' ;
 
-
-                if( mod != 0 && --remainder == 0 ) {
-                    mod = 0 ;
-                }
-
-                //  terminating the float div
-                str += '</div>' ;
             }
 
             //  terminating the literature section
@@ -120,22 +76,6 @@
 
             //  adding generated string to HTML element with id of content
             $( "#content" ).html( str ) ;
-        }
-
-        /**
-         *  @name   element
-         *
-         *  This function cleans non safe HTML quotes and generates a
-         *  div of a given classes with a given value
-         *
-         *  @param  classes   The class to assign the div
-         *  @param  value   The value of the content
-         *
-         *  @return string  The formatted element
-         */
-        function element( classes , value ) {
-             return '<div class="' + classes + '">' +
-                value.replace( /'/g , '&rsquo;' ) + '</div>' ;
         }
 
          /**
@@ -250,4 +190,3 @@
               json = data ;                 //  Store retrieved data in global variable
             }
         } ) ;
-

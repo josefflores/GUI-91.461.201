@@ -112,14 +112,14 @@
 
                             <li>
 
-                                <a href="<?php echo $A[ 'W_ROOT' ] ; echo 'assignments/5/' ; ?>">
+                                <a href="<?php echo $A[ 'W_ROOT' ] ; echo 'assignments/5.1/' ; ?>">
                                     Instructions
                                 </a>
 
                             </li>
 
                             <li>
-                                <a href="<?php echo $A[ 'W_ROOT' ] ; echo 'assignments/5/work/' ; ?>">
+                                <a href="<?php echo $A[ 'W_ROOT' ] ; echo 'assignments/5.1/work/' ; ?>">
                                     Work
                                 </a>
                             </li>

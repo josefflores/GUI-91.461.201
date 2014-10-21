@@ -45,16 +45,7 @@
     .wrapper {
             width: 800px;
             margin: auto ;
-            text-align: center;
         }
-
-    /**
-     *  To create multi column layout
-     */
-    .column {
-        float:left ;
-        width:450px ;
-    }
 
     /**
      *  Using the parchment background to style the header
@@ -79,13 +70,6 @@
         }
 
     /**
-     *  The header of the document
-     */
-    .header{
-            text-align: center;
-        }
-
-    /**
      *  This holds the revolutionary battle image
      */
     .banner {
@@ -102,7 +86,6 @@
             font-family: 'EB Garamond', serif;
             font-size: 20px ;
             font-weight: bold;
-            text-align: left;
         }
 
     /**
@@ -153,9 +136,9 @@
      */
     p.literature-verse > span.line:first-child:first-letter {
             float: left;
-            font-size: 58px;
+            font-size: 49px;
             line-height: 30px;
             color: #14425c;
-            margin: 5px 0px 0px 0px;
+            margin: -19px 0px 0px 0px;
             padding: 5px 4px 0px 0px;
         }
