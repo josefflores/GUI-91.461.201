@@ -65,9 +65,7 @@ input {
     padding: 5px;
     border: 1px solid #aaaaaa ;
 }
-input[submit] {
-    float: none;
-}
+
 /**
  * Form input description
  */
