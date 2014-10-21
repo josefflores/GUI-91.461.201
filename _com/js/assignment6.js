@@ -88,7 +88,9 @@ function Application( target ) {
             //  Return that the value was not a number
 
             //  Add to error message
-            this.str_out += '<p class="invalid">Invalid entry for ' + str_id  + '</p>' ;
+            this.str_out = '<p class="invalid">Invalid entry for ' + str_id  + '</p>' ;
+            $( "#" + str_id + "_error" ).html( this.str_out ) ;
+            
             return false ;
 
         }
@@ -157,7 +159,6 @@ function Application( target ) {
         // Check validation results
         if ( bool_tmp ) {
             console.log( "ERROR - Inputs not valid" ) ;
-            $( str_divTarget ).html( this.str_out ) ;
             return 1 ;
         }
 
