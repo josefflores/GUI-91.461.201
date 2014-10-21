@@ -72,6 +72,9 @@ function Application( target ) {
         //  VARIABLES
         var str_val ;       //  This string holds the value of the input
 
+        //  Clear error
+        $( "#" + str_id + "_error" ).html( "" ) ;
+        
         //  Retrieve the value of the input
         str_val = $( "#" + str_id ).val() ;
 
@@ -88,7 +91,7 @@ function Application( target ) {
             //  Return that the value was not a number
 
             //  Add to error message
-            this.str_out = '<p class="invalid">Invalid entry for ' + str_id  + '</p>' ;
+            this.str_out = '<span class="invalid">Invalid entry for ' + str_id  + '</span>' ;
             $( "#" + str_id + "_error" ).html( this.str_out ) ;
             
             return false ;
