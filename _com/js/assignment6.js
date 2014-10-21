@@ -91,7 +91,7 @@ function Application( target ) {
             //  Return that the value was not a number
 
             //  Add to error message
-            this.str_out = '<div class="message">Invalid entry for ' + str_id  + '</div>' ;
+            this.str_out = 'Invalid entry for ' + str_id ;
             $( "#" + str_id + "_error" ).html( this.str_out ) ;
             
             return false ;
