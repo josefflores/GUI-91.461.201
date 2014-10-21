@@ -21,6 +21,13 @@
 }
 
 /**
+ * Textual error message
+ */
+.message {
+   float:left;
+   padding: 5px;
+}
+/**
  * Spacing the output
  */
 #table {
