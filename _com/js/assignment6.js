@@ -94,7 +94,7 @@ function Application( target ) {
             //  Add to error message
             this.str_out = 'Invalid entry for ' + str_id ;
             $( "#" + str_id + "_error" ).html( this.str_out ) ;
-            $( "#" + str_id + "_error" ).show() ;
+            $( "#" + str_id + "_error" ).css( 'display' , 'block' ) ;
             
             return false ;
 
