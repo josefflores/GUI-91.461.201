@@ -75,7 +75,7 @@ function Application( target ) {
         //  Clear error
         $( "#" + str_id + "_error" ).html( "" ) ;
         $( "#" + str_id + "_error" ).hide() ;
-        
+
         //  Retrieve the value of the input
         str_val = $( "#" + str_id ).val() ;
 
@@ -94,8 +94,8 @@ function Application( target ) {
             //  Add to error message
             this.str_out = 'Invalid entry for ' + str_id ;
             $( "#" + str_id + "_error" ).html( this.str_out ) ;
-            $( "#" + str_id + "_error" ).css( 'display' , 'block' ) ;
-            
+            $( "#" + str_id + "_error" ).css( 'display' , 'inline-block' ) ;
+
             return false ;
 
         }
