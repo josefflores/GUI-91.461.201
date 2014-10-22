@@ -152,12 +152,12 @@
                     </p>
 
                     <ol>
-                        <li>Enter Numbers for the horizontal and vertical table headers in hexadecimal ( 0xNumber) or decimal (Number).</li>
+                        <li>Enter numbers for the horizontal and vertical table headers in hexadecimal ( 0xNumber) or decimal (Number).</li>
                         <li>Click the process button to generate the multiplication table.</li>
                     </ol>
 
                     <p>
-                        The values are then calculated and displayed in decimal form, with the lowest bound of the factors being located to the top left increasing in values across and downwards in increments of one.
+                        The values entered are then checked to make sure they are numbers, if the number is a float then it is rounded down to the closest integer value. The table values are then calculated and displayed in decimal form. The factors are displayed with the lowest bound located to the top left increasing in values across and downwards in increments of one.
                     </p>
 
                 </div>
@@ -168,22 +168,27 @@
                     <form id="application" name="application" >
 
                         <!-- The horizontal numerical bounds -->
-                        <p>
-                            <label>Horizontal axis bounding numbers</label>
+                        <div class="input-line">
+                            <label>Enter horizontal axis bounding numbers. Order does not matter.</label>
                             <input id="num_1" name="num_1" class="number" type="text"/>
+                            <span id="num_1_error" class="message"></span>
+                            <br/>
                             <input id="num_2" name="num_2" class="number" type="text"/>
-                        </p>
+                            <span id="num_2_error" class="message"></span>
+                        </div>
+
                         <!-- The vertical numerical bounds -->
-                        <p>
-                            <label>Vertical axis bounding numbers</label>
+                        <div class="input-line">
+                            <label>Enter vertical axis bounding numbers. Order does not matter.</label>
                             <input id="num_3" name="num_3" class="number" type="text"/>
+                            <span id="num_3_error" class="message"></span>
+                            <br/>
                             <input id="num_4" name="num_4" class="number" type="text"/>
-                        </p>
+                            <span id="num_4_error" class="message"></span>
+                        </div>
 
                         <!-- The submission button -->
-                        <p>
-                            <button type="submit"> Process </button>
-                        </p>
+                        <button type="submit"> Process </button>
 
                     </form>
 
@@ -199,3 +204,4 @@
     </body>
 
 </html>
+

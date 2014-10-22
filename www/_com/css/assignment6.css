@@ -16,15 +16,34 @@
  */
 .invalid {
     background: #F4B223 ;
-    border: 1px solid red;
+
     padding: 5px;
+}
+
+/**
+ * Setting up an input line, the overflow adds vertical dimension to the
+ * floated element
+ */
+.input-line {
+    overflow: auto;
+    width: 100%;
+}
+/**
+ * Textual error message
+ */
+.message {
+    float: none ;
+    padding: 5px;
+    margin: 10px 10px 10px 0px;
+    font-weight: bold ;
+    color : #F4B223 ;
 }
 
 /**
  * Spacing the output
  */
 #table {
-    margin-top: 10px;
+   margin-top: 10px;
 }
 
 /**

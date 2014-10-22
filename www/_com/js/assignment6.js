@@ -72,6 +72,10 @@ function Application( target ) {
         //  VARIABLES
         var str_val ;       //  This string holds the value of the input
 
+        //  Clear error
+        $( "#" + str_id + "_error" ).html( "" ) ;
+        $( "#" + str_id + "_error" ).hide() ;
+
         //  Retrieve the value of the input
         str_val = $( "#" + str_id ).val() ;
 
@@ -88,7 +92,10 @@ function Application( target ) {
             //  Return that the value was not a number
 
             //  Add to error message
-            this.str_out += '<p class="invalid">Invalid entry for ' + str_id  + '</p>' ;
+            this.str_out = 'Invalid entry for ' + str_id ;
+            $( "#" + str_id + "_error" ).html( this.str_out ) ;
+            $( "#" + str_id + "_error" ).css( 'display' , 'inline-block' ) ;
+
             return false ;
 
         }
@@ -157,7 +164,6 @@ function Application( target ) {
         // Check validation results
         if ( bool_tmp ) {
             console.log( "ERROR - Inputs not valid" ) ;
-            $( str_divTarget ).html( this.str_out ) ;
             return 1 ;
         }
 
