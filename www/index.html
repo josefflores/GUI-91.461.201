@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8"/>
+
+        <title> Form Validation </title>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <script type="text/javascript">
+
+            function Form( displayTarget ){
+
+                var str_display = displayTarget ;
+
+                this.process = function() {
+
+                    var str_input_name ,
+                        str_input_email ,
+                        str_input_phone ,
+                        str_output ,
+                        bool_val ;
+
+                    bool_val = true ;
+                    str_output = "" ;
+                    $( str_display ).html( str_output ) ;
+
+                    str_input_name  = $( "#input-name-value" ).val() ;
+                    str_input_email = $( "#input-email-value" ).val() ;
+                    str_input_phone = $( "#input-phone-value" ).val() ;
+
+                    if ( !this.validate( "#input-name" , "NAME"  , str_input_name ) )
+                        bool_val = false ;
+
+                    if ( !this.validate( "#input-email" , "EMAIL" , str_input_email ) )
+                        bool_val = false ;
+
+                    if ( !this.validate( "#input-phone" , "PHONE" , str_input_phone ) )
+                        bool_val = false ;
+
+                    if( !bool_val )
+                        return 1 ;
+
+                    str_output += "<div> Your name is "  + str_input_name  + "</div>" ;
+                    str_output += "<div> Your email is " + str_input_email + "</div>" ;
+                    str_output += "<div> Your phone is " + str_input_phone + "</div>" ;
+
+                    console.log( str_display ) ;
+                    console.log( str_output ) ;
+
+                    $( str_display ).html( str_output ) ;
+
+                    return 0 ;
+                } ;
+
+                this.validate = function( str_id , str_validation_type , str_string ){
+
+                    console.log( str_id ) ;
+                    console.log( str_validation_type ) ;
+                    console.log( str_string ) ;
+
+                    var str_regex ;
+
+                    $( str_id + " .input-message" ).html( "" ) ;
+
+                    switch( str_validation_type ){
+
+                        case "NAME" :
+                                //  http://stackoverflow.com/questions/14773421/regex-for-name-validation-with-atleast-one-alpahbeta-z
+                                //  with a modification to allow for spaces
+                                str_regex = new RegExp( '^[a-zA-Z0-9]*[a-zA-Z]+[a-zA-Z0-9]* [a-zA-Z0-9]*[a-zA-Z]+[a-zA-Z0-9]*$' ) ;
+                            break ;
+
+                        case "PHONE" :
+                                //  http://www.virtuosimedia.com/dev/php/37-tested-php-perl-and-javascript-regular-expressions
+                                str_regex = new RegExp( '^(([0-9]{1})*[- .(]*([0-9]{3})[- .)]*[0-9]{3}[- .]*[0-9]{4})+$' ) ;
+                            break ;
+
+                        case "EMAIL" :
+                                //  http://www.virtuosimedia.com/dev/php/37-tested-php-perl-and-javascript-regular-expressions
+                                str_regex = new RegExp( '^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$' ) ;
+                            break ;
+
+                        default :
+                                $( str_id + " .input-message" ).html( "Invalid String" ) ;
+                                $( str_id + '-value' ).addClass( 'warning' ) ;
+                                return false ;
+                            break ;
+                    }
+
+                    console.log( "validating '" + str_string + "' with '" + str_regex + "'" ) ;
+
+                    if ( !str_regex.test( str_string ) ) {
+                        console.log( "Failed Regex" ) ;
+                        $( str_id + " .input-message" ).html( "Invalid String" ) ;
+                        $( str_id + '-value' ).addClass( 'warning' ) ;
+                        return false ;
+                    }
+                    console.log( "Passed Regex" ) ;
+                    $( str_id + '-value' ).removeClass( 'warning' ) ;
+                    return true ;
+
+                } ;
+
+            } ;
+
+            $( document ).ready( function(){
+
+                $( "#registration" ).submit( function( ) {
+
+                    var form = new Form( "#result" ) ;
+
+                    console.log( "Form Submission" ) ;
+
+                    form.process() ;
+
+                    return false ;
+                }) ;
+
+            }) ;
+
+        </script>
+
+        <style type="text/css">
+            form {}
+            .wide {
+                width: 100% ;
+                overflow:initial;
+                float:left ;
+            }
+            .input-description {
+                width: 100% ;
+                float:left;
+                overflow: auto ;
+                margin: 10px;
+                font-weight: bold;
+            }
+            input {
+                float: left ;
+                padding 5px;
+                margin: 10px;
+                border: 1px solid #333 ;
+            }
+            .input-message {
+                float: left;
+                margin: 10px;
+                font-weight: bold;
+            }
+            .warning {
+                color: red ;
+                border: 1px solid red ;
+            }
+            #result {
+                margin: 10px;
+            }
+            button {
+                margin: 10px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <form name="registration" id="registration">
+
+            <div id="input-name" class="wide">
+                <span class="input-description">Enter your name (First Last).</span>
+                <input name="input-name-value" id="input-name-value"></input>
+                <span class="input-message"></span>
+            </div>
+
+            <div id="input-email" class="wide">
+                <span class="input-description">Enter your email.</span>
+                <input name="input-email-value" id="input-email-value"></input>
+                <span class="input-message"></span>
+            </div>
+
+            <div id="input-phone" class="wide">
+                <span class="input-description">Enter your phone number.</span>
+                <input name="input-phone-value" id="input-phone-value"></input>
+                <span class="input-message"></span>
+            </div>
+
+            <div class="wide">
+                <button type="submit"> Submit </button>
+            </div>
+
+        </form>
+        <div id="result"></div>
+    </body>
+</html>

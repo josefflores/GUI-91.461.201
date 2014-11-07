@@ -9,9 +9,9 @@
      *
      *  A UMass Lowell Computer Science Student 91.461
      *
-     *  This file holds the PHP download script for json
+     *  This file holds the PHP download script for html
      *
-     *  10/02/14    Modified download script for json
+     *  10/02/14    Modified download script for html
      *  9/21/14     Created download script
      */
 
@@ -41,11 +41,11 @@
 
     if ( isset( $_GET[ 'file' ] ) ) {
         $name = basename( $_GET[ 'file' ] ) ;
-        $file = $A[ 'D_JSON' ] . $name ;
+        $file = $A[ 'D_HTML' ] . $name ;
 
         if ( is_file( $file ) ) {
 
-            header( 'Content-Type: application/json');
+            header( 'Content-Type: text/html');
 
             //  Make sure an action value for switch case exists
             $tmp = "" ;

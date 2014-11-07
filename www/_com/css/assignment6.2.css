@@ -1,0 +1,64 @@
+ /**
+ *  File: assignment6.2.css
+ *  91.461 Assignment: Creating Your First Web Page
+ *  Jose F. Flores, UMass Lowell Computer Science Student
+ *      jose_flores@student.uml.edu
+ *  Copyright (c) 2014 by Jose F. Flores. All rights reserved. May be
+ *      freely copied or excerpted for educational purposes with credit
+ *      to the author.
+ *
+ *  updated by JFF on Oct 30, 2014 at 2:30
+ *      Finished styling for assignment 6 submission
+ */
+
+/**
+ *  Styling the navigation bar
+ */
+nav.assignment ,
+nav.assignment > ul {
+    margin: 0px;
+    padding: 0px;
+    width : 100%;
+    height : 40px;
+    background: #FCB825;
+}
+
+nav.assignment {
+    border-bottom: 1px solid #eee;
+}
+
+    nav.assignment > ul {
+        padding: 0px;
+    }
+
+        nav.assignment > ul > li {
+            margin: 0px 2px;
+            float: left ;
+            list-style-type:none;
+        }
+
+            nav.assignment > ul > li > a {
+                display: block ;
+                padding: 10px;
+                color: #fff ;
+                text-decoration: none;
+            }
+
+            nav.assignment > ul > li > a:hover{
+                color: #000 ;
+            }
+
+/**
+ *  Styling the recieving element
+ */
+#content {
+    margin: 10px 0px;
+    padding: 12px ;
+}
+
+/**
+ *  Warning class in case the file could not be loaded
+ */
+.warning {
+    color: red ;
+}

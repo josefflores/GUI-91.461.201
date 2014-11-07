@@ -19,7 +19,7 @@
 $(document).ready( function() {
 
     //  The submit handler for the application form
-    $( "#application" ).submit( function( e ) {
+    $( "#application" ).submit( function( ) {
 
         // Create an instance of the application class
         var app = new Application( "#table" ) ;
