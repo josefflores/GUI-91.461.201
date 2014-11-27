@@ -1,0 +1,347 @@
+ /**
+ *  File: assignment8.css
+ *  91.461 Assignment: Creating Your First Web Page
+ *  Jose F. Flores, UMass Lowell Computer Science Student
+ *      jose_flores@student.uml.edu
+ *  Copyright (c) 2014 by Jose F. Flores. All rights reserved. May be
+ *      freely copied or excerpted for educational purposes with credit
+ *      to the author.
+ *
+ *  updated by JFF on Oct 21, 2014 at 2:30
+ *      Finished styling for assignment 6 submission
+ */
+
+
+/**
+ *  The error messages for checkbox input.
+ */
+#checkboxes-error {
+    bottom:24px;
+    left:130px;
+    position:absolute;
+}
+
+/**
+ *  The styling properties for the close tab form.
+ */
+#settings > fieldset > ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+    /**
+     *  Each checkbox list item.
+     */
+    #settings > fieldset > ul > li {
+        float:left;
+        margin-left:0;
+        width:100%;
+    }
+
+/**
+ *  Allows for large tables to appear within the tab content without
+ *  spilling over.
+ */
+#tabs {
+    overflow-x:auto!important;
+    overflow-y:hidden;
+}
+
+/**
+ *  Each input set, holds the input and label. jQuery validate adds the
+ *  error messages inside here as well.
+ */
+.input-line {
+    overflow:auto;
+    width:100%;
+}
+
+    /**
+     *  Setting error message styling.
+     */
+    .input-line > input.error + label {
+        color:red;
+    }
+
+/**
+ *  The close icon on each tab.
+ */
+.my-close-button {
+    background-position:-96px -128px;
+    cursor:pointer;
+    position:absolute;
+    right:8px;
+    top:10px;
+}
+
+/**
+ *  Multiplication table container properties.
+ */
+.table {
+    margin-top:10px;
+}
+    /**
+     *  Multiplication table properties.
+     */
+    .table table {
+        border:1px solid #ddd;
+        border-collapse:separate;
+        border-spacing:2px;
+        padding:5px;
+    }
+
+        /**
+         *  Default cell properties.
+         */
+        .table > table > tbody > tr > td,
+        .table > table > tbody > tr > th {
+            min-width:30px;
+            line-height:30px;
+            text-align:center;
+        }
+
+        /**
+         *  Setting background color before alternating background colors.
+         */
+        .table > table > tbody > tr > td {
+            background:#F4B223;
+        }
+
+        /**
+         *  Setting header colors.
+         */
+        .table > table > tbody > tr > th {
+            background:#333;
+            color:#F4B223;
+        }
+
+        /**
+         *  Alternating checkered pattern.
+         */
+        .table > table > tbody > tr:nth-child(even) > td:nth-child(even),
+        .table > table > tbody > tr:nth-child(odd) > td:nth-child(odd) {
+            background:#fff;
+        }
+
+/**
+ *  Active tab coloring.
+ */
+.ui-state-active a {
+    background-color:#333!important;
+    color:#FCB825!important;
+}
+
+/**
+ *  Tab bar and tab dimensions.
+ */
+.ui-tabs .ui-tabs-nav {
+    height:37px;
+    margin:0;
+    overflow-y:scroll;
+}
+
+/**
+ *  Removing padding from tab elements.
+ */
+.ui-tabs .ui-tabs-nav,
+.ui-tabs .ui-tabs-panel {
+    padding:0;
+}
+
+/**
+ *  Active tab dimensions.
+ */
+.ui-tabs-active {
+    height:34px;
+    margin-bottom:0;
+    padding-bottom:0!important;
+}
+
+/**
+ *  Allowing tabs to scroll internal content.
+ */
+#tabs,
+.ui-tabs-panel {
+    overflow-x:auto!important;
+}
+
+/**
+ *  adding space for the close icon.
+ */
+.my-ui-icon-close {
+    padding-right:28px!important;
+}
+
+/**
+ *  This encompasses elements in the application, it borders them to.
+ *  separate content
+ */
+fieldset {
+    background:#f9f9f9;
+    border:2px solid #FCB825;
+    margin:20px 0 0;
+}
+
+    /**
+     *  This titles the fieldsets
+     */
+    fieldset legend {
+        background:#333;
+        border:2px solid #FCB825;
+        color:#FCB825;
+        left:-14px;
+        margin-bottom:0;
+        padding:12px;
+        position:relative;
+        text-transform:capitalize;
+        width:100%;
+    }
+
+/**
+ *  Floated left so that error messages appear on the right.
+ */
+input {
+    float:left;
+}
+
+    /**
+     *  Outlines the element that has an error assigned by jQuery .validate.
+     */
+    input.error {
+        border:1px solid red;
+    }
+
+/**
+ *  Check box labels in the close tab form.
+ */
+label.append {
+    float:left;
+    line-height:32px;
+    width:auto;
+}
+
+/**
+ *  The error message produced by jQuery UI .validate.
+ */
+label.error {
+    float:left;
+    line-height:45px;
+    width:auto;
+}
+
+/**
+ *  The tab that has the multiplication table image.
+ */
+
+li.img-generator a {
+    background-position:291px -223px;
+}
+
+/**
+ *  The tab that has the instruction table image.
+ */
+li.img-info a {
+    background-position:-28px -286px;
+}
+
+/**
+ *  The pinned tab dimensions.
+ */
+li.img-generator a,
+li.img-info a {
+    height:19px;
+    width:10px;
+}
+
+/**
+ *  Image spans used to insert images in the instructions
+ */
+span.table-generator,
+span.table-generator,
+span.tab-close-button,
+span.img-check,
+span.img-alert {
+    height:32px;
+    width:32px;
+    display:inline-block;
+    margin:0;
+    padding:0;
+}
+
+/**
+ *  Yellow icons
+ */
+.ui-state-active .my-ui-icon-close .my-close-button ,
+li.img-generator.ui-state-active a,
+li.img-info.ui-state-active a {
+    background-image:url(../img/jquery-ui/ui-icons_fcb825_256x240.png);
+}
+
+/**
+ *  Dark gray images
+ */
+li.img-info a,
+li.img-generator a,
+span.table-generator,
+span.table-generator,
+span.tab-close-button,
+span.img-check,
+span.img-alert,
+.my-close-button {
+    background-image:url(../img/jquery-ui/ui-icons_454545_256x240.png);
+}
+
+/**
+ * Instruction line heights to center image spans.
+ */
+li.instruction {
+    line-height:32px;
+}
+
+/**
+ *  Holds the red exclamation point image.
+ */
+span.img-alert {
+    background-image:url(../img/jquery-ui/ui-icons_cd0a0a_256x240.png);
+    background-position:442px 198px;
+    margin-bottom:-3px;
+}
+
+/**
+ *  Holds the blue check mark image.
+ */
+span.img-check {
+    background-image:url(../img/jquery-ui/ui-icons_2e83ff_256x240.png);
+    background-position:381px 193px;
+    margin-bottom:-10px;
+}
+
+/**
+ *  Holds the close icon image
+ */
+span.tab-close-button {
+    background-position:673px -365px;
+    height:24px;
+    margin-bottom:-8px;
+    width:19px;
+}
+
+/**
+ *  Holds the exclamation point image.
+ */
+span.table-generator {
+    background-position:287px -222px;
+    margin-bottom:-8px;
+}
+
+/**
+ *  Makes larger icon images
+ */
+span.table-generator,
+li.img-info a,
+li.img-generator a,
+span.img-alert,
+span.img-check {
+    background-size:512px 480px;
+}
