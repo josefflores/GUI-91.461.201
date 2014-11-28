@@ -10,13 +10,7 @@
      *  A Umass Lowell Computer Science Student 91.461 Assignment: Creating
      *      Styling Your First Web Page With CSS
      *
-     *  This file holds the content for the assignment 3. The assignment
-     *  file has had its extension modified to work as a PHP file to
-     *  allow for header redirects from unwanted access as well as to
-     *  allow for dynamic includes as the css and image locations are not
-     *  hard coded as they originally were. This assignments purpose is to
-     *  show knowledge of text styling with css, So I have created a quick
-     *  tutorial on how to format text.
+     *  This file holds the instructions for the assignment 8.
      *
      *  9/10/14 Modified HTML to work as PHP
      */
@@ -48,6 +42,8 @@
                 freely copied or excerpted for educational purposes with credit
                 to the author.
 
+            updated by JFF on November 20, 2014 at 12:30
+                Updated web page for assignment 8
             updated by JFF on October 6, 2014 at 21:30
                 Updated web page for assignment 5
             updated by JFF on October 1, 2014 at 21:30
@@ -156,7 +152,7 @@
                     </p>
 
                     <ul>
-                        <li>D - Copied program for the dynamic table assignment:
+                        <li>Copied program for the dynamic table assignment:
                             <ul>
                                 <li> assignment/6/ &#8594; assignment/8/</li>
                                 <li>assignment6.js &#8594; assignment8.js</li>
@@ -164,7 +160,7 @@
                                 <li>assignment6.css &#8594; assignment8.css </li>
                             </ul>
                         </li>
-                        <li>D - Investigated jQuery Validation plugin. Read the text, and examples.</li>
+                        <li>Investigated jQuery Validation plugin. Read the text, and examples.</li>
                         <li>Added jQuery Validation plugin, and modified assignment validation to use the plugin.</li>
                         <li>Customize error messages displayed by the plugin; customizations were both in location and content.</li>
                         <li>Moved table to a jQuery UI tab interface.
@@ -182,7 +178,8 @@
                                 <li>family members who are both engineers and non engineers of various age groups and technology skills.</li>
                             </ul>
                         </li>
-                        <li>1 discovered bug was fixed.</li>
+                        <li>1 discovered bug was fixed. - Overflow of large tables</li>
+                        <li>1 recomendation was attempted - overlay that ran during long executions, did not include because the overlay was not appearing until after the process was done. Have to look into callbacks and figure out why this was not working. </li>
                     </ul>
 
                 </div>
