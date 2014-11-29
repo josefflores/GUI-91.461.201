@@ -94,10 +94,10 @@ function Application( target ) {
         this.str_out = "" ;
 
         //  Getting the string values and converting to integers
-        int_num_1 = parseInt( $( "#num_1" ).val() ) ;
-        int_num_2 = parseInt( $( "#num_2" ).val() ) ;
-        int_num_3 = parseInt( $( "#num_3" ).val() ) ;
-        int_num_4 = parseInt( $( "#num_4" ).val() ) ;
+        int_num_1 = parseInt( $( "#num_1" ).val() , 10 ) ;
+        int_num_2 = parseInt( $( "#num_2" ).val() , 10 ) ;
+        int_num_3 = parseInt( $( "#num_3" ).val() , 10 ) ;
+        int_num_4 = parseInt( $( "#num_4" ).val() , 10 ) ;
 
         //  ORDERING NUMBERS
 
@@ -292,7 +292,7 @@ function Application( target ) {
     this.toggle = function() {
 
         //  Check if there are list items which hold check box items
-        if ( $( '#closer > ul > li' ).length == 0 ){
+        if ( $( '#closer > ul > li' ).length === 0 ){
 
             //  Empty list
             console.log( "Toggle - Hiding settings form" ) ;
@@ -309,5 +309,5 @@ function Application( target ) {
 
     //  Running constructor
     this.constructor( target );
-} ;
+}
 

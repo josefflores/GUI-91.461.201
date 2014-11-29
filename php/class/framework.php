@@ -175,7 +175,8 @@
 
             // Start crawler
             $wv = new w3c_validator( array( $this->A[ 'W_ROOT' ] ) ,
-                                     $this->A[ 'D_PHP' ] . 'lib/simple_html_dom.php' ) ;
+                                     $this->A[ 'D_PHP' ] . 'lib/simple_html_dom.php' ,
+                                     4 ) ;
             $wv->crawl() ;
             $wv->process() ;
 

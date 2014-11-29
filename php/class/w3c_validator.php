@@ -53,6 +53,8 @@
 
     //  VARIABLES
 
+        private $delay ;
+
         //Tags to search for and their link property
         private $tags   = array( 'a' => 'href' ,
                                  'link' => 'href' ,
@@ -91,14 +93,21 @@
          *
          *  @param  $root       The root links array
          *  @param  $pathToDom  The path to simple_html_dom.php
+         *  @param  $delay  The amount to sleep between calls , this is
+         *                  needed in the case of a max web page request
+         *                  from a domain is triggered by the validators
          */
-        public function __construct( $root , $pathToDom ){
+        public function __construct( $root , $pathToDom , $delay = 1 ){
+
+            //  Increase execution time
+            ini_set('max_execution_time', $delay * 300);
 
             // Including simple_html_dom.php
             require_once $pathToDom ;
 
             // Storing starting points
             $this->links = $root ;
+            $this->delay = $delay ;
         }
 
         /**
@@ -163,17 +172,14 @@
          *  delay to prevent failure caused by a validator trigger.
          *
          *  @param  $url    The url to be fetched
-         *  @param  $delay  The amount to sleep between calls , this is
-         *                  needed in the case of a max web page request
-         *                  from a domain is triggered by the validators
          *
          *  @return $data   The HTML of the fetched page or response
          *                  given by website.
          */
-        private function get_data( $url , $delay = 1 ) {
+        private function get_data( $url ) {
 
             // Delay to prevent trigger
-            sleep( $delay ) ;
+            sleep( $this->delay ) ;
 
             $ch = curl_init() ;
 
@@ -183,6 +189,7 @@
 
             // Modification HERE
             curl_setopt( $ch , CURLOPT_USERAGENT , 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13' ) ;
+                                                   //"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.112 Safari/534.30"
             curl_setopt( $ch , CURLOPT_VERBOSE , FALSE ) ;
 
             $data = curl_exec( $ch ) ;

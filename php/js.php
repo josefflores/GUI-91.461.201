@@ -20,6 +20,9 @@
         <!-- Adding google jquery APIs -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+        <!-- Adding jQuery Lint API -->
+        <script src="jquery.lint.js"></script>
     ' ;
 
 
