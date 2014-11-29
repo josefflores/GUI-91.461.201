@@ -68,9 +68,6 @@
         <!-- Assignment 6 onload function -->
         <script src="<?php echo $A[ 'W_COM' ] ; ?>js/assignment8Onload.js "></script>
 
-        <!-- Adding jQuery Lint API -->
-        <script src="jquery.lint.js"></script>
-
         <!-- Including the main stylesheet -->
         <link rel="stylesheet" type="text/css"  href="<?php echo $A[ 'W_COM' ] ; ?>css/main8.css" >
 

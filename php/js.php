@@ -22,7 +22,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
         <!-- Adding jQuery Lint API -->
-        <script src="jquery.lint.js"></script>
+        <!-- script src="jquery.lint.js"></script -->
     ' ;
 
 
