@@ -1,127 +1,639 @@
 /**
- *  File:  index.html
+ *  File: main.css
+ *  91.461 Assignment: Creating Your First Web Page
+ *  Jose F. Flores, UMass Lowell Computer Science Student
+ *      jose_flores@student.uml.edu
+ *  Copyright (c) 2014 by Jose F. Flores. All rights reserved. May be
+ *      freely copied or excerpted for educational purposes with credit
+ *      to the author.
  *
- *  91.461 Assignment:  Assignments 4
- *
- *  Jose F. Flores, UMass Lowell Computer Science, jose_flores@student.uml.edu
- *
- *  Copyright (c) 2014 by Jose F. Flores.  All rights reserved.  May be freely
- *      copied or excerpted for educational purposes with credit to the author.
- *
- *  updated by Jose F. Flores on 10/01/14 - Created Page
+ *  updated by JFF on Oct 21, 2014 at 2:30
+ *      Added buttons, labels and inputs
+ *  updated by JFF on September 21, 2014 at 11:30
+ *      Finished styling for assignment 3 submission
+ *      Added styling for item lists and source code viewing
+ *  updated by JFF on September 14, 2014 at 18:02
+ *      Finished styling assignment repository
  */
 
+/**
+ *  Styling the body and HTML sections, Goal is to standardize the font
+ *  and remove extra spacing surrounding the elements so that the
+ *  sections occupy the whole viewing space of the page. The font
+ *  complies with UML web standards
+ */
+html ,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
 
 /**
- * setting up the default font and size of the display area
+ * Setting Font, setting default colors for background and text.
  */
 body {
-        margin: 0px;
-        padding: 0px;
-        background: #eee;
-        width: 100%;
-        height: 100%;
-        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-    }
+    background: #f8f8f8;
+    color: #000;
+    font-family: Verdana, Geneva, sans-serif;
+}
 
 /**
- *  Setting up title
+ * Button styling to standardize buttons
  */
-h1 {
-        font-family: "Oswald", sans-serif;
-        font-size: 80px;
-        text-align: center;
-        margin-bottom: 0px;
-        padding-bottom: 0px;
-    }
+button {
+    padding: 10px 20px;
+    color: #F4B223 ;
+    background: #333333 ;
+    border: 1px solid #333333;
+}
+/**
+ * button click action style to show press
+ */
+button:active{
+    background: #fff ;
+    color: #333333 ;
+}
 
 /**
- *  Setting up sub heading
+ * Form inputs extra spacing
  */
-h2 {
-        margin: 0px auto 80px auto;
-        text-align: center;
-        padding-bottom: 15px;
-        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-        width: 500px;
-        font-size: 18px;
-    }
+input {
+    margin: 10px 10px 10px 0px;
+    padding: 5px;
+    border: 1px solid #aaaaaa ;
+}
 
 /**
- *  Setting the fonrt for the section headings
+ * Form input description
  */
-h3 {
-        font-family: "Oswald", sans-serif;
-    }
-    
-/**
- *  Setting up paragraph indentation
- */
-p {
-        margin-left: 20px;
-    }
+label {
+    float: left;
+    width: 100%;
+    font-weight: bold;
+    color: #333333 ;
+}
 
 /**
- *  Giving links a different font
+ *  Default .list styling so that ordered and unordered list behave the
+ *  same way
  */
-a {
-        font-family: 'Oswald', sans-serif;
-        color: #000000 ;
-    }
+ul.list {
+    margin: 10px 0px;
+    list-style-type: none ;
+}
 
-/**
- *  The list of links, without bullets and made to have the same
- *  indentation as paragraphs
- */
-ul {
-        list-style-type: none ;
-        margin: 0px 0px 0px 20px;
-        padding: 0px ;
-    }
+ol.list {
+    margin: 10px 0px;
+    list-style-type: normal ;
+}
 
     /**
-     *  The list item containing the links, gave vertical separation
-     *  space
+     *  Common list item allows for expansion and prevents link wraps from
+     *  making ol numbering break.
      */
-    ul li {
-        margin: 0px 0px 20px 0px;
-    }
-
-/**
- *  Allowing for centering
- */
-.wrapper {
-        width: 800px;
-        margin:  40px auto;
-        background: #fff;
-        box-shadow: 1px 2px 5px #333;
-        padding: 0px 20px 20px 20px;
-    }
-
-/**
- *  The title container
- */
-.header {
-        background: #00B8E6;
-        margin: 0 -20px;
-        color: darkslategray ;
-    }
-
-/**
- *  A section divider
- */
-.body {
-        padding: 10px;
+    .list > li {
+        min-height: 40px;
+        padding: 5px 5px;
         margin: 0px;
     }
 
+        /**
+         *  This div allows for word wraps to expand downwards while maintaining
+         *  indentations of element
+         */
+        .list > li > div {
+            min-height: 40px;
+            width: 100%;
+        }
+
+            /**
+             *  The first div will hold some form of icon for the list so
+             *  it is different than the second. If it does not hold an
+             *  icon it will add extra spacing
+             */
+            .list > li > div > div:first-child {
+                line-height: 40px;
+                height: 40px;
+                padding: 0px 5px;
+                margin: 0px 5px;
+                float: left;
+            }
+
+            /**
+             *  how a link should behave if it is in the first div.
+             *  usually surrounding an icon
+             */
+            .list > li > div > div:first-child > a {
+                display: block;
+                height: 40px;
+                width: 40px;
+                padding: 0px;
+                line-height: 40px;
+
+            }
+
+            /**
+             *  Whether the icon is in a link or not it shall still be
+             *  bordered
+             */
+            .list > li > div > div:first-child > img ,
+            .list > li > div > div:first-child > a > img {
+                border: 1px solid #dddddd;
+                padding: 4px ;
+            }
+
+        /**
+         * The second div contains the text of the list and should be
+         * able to collapse to multiple lines if it is cutoff
+         */
+        .list > li > div > div:nth-child(2) {
+            padding: 0px 5px;
+            overflow-wrap: break-word;
+            min-height:40px;
+            line-height:40px;
+        }
+
 /**
- *  Copyright information container
+ *  Standardizing the look of links in the document. I personally
+ *  dislike underlines.
  */
-.footer {
-        text-align: center;
-        font-family: 'Oswald', sans-serif;
-        color:  #333;
+a {
+    color: #0168b3; /* Light blue links. */
+    text-decoration: none;
+}
+
+/**
+ *  Standardizing the heading elements of the document. Removing bold.
+ */
+h1 , h2 , h3 , h4 , h5 , h6 {
+    font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+}
+
+/**
+ *  Giving The page Heading a different color
+ */
+h1 {
+    color: #fcb825; /*yellow*/
+}
+
+/**
+ *  Small sub header in a description box.
+ */
+h4 {
+    color: #0168b3;
+
+}
+/**
+ *  Makes the small article descriptors
+ */
+h4.info {
+    font-size: 10px;
+}
+/**
+ *  A class of heading to be used for the title of the page. It aligns
+ *  text vertically in the block.
+ */
+h1.title {
+    font-size: 30px;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+}
+
+/**
+ *  A class of heading to be used as a description of the page. It aligns
+ *  text vertically in the block.
+ */
+h2.title-sub {
+    font-size: 15px;
+    height: 25px;
+    line-height: 25px;
+    width: 100%;
+}
+
+/**
+ *  This is a wrapper, it allows for positioning of the document content.
+ */
+div.wrapper {
+    background: #f8f8f8;
+    height: 100%;
+    min-width: 800px;
+    width: 100%;
+}
+
+/**
+ *  The header bar of the page. The header is always present and allows
+ *  content to hide behind it as it scrolls by. This is called a sticky
+ *  header. I have added a shadow effect to make the header look like it
+ *  is a z-index above the content
+ */
+div.header {
+    background: #333333; /*#0168B3; */
+    box-shadow: 0px 1px 10px #666;
+    height: 107px;
+    left: 0px;
+    min-width: 800px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+/**
+ *  The title wrapper to assist in positioning of the page title. I am
+ *  using this to indent the heading and allow for an icon on the left
+ *  side of the header.
+ */
+div.title-wrapper {
+    color: #ffffff;
+    padding: 0 0 0 40px ;
+}
+
+/*
+ * A class of image to be used for the logo.
+ */
+img.logo {
+    float: left;
+    height: 75px;
+    margin: 0px 20px 0px 0px;
+}
+
+/**
+ *  The container holding the main content of the page. The padding fixes
+ *  the sticky header and footer from covering up content.
+ */
+div.content {
+    color: #000000;
+    font-size: 14px;
+    padding: 125px 0px 50px 0px; /*  */
+}
+
+/**
+ *  This wrapper allows for smooth contraction of the content went
+ *  browsers are resized.
+ */
+div.content-wrapper {
+    background: #f8f8f8;
+    overflow: auto;
+    padding: 0 25px;
+}
+
+/**
+ *  The container holding the sticky footer of the page
+ */
+div.footer {
+    background: #eeeeee;
+    border-top: 1px solid #999999;
+    bottom: 0px;
+    height: 40px;
+    left: 0px;
+    min-width: 800px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+/**
+ *  These containers hold the Github link notice and copyright information
+ */
+div.notice,
+div.copyright {
+    font-size: 10px;
+}
+
+/**
+ *  This container holds the title elements.
+ */
+div.header-right {
+    margin-left: 75px;
+}
+
+/**
+ *  This holds the horizontal navigation rules, they are used for the
+ *  main document navigation
+ */
+nav.horizontal {
+    background: #ffffff;
+    border-top: 6px solid #FCB825;
+    height: 26px;
+    line-height: 26px;
+    margin: 0px 0px 0px -60px;
+    padding: 0px 60px 0px 0px;
+    width: 100%;
+}
+
+    /**
+     *  This is the unordered list of menu items. Bulleting is removed
+     *  here, dimensions of the menu are given.
+     */
+    nav.horizontal ul {
+        height: 30px;
+        list-style-type: none;
+        margin: 0px 0px 0px 155px;
+        padding: 0px;
+        width: 100%;
     }
 
+        /**
+         *  Menu items are described here. This is where the horizontal
+         * part is determined.
+         */
+        nav.horizontal ul li {
+            border-right: 1px solid #dddddd;
+            float: left;
+        }
 
+            /**
+             *  This is a first-child selector It only affects the first
+             *  menu list item. I used it so that i could border the outsides
+             *  of the list items without having back to back borders.
+             */
+            nav.horizontal ul li:first-child {
+                border-left: 1px solid #dddddd;
+            }
+
+            /**
+             *  The menu links are being affected here, links are made to
+             *  expand to their container rather than just being a text
+             *  link. This makes the links act as buttons
+             */
+            nav.horizontal ul li a {
+                display: block;
+                height: 25px;
+                line-height: 25px;
+                padding: 0px 10px;
+            }
+
+                /**
+                 *  Setting hover and active state colors for the anchor items
+                 *  in the menu
+                 */
+                nav.horizontal ul li a:hover {
+                    background: #eeeeee;
+                }
+                nav.horizontal ul li a:active {
+                    background: #ffffff;
+                }
+
+/**
+ *  This is the beginning of the vertical navigation menu, it is used for
+ *  in page selection of content, such as assignment lists and file lists.
+ */
+nav.vertical {
+    float: left;
+    margin-left: 110px;
+    width: 300px;
+ }
+
+    /**
+     *  This is the unordered list of items, bullets have been removed
+     *  and list dimensions were set.
+     */
+    nav.vertical ul {
+        float: left;
+        list-style-type: none;
+        margin: 0px;
+        overflow-wrap: break-word;
+        padding-right: 20px;
+        padding: 0px;
+        width: 100%;
+     }
+
+        /**
+         *  The list anchors for the vertical menu are being styled here.
+         */
+        nav.vertical ul li a {
+            background: #ffffff;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            border-top: 1px solid #ddd;
+            display: block;
+            line-height: 20px;
+            min-height: 20px;
+            padding: 3px;
+            width: 100%;
+         }
+
+        /**
+         *  Similar to what was done for the horizontal menu a border is
+         *  being added to the last list element so that there are no
+         *  back to back borders.
+         */
+        nav.vertical ul li:last-child a {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        /**
+         *  Setting hover and active state colors for the anchor items
+         *  in the menu
+         */
+        nav.vertical ul li a:hover {
+            background: #eeeeee;
+        }
+        nav.vertical ul li a:active {
+            background: #ffffff;
+        }
+
+/**
+ *  The source div contains any list item output such as file contents
+ *  or assignment contents. It is made to expand and contract with browser resizes
+ */
+div.source {
+    border: 1px solid #dddddd;
+    margin-left: 430px;
+    overflow-wrap: break-word;
+    padding: 5px;
+}
+
+/**
+ *  clearing up any styling started by PHP
+ */
+div.source code {
+    background: none;
+    border: none ;
+}
+/**
+ *  The iframe element allows for the viewing of past assignments as
+ *  separate web pages without introducing styling or structural
+ *  elements in the application
+ */
+iframe {
+    border: 0px;
+    height: 800px;
+    width: 100%;
+}
+
+/**
+ *  The icon for a page description
+ */
+img.description {
+    border: 1px solid #dddddd;
+    float: left;
+    height: 90px;
+    margin: 0 0 10px 0;
+    padding: 5px;
+    width: 90px;
+}
+
+/**
+ *  The text box of a page description
+ */
+div.description {
+    border: 1px solid #dddddd;
+    margin: 0 0 10px 110px;
+    min-height: 90px;
+    padding: 5px;
+}
+
+/**
+ *  The paragraph element, removing extra spacing from the bottom this
+ *  allows for the text box descriptions to maintain their size and not
+ *  be expanded accidentally.
+ */
+p {
+    margin-bottom: 0px;
+}
+
+/**
+ *  Used the important tag to override the background color for a selected
+ *  anchor. This anchor tag is used in the vertical menus to show which
+ *  assignment or file is being viewed.
+ */
+a.selected {
+    background: #fcb825 !important;
+    border-bottom: 1px solid #fcb825;
+    color: #333333 !important;
+}
+
+/**
+ * making all content holders have a white background
+ */
+.description ,
+nav.vertical ul ,
+div.source {
+    background: #ffffff;
+}
+
+/**
+ * The div.code tag holds code examples and the div.sample holds processed
+ * examples
+ */
+div.code,
+div.sample {
+    margin: 10px 0;
+    padding: 10px 0;
+    word-wrap: break-word;
+    width: 100%;
+}
+
+/**
+ * Marking the differences between the div.code and div.sample tags
+ *
+ * The div.code tag is bordered by yellow and has a modified background
+ * while the sample has a blue border and background is white
+ * I did this to make them look differently and in turn give the user
+ * visual feedback to what they were looking at.
+ */
+div.code {
+    background: #f8f8f8;
+    border: 1px solid #fcb825;
+    display: block;
+}
+div.sample {
+    background: #ffffff;
+    border: 1px solid #0168b3;
+}
+
+/**
+ * a sub heading for content
+ */
+h5 {
+    color: #fcb825;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 4px 0 0 0;
+    padding: 4px 0;
+}
+
+/**
+ *  Styling an embedded HTML object containing a pdf
+ */
+object.pdf {
+    width: 100% ;
+    min-width: 624px ;
+
+    overflow:visible;
+
+}
+
+/**
+ *  Styling tables to allow for table rows to extend as a unit
+ */
+table {
+    border-collapse: collapse;
+}
+
+/**
+ *  Rsume title row , did not use a th element here because there is no
+ *  table head
+ */
+tr.title {
+    font-weight: bold;
+    width: 100%;
+    line-height: 20px;
+    height: 20px;
+    border-bottom: 1px solid #000;
+}
+
+/**
+ *  Resume styling for content cells
+ */
+tr.entry > td {
+    margin:0px;
+    padding:0px;
+    display: inline-block ;
+    float:left;
+}
+/**
+ *  Resume styling for title cells
+ */
+tr.title > td {
+    padding: 10px 0 ;
+    margin-top:10px;
+    display: inline-block ;
+    float:left;
+}
+
+/**
+ *  Resume styling for column spacing
+ */
+tr.title > td:first-child ,
+tr.entry > td:first-child ,
+tr.title > td:nth-child(3) ,
+tr.entry > td:nth-child(3) {
+    width: 20%;
+}
+tr.title > td:nth-child(2) ,
+tr.entry > td:nth-child(2) {
+    width: 60%;
+}
+
+/**
+ *  Resume styling for topic rows. This is theEducation , Experience
+ *  etc headers
+ */
+tr.topic > td {
+    font-size: 1.17em;
+    background: #333333 ;
+    color: #fcb825;
+    font-weight: normal;
+    height:30px;
+    line-height:30px;
+    width:100%;
+    margin: 20px 0px 10px 0px;
+    display: inline-block ;
+    float:left;
+}

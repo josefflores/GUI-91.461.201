@@ -1,0 +1,168 @@
+ /**
+ *  File: assignment9.css
+ *  91.461 Assignment: Creating Your First Web Page
+ *  Jose F. Flores, UMass Lowell Computer Science Student
+ *      jose_flores@student.uml.edu
+ *  Copyright (c) 2014 by Jose F. Flores. All rights reserved. May be
+ *      freely copied or excerpted for educational purposes with credit
+ *      to the author.
+ *
+ *  updated by JFF on Dec 12, 2014 at 2:30
+ *      Finished styling for assignment 9 submission
+ */
+
+
+/**
+ *  Centering column text
+ */
+td {
+    line-height: 32px;
+    padding: 5px;
+    text-align:center;
+}
+
+/**
+ *  The images and text align in the titel to the left
+ */
+td:first-child {
+    text-align:left;
+}
+
+/**
+ * For zebra striping
+ */
+tr:nth-child(even) {
+    background:#f6f6f6;
+    color:#333333;
+}
+
+/**
+ * For zebra striping
+ */
+tr:nth-child(odd) {
+    color: #333333;
+    background: #ffffff ;
+}
+
+/**
+ *  Styling the table headers so that they match the sites overall design
+ */
+th {
+    background: #333333;
+    color: #FBB723 ;
+    text-align:center;
+    height:55px;
+    padding: 0 20px;
+    line-height:55px;
+}
+
+    /**
+     *  Styling the table header control links
+     */
+    th a {
+        text-transform: capitalize ;
+        display: inline-block;
+        padding: 0 ;
+        color: #FBB723;
+        background: #333333 ;
+        margin: 0px;
+        line-height:55px;
+        height:100%;
+        width:100%;
+    }
+
+/**
+ *  Added spacing to seperate IMDB url link images from the edges of the
+ *  cells
+ */
+tr {
+    padding:5px;
+}
+
+/**
+ *  Styling the IMDB url link image
+ */
+img.imdb {
+    float:left;
+    width: 32px;
+    height: 32px;
+    padding-right: 10px;
+    margin: 0px;
+}
+
+/**
+ *  Styling the IMDB table
+ */
+table {
+    border-collapse: separate;
+    padding: 2px;
+    border: 1px solid #ccc;
+    background: #f6f6f6;
+    box-shadow: 1px 1px 8px #999;
+}
+
+/**
+ * Floating inputs to the left so that the input lies before the select
+ */
+input {
+    float:left;
+}
+
+/**
+ *  Styling the submit button
+ */
+input[type='submit']{
+    float: left ;
+    border: 1px solid #aaaaaa;
+    text-transform: capitalize;
+    display: inline-block;
+    color: #333333;
+    background: #F4B223;
+    margin: 10px 0px;
+    padding: 5px 25px;
+}
+
+/**
+ *  Spacing and positioning of the year select dropdown
+ */
+select {
+    height: 27px;
+    float: left;
+    margin: 10px 10px 0px 0px;
+}
+
+/**
+ *  Custom error message for the addForm
+ */
+span.my-error {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    margin: 10px;
+    float: left;
+    padding: 0 10px;
+}
+
+/**
+ *  Extending the size of the table to the width of the application
+ */
+table{
+    width: 100%;
+}
+
+/**
+ *  Spacing the prompt form sections
+ */
+fieldset{
+    margin: 0 0 10px 0;
+}
+
+/**
+ * Setting up an input line, the overflow adds vertical dimension to the
+ * floated element
+ */
+.input-line {
+    display: block;
+    overflow: auto;
+    width: 100%;
+}
