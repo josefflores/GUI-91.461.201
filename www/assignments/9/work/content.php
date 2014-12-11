@@ -26,14 +26,16 @@
 
 ?>
 
-<!DOCTYPE html><!-- Document type declaration for HTML5-->
+<!DOCTYPE   html><!-- Document type declaration for HTML5-->
 
 <!-- Start of HTML, language of document is English -->
-<html lang="en" ng-app="assignmentNineApp">
+<html   lang="en"
+        ng-app="assignmentNineApp">
 
     <head>
+
         <!-- Document is utf-8 -->
-        <meta charset="utf-8">
+        <meta   charset="utf-8">
 
         <!--
             File: content.html
@@ -55,50 +57,18 @@
         <!-- Include Angular.js -->
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
 
+        <!-- Include Assignment library -->
+        <script src="<?php echo $A[ 'W_JS' ] ; ?>assignment9.js"></script>
+
         <!-- Including the main stylesheet -->
-        <link rel="stylesheet" type="text/css"  href="<?php echo $A[ 'W_COM' ] ; ?>css/main.css" >
+        <link   href="<?php echo $A[ 'W_CSS' ] ; ?>main.css"
+                rel="stylesheet"
+                type="text/css">
 
-        <script type="text/javascript" >
-
-            var assignmentNineApp = angular.module( 'assignmentNineApp' , [] ) ;
-
-            assignmentNineApp.controller( 'tableCtrl', [ '$scope' , '$http' , function( $scope , $http ) {
-
-                $http.get( 'http://josefflores.com/gui/_api/get/json/?file=disney.json' )
-                    .success( function( data ) {
-
-                        $scope.filmList = data ;
-                        $scope.apply ;
-
-                        var i = 0 ;
-
-                        angular.forEach( $scope.filmList , function( value , key ) {
-
-                            $http.get( 'http://www.imdbapi.com/?i=&t=' + value.title )
-                                .then( function(result) {
-
-                                    $scope.filmList[ i ][ 'Poster' ] = 'error.png' ;
-
-                                    if ( typeof value.year == 'number' ) {
-                                        $scope.filmList[ i ][ 'Poster' ] = result[ 'data' ][ 'Poster' ] ;
-                                    }
-
-                                    console.log( value.title ) ;
-                                    console.log( $scope.filmList[ i ][ 'Poster' ] ) ;
-                                    i++ ;
-                                });
-
-                        } , $scope.filmList ) ;
-
-                        console.log( $scope.filmList ) ;
-                        $scope.apply ;
-
-                    });
-
-            }]);
-
-
-        </script>
+        <!-- Include Assignment stylesheet -->
+        <link   href="<?php echo $A[ 'W_CSS' ] ; ?>assignment9.css"
+                rel="stylesheet"
+                type="text/css">
 
     </head>
 
@@ -108,22 +78,24 @@
             Begin page wrapper, the wrapper will allow for future
             positional modifications in page layout such as centering.
         -->
-        <div class="wrapper">
+        <div    class="wrapper">
 
             <!-- Start header -->
-            <div class="header">
+            <div    class="header">
 
                 <!--
                     Begin wrapper, this wrapper allows for the whole
                     header to be positioned as an item while maintaining
                     a full header bar.
                 -->
-                <div class="title-wrapper">
+                <div    class="title-wrapper">
 
                     <!-- logo -->
-                    <img class="logo" src="<?php echo $A[ 'W_IMG' ] ; ?>mouse.png" alt="Page Logo">
+                    <img    alt="Page Logo"
+                            class="logo"
+                            src="<?php echo $A[ 'W_IMG' ] ; ?>mouse.png" />
 
-                    <div class="header-right" >
+                    <div    class="header-right" >
 
                         <!-- Title of the page -->
                         <h1 class="title">
@@ -138,18 +110,18 @@
                     </div>
 
                     <!-- Navigation menu -->
-                    <nav class="horizontal">
+                    <nav    class="horizontal">
 
                         <ul>
 
                             <li>
-                                <a href="<?php echo $A[ 'W_ROOT' ] ; echo 'assignments/9/' ; ?>">
+                                <a  href="<?php echo $A[ 'W_ROOT' ] ; echo 'assignments/9/' ; ?>">
                                     Instructions
                                 </a>
                             </li>
 
                             <li>
-                                <a href="<?php echo $A[ 'W_ROOT' ] ; echo 'assignments/9/work/'; ?>">
+                                <a  href="<?php echo $A[ 'W_ROOT' ] ; echo 'assignments/9/work/'; ?>">
                                     Work
                                 </a>
                             </li>
@@ -164,40 +136,186 @@
             </div>
 
             <!-- Begin content -->
-            <div class="content">
+            <div    class="content"
+                    data-ng-init="setErrorState('E');getJson();getYears()"
+                    ng-controller="tableCtrl">
 
-                <img class="description" src="<?php echo $A[ 'W_IMG' ] ; ?>assignment.png" alt="assignment logo" >
+                <img    alt="assignment logo"
+                        class="description"
+                        src="<?php echo $A[ 'W_IMG' ] ; ?>assignment.png" >
 
-                <div class="description">
+                <div    class="description">
 
-                    <input ng-model="query" type="text"/>
+                    <h3>
+                        Angular JS Application
+                    </h3>
 
-                    <table ng-controller="tableCtrl">
+                    <h4 class="info">
+                        An IMDB movie table generator
+                    </h4>
+
+                    <p>
+                        This page holds an angular.js application. It uses a preformed json file of films and their corresponding years to perform an IMDB database lookup for remaining information. The application allows users to add films to the table, as well as to search for specific entries.
+                    </p>
+
+                </div>
+
+                <div    class="description">
+
+                    <form   id="addMovie"
+                            name="addMovie"
+                            ng-submit="addUserMovie()">
+
+                        <fieldset>
+
+                            <legend>
+                                Search for a film in the table
+                            </legend>
+
+                            <span   class="input-line">
+                                Type in the box to narrow the table contents to rows that contain the text in the field.
+                            </span>
+
+                            <span   class="input-line">
+
+                                <input  ng-model="query"
+                                        type="text" />
+
+                            </span>
+
+                        </fieldset>
+
+                        <fieldset>
+
+                            <legend>
+                                Add a film to the table
+                            </legend>
+
+                            <span   class="input-line">
+                                Enter a film title in the text input below. Optionally select a film release year. Click on the button. The application will then query the IMDB Api for the film, the Api will return the most popular term match to the film title entered. If the film retrieved has already been added to the table a notification will appear and the application will not add the entry to the table.
+                            </span>
+
+                            <span   class="input-line">
+
+                                <input  id="movieTitle"
+                                        name="movieTitle"
+                                        ng-model="movieTitle"
+                                        required
+                                        type="text" />
+
+                                <select data-ng-options="year.value as year.label for year in years"
+                                        id="movieYear"
+                                        name="movieYear"
+                                        ng-model="movieYear"></select>
+
+                            </span>
+
+                            <span   class="input-line">
+
+                                <input  id="submit"
+                                        ng-model="movieSubmit"
+                                        type="submit"
+                                        value="Add"/>
+
+                                <span   class="error"
+                                        ng-show="movieTitle.$error.required">
+                                </span>
+
+                                <span   class="my-error"
+                                        ng-if="duplicate">
+                                    The film is in the table.
+                                </span>
+
+                            </span>
+
+                        </fieldset>
+
+                    </form>
+
+                    <fieldset>
+
+                        <legend>
+                            Sort the table
+                        </legend>
+
+                        <span   class="input-line">
+                            To sort the table by column value click on the corresponding table headers. The first click will sort the table consecutive clicks will reverse the ordering of the table.
+                        </span>
+
+                    </fieldset>
+
+                    <table>
 
                         <thead>
+
                             <tr>
                                 <!--
                                     https://docs.angularjs.org/api/ng/filter/orderBy
 
-                                    sorter choses the column to sort by , reverse =! reverse flips the ordering of the array
+                                    sorter choses the column to sort by ,
+                                    reverse =! reverse flips the ordering of the array
                                     This works in conjunction with orderBy:sorter:reverse
                                 -->
-                                <th>Poster</th>
-                                <th><a href="" ng-click="sorter='title'; reverse=!reverse ">title</a></th>
-                                <th><a href="" ng-click="sorter='year'; reverse=!reverse">year</a></th>
-                                <th><a href="" ng-click="sorter='length'; reverse=!reverse">length</a></th>
-                                <th><a href="" ng-click="sorter='rating'; reverse=!reverse">rating</a></th>
+                                <th>
+
+                                    <a  href=""
+                                        ng-click="sorter='Title'; reverse=!reverse">
+                                        title
+                                    </a>
+
+                                </th>
+
+                                <th>
+
+                                    <a  href=""
+                                        ng-click="sorter='Year'; reverse=!reverse">
+                                        year
+                                    </a>
+
+                                </th>
+
+                                <th>
+
+                                    <a  href=""
+                                        ng-click="sorter='Runtime'; reverse=!reverse">
+                                        length
+                                    </a>
+
+                                </th>
+
+                                <th>
+
+                                    <a  href=""
+                                        ng-click="sorter='Rated'; reverse=!reverse">
+                                        rating
+                                    </a>
+
+                                </th>
+
                             </tr>
+
                         </thead>
 
                         <tbody>
-                            <tr ng-repeat="film in filmList | filter:query | orderBy:sorter:reverse">
-                                <td><img src="{{film.Poster}}" style="width:50px;" alt="{{film.title}}"/></th>
-                                <td>{{film.title}}</td>
-                                <td>{{film.year}}</td>
-                                <td>{{film.length}}</td>
-                                <td>{{film.rating}}</td>
+
+                            <tr ng-repeat="film in filmList | filter:searchFilter | orderBy:sorter:reverse">
+
+                                <td ng-bind-html="film.imdbID"></td>
+
+                                <td>
+                                    {{film.Year}}
+                                </td>
+
+                                <td>
+                                    {{film.Runtime}}
+                                </td>
+
+                                <td>
+                                    {{film.Rated}}
+                                </td>
+
                             </tr>
+
                         </tbody>
 
                     </table>
