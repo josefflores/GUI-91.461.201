@@ -58,11 +58,11 @@ assignmentNineApp.controller( 'tableCtrl', [ '$scope' , '$http' , '$sce', functi
         //  Returning true only when found in the Title, Year, Runtime,
         //  or Rated columns and there was something to search for
         return  !$scope.query ||
-                re.test(obj.Title) ||
-                re.test(obj.Year) ||
-                re.test(obj.Runtime) ||
-                re.test(obj.Rated) ;
-    };
+                re.test( obj.Title ) ||
+                re.test( obj.Year ) ||
+                re.test( obj.Runtime ) ||
+                re.test( obj.Rated ) ;
+    } ;
 
     /**
      *  @name   setErrorState

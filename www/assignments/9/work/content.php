@@ -30,7 +30,7 @@
 
 <!-- Start of HTML, language of document is English -->
 <html   lang="en"
-        ng-app="assignmentNineApp">
+        data-ng-app="assignmentNineApp">
 
     <head>
 
@@ -137,8 +137,8 @@
 
             <!-- Begin content -->
             <div    class="content"
-                    data-ng-init="setErrorState('E');getJson();getYears()"
-                    ng-controller="tableCtrl">
+                    data-ng-init="setErrorState('V');getJson();getYears()"
+                    data-ng-controller="tableCtrl">
 
                 <img    alt="assignment logo"
                         class="description"
@@ -164,7 +164,7 @@
 
                     <form   id="addMovie"
                             name="addMovie"
-                            ng-submit="addUserMovie()">
+                            data-ng-submit="addUserMovie()">
 
                         <fieldset>
 
@@ -178,7 +178,7 @@
 
                             <span   class="input-line">
 
-                                <input  ng-model="query"
+                                <input  data-ng-model="query"
                                         type="text" />
 
                             </span>
@@ -199,30 +199,30 @@
 
                                 <input  id="movieTitle"
                                         name="movieTitle"
-                                        ng-model="movieTitle"
+                                        data-ng-model="movieTitle"
                                         required
                                         type="text" />
 
                                 <select data-ng-options="year.value as year.label for year in years"
                                         id="movieYear"
                                         name="movieYear"
-                                        ng-model="movieYear"></select>
+                                        data-ng-model="movieYear"></select>
 
                             </span>
 
                             <span   class="input-line">
 
                                 <input  id="submit"
-                                        ng-model="movieSubmit"
+                                        data-ng-model="movieSubmit"
                                         type="submit"
                                         value="Add"/>
 
                                 <span   class="error"
-                                        ng-show="movieTitle.$error.required">
+                                        data-ng-show="movieTitle.$error.required">
                                 </span>
 
                                 <span   class="my-error"
-                                        ng-if="duplicate">
+                                        data-ng-if="duplicate">
                                     The film is in the table.
                                 </span>
 
@@ -259,7 +259,7 @@
                                 <th>
 
                                     <a  href=""
-                                        ng-click="sorter='Title'; reverse=!reverse">
+                                        data-ng-click="sorter='Title'; reverse=!reverse">
                                         title
                                     </a>
 
@@ -268,7 +268,7 @@
                                 <th>
 
                                     <a  href=""
-                                        ng-click="sorter='Year'; reverse=!reverse">
+                                        data-ng-click="sorter='Year'; reverse=!reverse">
                                         year
                                     </a>
 
@@ -277,8 +277,8 @@
                                 <th>
 
                                     <a  href=""
-                                        ng-click="sorter='Runtime'; reverse=!reverse">
-                                        length
+                                        data-ng-click="sorter='Runtime'; reverse=!reverse">
+                                        ledata-ngth
                                     </a>
 
                                 </th>
@@ -286,7 +286,7 @@
                                 <th>
 
                                     <a  href=""
-                                        ng-click="sorter='Rated'; reverse=!reverse">
+                                        data-ng-click="sorter='Rated'; reverse=!reverse">
                                         rating
                                     </a>
 
@@ -298,9 +298,9 @@
 
                         <tbody>
 
-                            <tr ng-repeat="film in filmList | filter:searchFilter | orderBy:sorter:reverse">
+                            <tr data-ng-repeat="film in filmList | filter:searchFilter | orderBy:sorter:reverse">
 
-                                <td ng-bind-html="film.imdbID"></td>
+                                <td data-ng-bind-html="film.imdbID"></td>
 
                                 <td>
                                     {{film.Year}}
